@@ -98,10 +98,12 @@ import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00307_ControlDeviceOfTheGiants.Q00307_ControlDeviceOfTheGiants;
 import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
 import quests.Q00326_VanquishRemnants.Q00326_VanquishRemnants;
+import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
 import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
 import quests.Q00357_WarehouseKeepersAmbition.Q00357_WarehouseKeepersAmbition;
 import quests.Q00359_ForASleeplessDeadman.Q00359_ForASleeplessDeadman;
 import quests.Q00371_ShrieksOfGhosts.Q00371_ShrieksOfGhosts;
+import quests.Q00373_SupplierOfReagents.Q00373_SupplierOfReagents;
 import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGiantsCavePart1;
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
@@ -291,10 +293,12 @@ public class QuestMasterHandler
 		Q00307_ControlDeviceOfTheGiants.class,
 		Q00310_OnlyWhatRemains.class,
 		Q00326_VanquishRemnants.class,
+		Q00344_1000YearsTheEndOfLamentation.class,
 		Q00350_EnhanceYourWeapon.class,
 		Q00357_WarehouseKeepersAmbition.class,
 		Q00359_ForASleeplessDeadman.class,
 		Q00371_ShrieksOfGhosts.class,
+		Q00373_SupplierOfReagents.class,
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
 		Q00381_LetsBecomeARoyalMember.class,
