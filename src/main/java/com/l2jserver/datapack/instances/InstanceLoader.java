@@ -49,6 +49,7 @@ import com.l2jserver.datapack.instances.NornilsGarden.NornilsGarden;
 import com.l2jserver.datapack.instances.NornilsGardenQuest.NornilsGardenQuest;
 import com.l2jserver.datapack.instances.PailakaDevilsLegacy.PailakaDevilsLegacy;
 import com.l2jserver.datapack.instances.PailakaSongOfIceAndFire.PailakaSongOfIceAndFire;
+import com.l2jserver.datapack.instances.PailakaVarkaSilenosBarracks.PailakaVarkaSilenosBarracks;
 import com.l2jserver.datapack.instances.SanctumOftheLordsOfDawn.SanctumOftheLordsOfDawn;
 import com.l2jserver.datapack.instances.SecretAreaInTheKeucereusFortress1.SecretAreaInTheKeucereusFortress1;
 
@@ -88,6 +89,7 @@ public final class InstanceLoader {
 		NornilsGardenQuest.class,
 		PailakaDevilsLegacy.class,
 		PailakaSongOfIceAndFire.class,
+		PailakaVarkaSilenosBarracks.class,
 		SanctumOftheLordsOfDawn.class,
 		SecretAreaInTheKeucereusFortress1.class,
 	};

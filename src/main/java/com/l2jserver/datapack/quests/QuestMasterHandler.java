@@ -164,6 +164,7 @@ import com.l2jserver.datapack.quests.Q00140_ShadowFoxPart2.Q00140_ShadowFoxPart2
 import com.l2jserver.datapack.quests.Q00141_ShadowFoxPart3.Q00141_ShadowFoxPart3;
 import com.l2jserver.datapack.quests.Q00142_FallenAngelRequestOfDawn.Q00142_FallenAngelRequestOfDawn;
 import com.l2jserver.datapack.quests.Q00143_FallenAngelRequestOfDusk.Q00143_FallenAngelRequestOfDusk;
+import com.l2jserver.datapack.quests.Q00144_PailakaInjuredDragon.Q00144_PailakaInjuredDragon;
 import com.l2jserver.datapack.quests.Q00146_TheZeroHour.Q00146_TheZeroHour;
 import com.l2jserver.datapack.quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
 import com.l2jserver.datapack.quests.Q00148_PathtoBecominganExaltedMercenary.Q00148_PathtoBecominganExaltedMercenary;
@@ -663,6 +664,7 @@ public class QuestMasterHandler
 		Q00141_ShadowFoxPart3.class,
 		Q00142_FallenAngelRequestOfDawn.class,
 		Q00143_FallenAngelRequestOfDusk.class,
+		Q00144_PailakaInjuredDragon.class,
 		Q00146_TheZeroHour.class,
 		Q00147_PathtoBecominganEliteMercenary.class,
 		Q00148_PathtoBecominganExaltedMercenary.class,
