@@ -19,8 +19,10 @@
 package com.l2jserver.datapack.ai.npc.ArenaManager;
 
 import com.l2jserver.datapack.ai.npc.AbstractNpcAI;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.zone.ZoneId;
@@ -56,7 +58,13 @@ public class ArenaManager extends AbstractNpcAI {
 		super(ArenaManager.class.getSimpleName(), "ai/npc");
 		addStartNpc(ARENA_MANAGER);
 		addTalkId(ARENA_MANAGER);
-		addFirstTalkId(ARENA_MANAGER);
+		addFirstTalkId(ARENA_MANAGER);	
+		setCreatureSee(e -> new TerminateReturn(!handleEvent(e.getObserver(), e.getObserved()), false, false));
+	}
+			
+	private boolean handleEvent(L2Character observer, L2Character observed) {
+		_log.info("Guard " + observer + " is watching " + observed);
+		return true;
 	}
 	
 	@Override

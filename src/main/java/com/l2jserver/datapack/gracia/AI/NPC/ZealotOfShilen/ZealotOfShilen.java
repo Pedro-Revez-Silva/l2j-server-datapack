@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
 
 /**
  * Zealot of Shilen AI.
@@ -42,6 +43,12 @@ public final class ZealotOfShilen extends AbstractNpcAI {
 		addSpawnId(ZEALOT);
 		addSpawnId(GUARDS);
 		addFirstTalkId(GUARDS);
+		setCreatureSee(e -> new TerminateReturn(!handleEvent(e.getObserver(), e.getObserved()), false, false));
+	}
+	
+	private boolean handleEvent(L2Character observer, L2Character observed) {
+		_log.info("Guard " + observer + " is watching " + observed);
+		return true;
 	}
 	
 	@Override
