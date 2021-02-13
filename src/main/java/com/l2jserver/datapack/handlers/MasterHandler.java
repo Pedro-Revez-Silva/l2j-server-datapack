@@ -199,45 +199,6 @@ import com.l2jserver.datapack.handlers.itemhandlers.TeleportBookmark;
 import com.l2jserver.datapack.handlers.punishmenthandlers.BanHandler;
 import com.l2jserver.datapack.handlers.punishmenthandlers.ChatBanHandler;
 import com.l2jserver.datapack.handlers.punishmenthandlers.JailHandler;
-import com.l2jserver.datapack.handlers.targethandlers.Area;
-import com.l2jserver.datapack.handlers.targethandlers.AreaCorpseMob;
-import com.l2jserver.datapack.handlers.targethandlers.AreaFriendly;
-import com.l2jserver.datapack.handlers.targethandlers.AreaSummon;
-import com.l2jserver.datapack.handlers.targethandlers.Aura;
-import com.l2jserver.datapack.handlers.targethandlers.AuraCorpseMob;
-import com.l2jserver.datapack.handlers.targethandlers.AuraFriendly;
-import com.l2jserver.datapack.handlers.targethandlers.AuraUndeadEnemy;
-import com.l2jserver.datapack.handlers.targethandlers.BehindArea;
-import com.l2jserver.datapack.handlers.targethandlers.BehindAura;
-import com.l2jserver.datapack.handlers.targethandlers.Clan;
-import com.l2jserver.datapack.handlers.targethandlers.ClanMember;
-import com.l2jserver.datapack.handlers.targethandlers.CommandChannel;
-import com.l2jserver.datapack.handlers.targethandlers.CorpseClan;
-import com.l2jserver.datapack.handlers.targethandlers.CorpseMob;
-import com.l2jserver.datapack.handlers.targethandlers.Enemy;
-import com.l2jserver.datapack.handlers.targethandlers.EnemyNot;
-import com.l2jserver.datapack.handlers.targethandlers.EnemyOnly;
-import com.l2jserver.datapack.handlers.targethandlers.EnemySummon;
-import com.l2jserver.datapack.handlers.targethandlers.FlagPole;
-import com.l2jserver.datapack.handlers.targethandlers.FrontArea;
-import com.l2jserver.datapack.handlers.targethandlers.FrontAura;
-import com.l2jserver.datapack.handlers.targethandlers.Ground;
-import com.l2jserver.datapack.handlers.targethandlers.Holy;
-import com.l2jserver.datapack.handlers.targethandlers.One;
-import com.l2jserver.datapack.handlers.targethandlers.OwnerPet;
-import com.l2jserver.datapack.handlers.targethandlers.Party;
-import com.l2jserver.datapack.handlers.targethandlers.PartyClan;
-import com.l2jserver.datapack.handlers.targethandlers.PartyMember;
-import com.l2jserver.datapack.handlers.targethandlers.PartyNotMe;
-import com.l2jserver.datapack.handlers.targethandlers.PartyOther;
-import com.l2jserver.datapack.handlers.targethandlers.PcBody;
-import com.l2jserver.datapack.handlers.targethandlers.Pet;
-import com.l2jserver.datapack.handlers.targethandlers.Self;
-import com.l2jserver.datapack.handlers.targethandlers.Servitor;
-import com.l2jserver.datapack.handlers.targethandlers.Summon;
-import com.l2jserver.datapack.handlers.targethandlers.Target;
-import com.l2jserver.datapack.handlers.targethandlers.TargetParty;
-import com.l2jserver.datapack.handlers.targethandlers.Unlockable;
 import com.l2jserver.datapack.handlers.telnethandlers.ChatsHandler;
 import com.l2jserver.datapack.handlers.telnethandlers.DebugHandler;
 import com.l2jserver.datapack.handlers.telnethandlers.HelpHandler;
@@ -278,7 +239,6 @@ import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
 import com.l2jserver.gameserver.handler.PunishmentHandler;
-import com.l2jserver.gameserver.handler.TargetHandler;
 import com.l2jserver.gameserver.handler.TelnetHandler;
 import com.l2jserver.gameserver.handler.UserCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
@@ -507,48 +467,6 @@ public class MasterHandler {
 		SiegeStatus.class,
 	};
 	
-	private static final Class<?>[] TARGET_HANDLERS = {
-		Area.class,
-		AreaCorpseMob.class,
-		AreaFriendly.class,
-		AreaSummon.class,
-		Aura.class,
-		AuraCorpseMob.class,
-		AuraFriendly.class,
-		AuraUndeadEnemy.class,
-		BehindArea.class,
-		BehindAura.class,
-		Clan.class,
-		ClanMember.class,
-		CommandChannel.class,
-		CorpseClan.class,
-		CorpseMob.class,
-		Enemy.class,
-		EnemyNot.class,
-		EnemyOnly.class,
-		EnemySummon.class,
-		FlagPole.class,
-		FrontArea.class,
-		FrontAura.class,
-		Ground.class,
-		Holy.class,
-		One.class,
-		OwnerPet.class,
-		Party.class,
-		PartyClan.class,
-		PartyMember.class,
-		PartyNotMe.class,
-		PartyOther.class,
-		PcBody.class,
-		Pet.class,
-		Self.class,
-		Servitor.class,
-		Summon.class,
-		Target.class,
-		TargetParty.class,
-		Unlockable.class,
-	};
-	
 	private static final Class<?>[] TELNET_HANDLERS = {
 		ChatsHandler.class,
 		DebugHandler.class,
@@ -596,7 +514,6 @@ public class MasterHandler {
 		loadHandlers(ItemHandler.getInstance(), ITEM_HANDLERS);
 		loadHandlers(PunishmentHandler.getInstance(), PUNISHMENT_HANDLERS);
 		loadHandlers(UserCommandHandler.getInstance(), USER_COMMAND_HANDLERS);
-		loadHandlers(TargetHandler.getInstance(), TARGET_HANDLERS);
 		loadHandlers(TelnetHandler.getInstance(), TELNET_HANDLERS);
 	}
 	

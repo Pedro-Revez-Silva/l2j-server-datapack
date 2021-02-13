@@ -61,19 +61,20 @@
 		</effects>
 	</skill>
 	<skill id="2005" levels="1" name="Nectar">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Summer Squash Event Skill -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6391" /> <!-- Nectar -->
+		<set name="itemConsumeId" val="6391" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="1000" />
+		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" /> <!-- FIXME: This should be OTHERS -->
+		<set name="targetType" val="OTHERS" />
 	</skill>
 	<skill id="2006" levels="1" name="Scroll: Enchant Weapon (Grade A)">
 		<set name="isMagic" val="2" />
@@ -868,16 +869,24 @@
 		</effects>
 	</skill>
 	<skill id="2065" levels="8" name="Box Key">
-		<table name="#effectPoints"> -1 -2 -3 -4 -5 -6 -7 -8 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -1 -2 -3 -4 -5 -6 -7 -8 </table>
+		<table name="#itemConsumeId"> 5197 5198 5199 5200 5201 5202 5203 5204 </table>
+		<table name="#magicLvl"> 1 10 20 30 40 50 60 70 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
-		<set name="magicLvl" val="1" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="109">
 			<target npcType="L2ChestInstance" />
 		</cond>
@@ -942,12 +951,14 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="affectLimit" val="9-10" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="800" />
 		<set name="icon" val="icon.etc_potion_red_i00" />
@@ -956,9 +967,11 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A3" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
-			<effect name="RandomizeHate" />
+			<effect name="RandomizeHate">
+				<param chance="100" />
+			</effect>
 			<effect name="Debuff">
 				<mul stat="runSpd" val="0.7" />
 			</effect>
@@ -1389,9 +1402,11 @@
 		</effects>
 	</skill>
 	<skill id="2098" levels="1" name="Harvesting">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="20" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
@@ -1399,7 +1414,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="CORPSE_MOB" />
+		<set name="targetType" val="NPC_BODY" />
 		<effects>
 			<effect name="Harvesting" />
 		</effects>

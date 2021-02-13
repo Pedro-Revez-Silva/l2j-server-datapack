@@ -20,6 +20,7 @@ package com.l2jserver.datapack.quests.TerritoryWarScripts;
 
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.l2jserver.datapack.quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
@@ -262,8 +263,8 @@ public class TerritoryWarSuperClass extends Quest {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon) {
-		if (Util.contains(targets, npc)) {
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, List<L2Object> targets, boolean isSummon) {
+		if (targets.contains(npc)) {
 			if (skill.getId() == 845) {
 				if (TerritoryWarManager.getInstance().getHQForClan(caster.getClan()) != npc) {
 					return super.onSkillSee(npc, caster, skill, targets, isSummon);

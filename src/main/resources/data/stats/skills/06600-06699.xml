@@ -19,7 +19,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="#physicalAttackPower" />
@@ -45,7 +45,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="#physicalAttackPower" />
@@ -71,7 +71,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="#physicalAttackPower" />
@@ -177,7 +177,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="#physicalAttackPower" />
@@ -205,7 +205,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="#physicalAttackPower" />
@@ -233,7 +233,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="#physicalAttackPower" />
@@ -339,7 +339,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="#magicalAttackPower" />
@@ -367,7 +367,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="#magicalAttackPower" />
@@ -395,7 +395,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="#magicalAttackPower" />
@@ -421,7 +421,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="#magicalAttackPower" />
@@ -447,7 +447,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="#magicalAttackPower" />
@@ -473,7 +473,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="#magicalAttackPower" />
@@ -515,18 +515,20 @@
 		</effects>
 	</skill>
 	<skill id="6619" levels="7" name="Maguen Power Strike">
-		<!-- Moving Spd. Is decreased by 90% for 10 seconds. -->
+		<!-- High Five Confirmed -->
 		<table name="#magicLvl"> 55 60 65 70 75 80 85 </table>
 		<table name="#mpConsume2"> 109 121 131 142 151 159 165 </table>
-		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
+		<table name="#physicalAttackPower"> 1832 2272 2751 3252 3752 4224 4640 </table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="30" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="500" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
@@ -536,10 +538,10 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 			<effect name="Debuff">
 				<mul stat="runSpd" val="0.1" />
@@ -706,16 +708,20 @@
 		</effects>
 	</skill>
 	<skill id="6626" levels="2" name="Energy of Life's Power">
+		<!-- High Five Confirmed -->
 		<!-- This skill only has one level, 2. -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="2000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="HpPerMax">
 				<param power="25" />
@@ -723,16 +729,20 @@
 		</effects>
 	</skill>
 	<skill id="6627" levels="3" name="Energy of Life's Highest Power">
+		<!-- High Five Confirmed -->
 		<!-- This skill only has one level, 3. -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="2000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="HpPerMax">
 				<param power="100" />
@@ -759,34 +769,42 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6629" levels="2" name="Energy of Mana's Power">
+	<skill id="6629" levels="1" name="Energy of Mana's Power">
+		<!-- High Five Confirmed -->
 		<!-- This skill only has one level, 2. -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="2000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="MpPerMax">
 				<param power="18" />
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6630" levels="3" name="Energy of Mana's Highest Power">
+	<skill id="6630" levels="1" name="Energy of Mana's Highest Power">
+		<!-- High Five Confirmed -->
 		<!-- This skill only has one level, 3. -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="2000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="MpPerMax">
 				<param power="100" />
@@ -1079,20 +1097,22 @@
 		</effects>
 	</skill>
 	<skill id="6642" levels="1" name="Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Kegor Skills -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="FIRE" />
 		<set name="castRange" val="650" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
-		<set name="attributeType" val="FIRE" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="83" />
 		<set name="operateType" val="DA1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
@@ -1103,20 +1123,22 @@
 		</effects>
 	</skill>
 	<skill id="6643" levels="1" name="Holy Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Kegor Skills -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="HOLY" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="HOLY" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="2319" />
@@ -1309,7 +1331,7 @@
 		<set name="mpConsume2" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="11599" />
@@ -1687,7 +1709,7 @@
 		<set name="mpConsume2" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="11599" />
@@ -1950,7 +1972,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="DispelBySlot">
 				<param dispel="PA_UP,9" />
@@ -1996,7 +2018,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.2" />
@@ -2024,11 +2046,11 @@
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="HpDrain">
 				<param power="131" />
-				<param drain="1.40" />
+				<param drain="1.4" />
 			</effect>
 			<effect name="Mp">
 				<param amount="-491" />
@@ -2094,7 +2116,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6602" />
@@ -2167,7 +2189,7 @@
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="#physicalAttackPower" />
@@ -2205,7 +2227,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="7000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="CallSkill">
 				<param skillId="6698" skillLevel="1" />

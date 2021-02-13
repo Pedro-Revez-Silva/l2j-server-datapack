@@ -19,9 +19,6 @@
 package com.l2jserver.datapack.handlers.effecthandlers.pump;
 
 import com.l2jserver.commons.util.Rnd;
-import com.l2jserver.gameserver.handler.ITargetTypeHandler;
-import com.l2jserver.gameserver.handler.TargetHandler;
-import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
@@ -31,7 +28,6 @@ import com.l2jserver.gameserver.model.events.impl.character.OnCreatureAttackAvoi
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.TargetType;
 import com.l2jserver.gameserver.util.Util;
 
@@ -61,27 +57,20 @@ public final class TriggerSkillByAvoid extends AbstractEffect {
 			return;
 		}
 		
-		final ITargetTypeHandler targetHandler = TargetHandler.getInstance().getHandler(_targetType);
-		if (targetHandler == null) {
-			_log.warning("Handler for target type: " + _targetType + " does not exist.");
-			return;
-		}
-		
 		if (Rnd.get(100) > _chance) {
 			return;
 		}
 		
-		final Skill triggerSkill = _skill.getSkill();
-		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, event.getTarget(), false, event.getAttacker());
-		
-		for (L2Object triggerTarget : targets) {
-			if ((triggerTarget == null) || !triggerTarget.isCharacter()) {
+		final var triggerSkill = _skill.getSkill();
+		final var targets = _targetType.getTargets(triggerSkill, event.getTarget(), event.getAttacker());
+		for (var object : targets) {
+			if ((object == null) || !object.isCharacter()) {
 				continue;
 			}
 			
-			final L2Character targetChar = (L2Character) triggerTarget;
-			if (!targetChar.isInvul()) {
-				event.getTarget().makeTriggerCast(triggerSkill, targetChar);
+			final var target = (L2Character) object;
+			if (!target.isInvul()) {
+				event.getTarget().makeTriggerCast(triggerSkill, target);
 			}
 		}
 	}

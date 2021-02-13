@@ -214,9 +214,11 @@
 		</effects>
 	</skill>
 	<skill id="3318" levels="1" name="Flag Display">
-		<!-- Flag Skill -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="85" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="180000" />
 		<set name="icon" val="icon.weapon_fort_flag_i00" />
 		<set name="isMagic" val="2" />
@@ -224,7 +226,7 @@
 		<set name="operateType" val="CA1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="FLAGPOLE" />
+		<set name="targetType" val="FORTRESS_FLAGPOLE" />
 		<cond>
 			<player canTakeFort="true" />
 		</cond>
@@ -352,11 +354,13 @@
 		</effects>
 	</skill>
 	<skill id="3328" levels="1" name="Double Stab">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="133" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1667" />
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="magicLvl" val="78" />
@@ -365,7 +369,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="11500" />
@@ -373,11 +377,13 @@
 		</effects>
 	</skill>
 	<skill id="3329" levels="1" name="Power Slash">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="133" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1667" />
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="magicLvl" val="78" />
@@ -386,7 +392,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="11500" />
@@ -394,13 +400,16 @@
 		</effects>
 	</skill>
 	<skill id="3330" levels="1" name="Air Blade">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="6-12" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectScope" val="FAN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-1" />
-		<set name="effectRange" val="80" />
+		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,80,150" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill3630" />
 		<set name="magicLvl" val="78" />
@@ -409,7 +418,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="15000" />
@@ -417,25 +426,28 @@
 		</effects>
 	</skill>
 	<skill id="3331" levels="1" name="Enslave">
-		<!-- Confirmed CT2.5 -->
-		<!-- <set name="abnormalLvl" val="3" /> -->
-		<!-- <set name="abnormalTime" val="30" /> -->
-		<!-- <set name="abnormalType" val="ATTACK_TIME_UP" /> -->
+		<!-- High Five Confirmed -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
+		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="10-10" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-1" />
-		<set name="effectRange" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill3631" />
-		<set name="rideState" val="NONE" />
-		<!-- <set name="isDebuff" val="true" /> -->
-		<!-- <set name="lvlBonusRate" val="1" /> -->
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume2" val="200" />
-		<set name="operateType" val="A1" /> <!-- Should be A2 -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="targetType" val="AURA" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="HpDrain">
 				<param power="200" />

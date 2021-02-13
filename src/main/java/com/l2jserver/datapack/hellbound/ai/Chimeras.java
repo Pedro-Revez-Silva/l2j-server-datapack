@@ -18,6 +18,8 @@
  */
 package com.l2jserver.datapack.hellbound.ai;
 
+import java.util.List;
+
 import com.l2jserver.datapack.ai.npc.AbstractNpcAI;
 import com.l2jserver.datapack.hellbound.HellboundEngine;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -75,9 +77,9 @@ public final class Chimeras extends AbstractNpcAI {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon) {
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, List<L2Object> targets, boolean isSummon) {
 		if ((skill.getId() == BOTTLE) && !npc.isDead()) {
-			if ((targets.length > 0) && (targets[0] == npc)) {
+			if (!targets.isEmpty() && (targets.get(0) == npc)) {
 				if (npc.getCurrentHp() < (npc.getMaxHp() * 0.1)) {
 					if (HellboundEngine.getInstance().getLevel() == 7) {
 						HellboundEngine.getInstance().updateTrust(3, true);

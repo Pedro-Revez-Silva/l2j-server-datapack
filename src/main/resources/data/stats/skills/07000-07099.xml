@@ -79,40 +79,67 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="affectObject" val="FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="PARTY" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="655" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="74" />
-		<set name="mpConsume2" val="217" />
 		<set name="mpConsume1" val="55" />
+		<set name="mpConsume2" val="217" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="CLAN_MEMBER" />
+		<set name="targetType" val="TARGET" />
+		<!--
+		<cond msgId="113" addName="1">
+			<target myPledge="true" />
+		</cond>
+		 -->
 		<effects>
 			<effect name="Buff">
-				<add stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
+				<add stat="absorbDam" val="9" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="7006" levels="13" name="The Love of Pa'agrio">
-		<!-- TODO: Needs to be done -->
+		<!-- High Five Confirmed -->
 		<!-- This skill only has one level, 13. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
+		<set name="affectObject" val="FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="PLEDGE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="655" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" />
-		<set name="mpConsume2" val="272" />
+		<set name="magicLvl" val="74" />
+		<set name="mpConsume1" val="48" />
+		<set name="mpConsume2" val="217" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="TARGET" />
+		<!--
+		<cond msgId="113" addName="1">
+			<target myPledge="true" />
+		</cond>
+		 -->
+		<effects>
+			<effect name="TickHp">
+				<param power="58" />
+				<param ticks="1" />
+				<param mode="DIFF" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7007" levels="4" name="Greater Seal of Flame">
 		<!-- Needs to be done -->
@@ -136,130 +163,212 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7008" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7009" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7010" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7011" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7012" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7013" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7014" levels="1" name="Test - Critical Damage Up">
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<mul stat="defCritDamage" val="1.1" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7015" levels="1" name="Test - Critical Damage Down">
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Debuff">
+				<mul stat="defCritDamage" val="0.5" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7016" levels="1" name="Test - Critical Damage Up">
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="defCritDamage" val="100" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7017" levels="1" name="Test - Critical Damage Down">
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Debuff">
+				<sub stat="defCritDamage" val="200" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7018" levels="1" name="Test - Critical Rate Up">
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<mul stat="defCritRate" val="1.1" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7019" levels="1" name="Test - Critical Rate Down">
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Debuff">
+				<mul stat="defCritRate" val="0.5" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7020" levels="1" name="Test - Critical Rate Up">
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="defCritRate" val="100" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7021" levels="1" name="Test - Critical Rate Down">
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Debuff">
+				<sub stat="defCritRate" val="200" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7022" levels="1" name="Test - Find Hidden Door">
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="6-12" />
+		<set name="affectObject" val="HIDDEN_PLACE" />
+		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="STATIC_OBJECT_SCOPE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="FIRE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="DetectHiddenObjects" />
+		</effects>
 	</skill>
 	<skill id="7023" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7024" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7025" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7026" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7027" levels="1" name="not_used">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7028" levels="1" name="For Stationary NPCs">
-		<!-- TODO: Implement me! -->
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<effects>
+			<effect name="BlockBuff" />
 			<effect name="DefenceTrait">
 				<param DERANGEMENT="100" />
 			</effect>
@@ -1409,10 +1518,12 @@
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-12" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
 		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="300" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="1" />
@@ -1422,7 +1533,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
 		<effects>
 			<effect name="Stun" />

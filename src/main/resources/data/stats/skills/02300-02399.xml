@@ -786,18 +786,22 @@
 		</cond>
 	</skill>
 	<skill id="2343" levels="1" name="Gate Key of Kamael">
-		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<!-- High Five Confirmed -->
+		<set name="afterEffectId" val="1" /> <!-- TODO: Hack to keep doors opened -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9703" /> <!-- Gate Key: Kamael -->
+		<set name="itemConsumeId" val="9703" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200002" />
 		</cond>
@@ -808,18 +812,22 @@
 		</effects>
 	</skill>
 	<skill id="2344" levels="1" name="Gate Key of Records">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9704" /> <!-- Gate Key: Archives -->
+		<set name="itemConsumeId" val="9704" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200005" />
 		</cond>
@@ -830,18 +838,22 @@
 		</effects>
 	</skill>
 	<skill id="2345" levels="1" name="Gate Key of Observation">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9705" /> <!-- Gate Key: Observation -->
+		<set name="itemConsumeId" val="9705" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200009" />
 		</cond>
@@ -852,18 +864,22 @@
 		</effects>
 	</skill>
 	<skill id="2346" levels="1" name="Gate Key of Specula">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9706" /> <!-- Gate Key: Spicula -->
+		<set name="itemConsumeId" val="9706" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200003" />
 		</cond>
@@ -874,18 +890,22 @@
 		</effects>
 	</skill>
 	<skill id="2347" levels="1" name="Enuma Elish Key">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9707" /> <!-- Gate Key: Harkilgamed -->
+		<set name="itemConsumeId" val="9707" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200007" />
 		</cond>
@@ -896,18 +916,22 @@
 		</effects>
 	</skill>
 	<skill id="2348" levels="1" name="Prahnah Key">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9708" /> <!-- Gate Key: Rodenpicula -->
+		<set name="itemConsumeId" val="9708" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200008" />
 		</cond>
@@ -918,18 +942,22 @@
 		</effects>
 	</skill>
 	<skill id="2349" levels="1" name="Gate Key of Arvitaire">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9709" /> <!-- Gate Key: Arviterre -->
+		<set name="itemConsumeId" val="9709" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200010" />
 		</cond>
@@ -940,18 +968,22 @@
 		</effects>
 	</skill>
 	<skill id="2350" levels="1" name="Leopold Key">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9710" /> <!-- Gate Key: Katenar -->
+		<set name="itemConsumeId" val="9710" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200006" />
 		</cond>
@@ -962,18 +994,22 @@
 		</effects>
 	</skill>
 	<skill id="2351" levels="1" name="Gate Key of Prediction">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9711" /> <!-- Gate Key: Prediction -->
+		<set name="itemConsumeId" val="9711" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200011" />
 		</cond>
@@ -984,18 +1020,22 @@
 		</effects>
 	</skill>
 	<skill id="2352" levels="1" name="Gate Key of Nornil">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
-		<set name="castRange" val="200" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9712" /> <!-- Gate Key: Massive Cavern -->
+		<set name="itemConsumeId" val="9712" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="16200012" />
 		</cond>
@@ -1006,14 +1046,18 @@
 		</effects>
 	</skill>
 	<skill id="2353" levels="1" name="Nornil's Power">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="HIDDEN_PLACE" />
 		<set name="affectRange" val="600" />
-		<set name="hitTime" val="200" />
+		<set name="affectScope" val="STATIC_OBJECT_SCOPE" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="9713" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
 				<player instanceId="11" />
@@ -1025,19 +1069,21 @@
 		</effects>
 	</skill>
 	<skill id="2354" levels="1" name="Gate Key of Darkness">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9685" /> <!-- Gate Key: Darkness -->
+		<set name="itemConsumeId" val="9685" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="20260001" />
 		</cond>
@@ -1048,19 +1094,21 @@
 		</effects>
 	</skill>
 	<skill id="2355" levels="1" name="Gate Key of Destruction">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9686" /> <!-- Gate Key: Destruction -->
+		<set name="itemConsumeId" val="9686" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="20260006" />
 		</cond>
@@ -1071,19 +1119,21 @@
 		</effects>
 	</skill>
 	<skill id="2356" levels="1" name="Gate Key of Blood">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9687" /> <!-- Gate Key: Blood -->
+		<set name="itemConsumeId" val="9687" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="20260002" />
 		</cond>
@@ -1172,19 +1222,21 @@
 		</effects>
 	</skill>
 	<skill id="2362" levels="1" name="Prison Gate Key">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10015" /> <!-- Prison Gate Key -->
+		<set name="itemConsumeId" val="10015" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="24220009,24220011,24220012,24220014,24220015,24220016,24220017,24220019" />
 		</cond>
@@ -1195,19 +1247,21 @@
 		</effects>
 	</skill>
 	<skill id="2363" levels="1" name="Underground Warehouse Key">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10016" /> <!-- Underground Warehouse Key -->
+		<set name="itemConsumeId" val="10016" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="24220040" />
 		</cond>
@@ -1265,19 +1319,21 @@
 		</effects>
 	</skill>
 	<skill id="2366" levels="1" name="Blue Coral Key">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9698" /> <!-- Blue Coral Key -->
+		<set name="itemConsumeId" val="9698" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="24220020" />
 		</cond>
@@ -1288,19 +1344,21 @@
 		</effects>
 	</skill>
 	<skill id="2367" levels="1" name="Red Coral Key">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9699" /> <!-- Red Coral Key -->
+		<set name="itemConsumeId" val="9699" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="24220022" />
 		</cond>

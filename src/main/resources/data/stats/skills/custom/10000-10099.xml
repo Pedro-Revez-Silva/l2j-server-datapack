@@ -34,7 +34,11 @@
 	</skill>
 	<skill id="10002" levels="1" name="Custom Trap skill">
 		<!-- Use this skill if you want to handle trap activation in scripts(example Seed of Destruction Spawn Traps) -->
-		<set name="targetType" val="AURA" />
+		<set name="affectLimit" val="6-12" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="operateType" val="P" />
 	</skill>

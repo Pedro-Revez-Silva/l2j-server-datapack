@@ -515,19 +515,34 @@
 		</effects>
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="-2" />
 		<set name="effectPoint" val="1000" />
+		<set name="effectRange" val="-2" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="OTHERS" />
+		<cond>
+			<and>
+				<target myParty="EXCEPT_ME" />
+				<player callPc="true" />
+			</and>
+		</cond>
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
 			</not>
 		</cond>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="8330" levels="1" name="Release Seal on Agathion - Dawn">
 		<!-- Confirmed CT2.5 -->
@@ -544,21 +559,26 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel">
-		<!-- Confirmed CT2.5 -->
+	<skill id="8331" levels="1" name="Blue Talisman of Buff Cancel">
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="5-5" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="150" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="-532" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="55" />
-		<set name="mpConsume2" val="40" />
 		<set name="mpConsume1" val="10" />
+		<set name="mpConsume2" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="DispelByCategory">
 				<param slot="BUFF" rate="25" max="5" />
@@ -1022,21 +1042,23 @@
 		</effects>
 	</skill>
 	<skill id="8357" levels="1" name="Einhasad's Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="5-15" />
-		<set name="affectRange" val="300" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectScope" val="FAN" />
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
-		<set name="fanRange" val="0,0,300,900" />
+		<set name="fanRange" val="0,0,300,90" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1300" />
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="StaticDamage">
 				<param power="10000" />
@@ -1127,26 +1149,36 @@
 		</cond>
 	</skill>
 	<skill id="8363" levels="1" name="Beast Training - Accompany">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="icon.skill8363" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="icon.skill8364" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
 		<set name="icon" val="icon.armor_t93_ue_i00" />
@@ -1300,15 +1332,20 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8378" levels="1" name="Beast Training - Release All">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="icon.skill8378" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>

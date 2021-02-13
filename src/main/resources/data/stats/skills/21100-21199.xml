@@ -458,7 +458,8 @@
 		</effects>
 	</skill>
 	<skill id="21120" levels="1" name="Jack O'Lantern Card">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="500" />
@@ -466,11 +467,13 @@
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelayLock" val="true" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="21121" levels="1" name="Rotten Jack O'Lantern Card">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="500" />
@@ -478,8 +481,9 @@
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelayLock" val="true" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="21122" levels="1" name="Blessing of Skooldy : Protection of Darkness">
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
@@ -857,12 +861,16 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21136" levels="1" name="Authority of Golden Jack O'Lantern Mask">
-		<!-- Increase max HP 40%, max MP 40%, max CP 40%, Physical Def. 30%, Magic Def. 30%, Spd. 30% of party members for 10 minutes. Reuse Delay 1 hour. -->
+	<skill id="21136" levels="1" name="Golden Jack O'Lantern's Authority">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="abnormalType" val="BR_EVENT_BUF10" />
+		<set name="affectObject" val="FRIEND" />
+		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="PARTY" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="buffProtectLevel" val="1" />
 		<set name="effectPoint" val="486" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="BranchSys.icon.br_golden_jack0_mask_i00" />
@@ -871,15 +879,19 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<effects>
-			<effect name="MaxHp">
+			<effect name="Buff">
+				<mul stat="mDef" val="1.3" />
+			</effect>
+			<effect name="MaxCp">
 				<param power="40" />
 				<param type="PER" />
 			</effect>
-			<effect name="MaxCp">
+			<effect name="MaxHp">
 				<param power="40" />
 				<param type="PER" />
 			</effect>
@@ -889,8 +901,9 @@
 			</effect>
 			<effect name="Buff">
 				<mul stat="pDef" val="1.3" />
-				<mul stat="mDef" val="1.3" />
-				<mul stat="runSpd" val="1.3" />
+			</effect>
+			<effect name="Buff">
+				<add stat="runSpd" val="30" />
 			</effect>
 		</effects>
 	</skill>
@@ -2254,9 +2267,11 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="activateRate" val="0" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="1000" />
 		<set name="affectScope" val="PARTY" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="buffProtectLevel" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="486" />
 		<set name="effectRange" val="600" />
@@ -2265,13 +2280,14 @@
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20976" /> <!-- Proof of a Warrior -->
+		<set name="itemConsumeId" val="20976" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<effects>
 			<effect name="Buff">
@@ -2287,7 +2303,7 @@
 				<mul stat="pDef" val="1.3" />
 			</effect>
 			<effect name="Buff">
-				<add stat="runSpd" val="30.0" />
+				<add stat="runSpd" val="30" />
 			</effect>
 		</effects>
 	</skill>

@@ -59,7 +59,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="critDmg" val="1.15" />
@@ -108,7 +108,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="mAtk" val="1.1" />
@@ -311,22 +311,38 @@
 		</effects>
 	</skill>
 	<skill id="6120" levels="1" name="Santa Claus' Reward">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="EVENT_SANTA_REWARD" />
+		<set name="affectObject" val="ALL" />
+		<set name="affectRange" val="400" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
-			<effect name="MaxHp">
+			<effect name="Buff">
+				<mul stat="critDmg" val="1.15" />
+			</effect>
+			<effect name="Buff">
+				<add stat="critRate" val="5" />
+			</effect>
+			<effect name="Buff">
+				<add stat="mCritRate" val="2" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.15" />
+			</effect>
+			<effect name="MaxCp">
 				<param power="10" />
 				<param type="PER" />
 			</effect>
-			<effect name="MaxCp">
+			<effect name="MaxHp">
 				<param power="10" />
 				<param type="PER" />
 			</effect>
@@ -335,12 +351,10 @@
 				<param type="PER" />
 			</effect>
 			<effect name="Buff">
-				<add stat="runSpd" val="15" />
 				<mul stat="pAtk" val="1.1" />
-				<mul stat="mAtk" val="1.15" />
-				<add stat="critRate" val="50" />
-				<mul stat="critDmg" val="1.15" />
-				<add stat="mCritRate" val="2" />
+			</effect>
+			<effect name="Buff">
+				<add stat="runSpd" val="15" />
 			</effect>
 		</effects>
 	</skill>
@@ -416,40 +430,42 @@
 		</cond>
 	</skill>
 	<skill id="6125" levels="1" name="Paralysis">
-		<!-- Summon Binding Cubic Skill Effect -->
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<!-- Summon Binding Cubic Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="PARALYZE" />
 		<effects>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 		</effects>
 	</skill>
 	<skill id="6126" levels="1" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="PARALYZE" />
 		<effects>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 		</effects>
 	</skill>
 	<skill id="6127" levels="1" name="Anti-limit">
@@ -528,7 +544,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<set name="trait" val="SHOCK" />
 		<effects>
 			<effect name="Stun" />
@@ -877,11 +893,13 @@
 		</effects>
 	</skill>
 	<skill id="6149" levels="1" name="Kasha's Betrayal">
-		<!-- Kasha's Betrayal. For 15 minutes, decreases P. Atk./P. Def./moving speed by 50%. -->
-		<!-- Only when a eye explode -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="900" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="2000" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
@@ -889,11 +907,15 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Debuff">
 				<mul stat="pAtk" val="0.5" />
+			</effect>
+			<effect name="Debuff">
 				<mul stat="pDef" val="0.5" />
+			</effect>
+			<effect name="Debuff">
 				<mul stat="runSpd" val="0.5" />
 			</effect>
 		</effects>
@@ -1200,11 +1222,11 @@
 		</effects>
 	</skill>
 	<skill id="6172" levels="1" name="Presentation - Tyranno">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SIGNAL_A" />
-		<set name="activateRate" val="-1" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1000" />
 		<set name="effectRange" val="400" />
@@ -1212,7 +1234,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="2320" />
@@ -1576,7 +1598,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="#physicalAttackPower" />

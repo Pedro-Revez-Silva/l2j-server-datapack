@@ -18,6 +18,8 @@
  */
 package com.l2jserver.datapack.ai.group_template;
 
+import java.util.List;
+
 import com.l2jserver.datapack.ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2Object;
@@ -218,9 +220,9 @@ public final class MonasteryOfSilence extends AbstractNpcAI {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon) {
-		if (skill.hasEffectType(L2EffectType.AGGRESSION) && (targets.length != 0)) {
-			for (L2Object obj : targets) {
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, List<L2Object> targets, boolean isSummon) {
+		if (skill.hasEffectType(L2EffectType.AGGRESSION)) {
+			for (var obj : targets) {
 				if (obj.equals(npc)) {
 					broadcastNpcSay(npc, Say2.NPC_ALL, DIVINITY_MSG[getRandom(DIVINITY_MSG.length)], caster.getName());
 					addAttackDesire(npc, caster);

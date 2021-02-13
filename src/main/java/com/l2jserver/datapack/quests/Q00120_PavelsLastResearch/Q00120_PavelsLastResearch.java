@@ -18,6 +18,8 @@
  */
 package com.l2jserver.datapack.quests.Q00120_PavelsLastResearch;
 
+import java.util.List;
+
 import com.l2jserver.datapack.quests.Q00114_ResurrectionOfAnOldManager.Q00114_ResurrectionOfAnOldManager;
 import com.l2jserver.gameserver.enums.audio.Sound;
 import com.l2jserver.gameserver.model.L2Object;
@@ -918,7 +920,7 @@ public final class Q00120_PavelsLastResearch extends Quest {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, L2Object[] targets, boolean isSummon) {
+	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, List<L2Object> targets, boolean isSummon) {
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isStarted()) {
 			final Skill npcDefault = NPC_DEFAULT.getSkill();

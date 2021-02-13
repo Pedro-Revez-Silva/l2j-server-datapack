@@ -18,6 +18,8 @@
  */
 package com.l2jserver.datapack.ai.individual;
 
+import java.util.List;
+
 import com.l2jserver.datapack.ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -112,7 +114,7 @@ public class Knoriks extends AbstractNpcAI {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, L2Object[] targets, boolean isSummon) {
+	public String onSkillSee(L2Npc npc, L2PcInstance player, Skill skill, List<L2Object> targets, boolean isSummon) {
 		if ((getRandom(100) < 10) && (!npc.isCastingNow()) && (!npc.isInsideRadius(player, 250, false, false))) {
 			addSkillCastDesire(npc, player, DARK_WIND, 1000000L);
 		}

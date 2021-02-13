@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6800" levels="1" name="Presentation - Yellow Portal Ray">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
@@ -9,6 +10,7 @@
 	</skill>
 	<skill id="6801" levels="1" name="Presentation - Yellow-Green Portal Ray">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
@@ -20,12 +22,13 @@
 		<set name="abnormalTime" val="86400" />
 		<set name="abnormalType" val="HIDE" />
 		<set name="abnormalVisualEffect" val="STEALTH" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="679" />
 		<set name="icon" val="icon.skill0922" />
 		<set name="magicLvl" val="-2" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Hide" />
 		</effects>
@@ -35,6 +38,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -43,7 +47,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="pAtkSpd" val="1.33" />
@@ -55,6 +59,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_UP" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -63,7 +68,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<add stat="runSpd" val="33" />
@@ -75,6 +80,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MA_UP" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -83,7 +89,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="mAtk" val="1.75" />
@@ -95,6 +101,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -103,7 +110,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="mAtkSpd" val="1.3" />
@@ -115,6 +122,7 @@
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -123,7 +131,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<sub stat="cancel" val="53" />
@@ -135,6 +143,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -143,7 +152,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.15" />
@@ -155,6 +164,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="HIT_UP" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -163,7 +173,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<add stat="accCombat" val="4" />
@@ -175,6 +185,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -183,7 +194,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="critRate" val="1.3" />
@@ -195,6 +206,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -203,7 +215,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="critDmg" val="1.35" />
@@ -215,6 +227,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BERSERKER" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
@@ -223,13 +236,19 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="Buff">
-				<mul stat="mAtk" val="1.16" />
+				<mul stat="pAtkSpd" val="1.08" />
+			</effect>
+			<effect name="Buff">
+				<sub stat="rEvas" val="4" />
 			</effect>
 			<effect name="Buff">
 				<mul stat="mAtkSpd" val="1.08" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.16" />
 			</effect>
 			<effect name="Buff">
 				<mul stat="mDef" val="0.84" />
@@ -238,13 +257,7 @@
 				<mul stat="pAtk" val="1.08" />
 			</effect>
 			<effect name="Buff">
-				<sub stat="pAtkSpd" val="4" />
-			</effect>
-			<effect name="Buff">
 				<mul stat="pDef" val="0.92" />
-			</effect>
-			<effect name="Buff">
-				<mul stat="rEvas" val="1.08" />
 			</effect>
 			<effect name="Buff">
 				<add stat="runSpd" val="8" />
@@ -253,54 +266,58 @@
 	</skill>
 	<skill id="6813" levels="8" name="Focus Sonic">
 		<!-- High Five Confirmed -->
+		<table name="#focusEnergyCharge"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
-		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="324">
-			<not>
-				<player Charges="#maxCharges" />
-			</not>
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="DUAL,SWORD,BLUNT" />
+				<player Charges="#focusEnergyCharge" />
+			</and>
 		</cond>
 		<effects>
 			<effect name="FocusEnergy">
-				<param charge="#maxCharges" />
+				<param charge="#focusEnergyCharge" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6814" levels="8" name="Focus Force">
 		<!-- High Five Confirmed -->
+		<table name="#focusEnergyCharge"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
-		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="324">
-			<not>
-				<player Charges="#maxCharges" />
-			</not>
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="DUALFIST" />
+				<player Charges="#focusEnergyCharge" />
+			</and>
 		</cond>
 		<effects>
 			<effect name="FocusEnergy">
-				<param charge="#maxCharges" />
+				<param charge="#focusEnergyCharge" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6815" levels="16" name="Deadly Poison">
 		<!-- High Five Confirmed -->
-		<!-- "Poison seeps deeper and for 10 seconds, 800 HP is decreased every second. If not treated, the poison will worsen." -->
 		<table name="#magicLvl"> 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 </table>
-		<table name="#power"> -330 -370 -400 -440 -480 -520 -560 -600 -640 -680 -720 -760 -780 -780 -800 -800 </table>
-		<table name="#skillLevel"> 2 3 4 5 6 7 8 9 10 11 12 13 14 15 15 16 </table>
+		<table name="#tickHpPower"> -330 -370 -400 -440 -480 -520 -560 -600 -640 -680 -720 -760 -760 -780 -780 -800 </table>
+		<table name="#skillLevel"> 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 16 </table>
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="icon" val="icon.skill6815" />
 		<set name="isDebuff" val="true" />
@@ -313,8 +330,9 @@
 		<set name="trait" val="POISON" />
 		<effects>
 			<effect name="TickHp">
-				<param power="#power" />
+				<param power="#tickHpPower" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 		<endEffects>
@@ -325,13 +343,14 @@
 	</skill>
 	<skill id="6816" levels="16" name="Deadly Bleed">
 		<!-- High Five Confirmed -->
-		<!-- "Bleed becomes deeper and for 10 seconds, 800 HP is decreased every second. If not treated, the bleed will worsen." -->
 		<table name="#magicLvl"> 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 </table>
-		<table name="#power"> -330 -370 -400 -440 -480 -520 -560 -600 -640 -680 -720 -760 -780 -780 -800 -800 </table>
+		<table name="#tickHpPower"> -330 -370 -400 -440 -480 -520 -560 -600 -640 -680 -720 -760 -780 -780 -800 -800 </table>
 		<table name="#skillLevel"> 2 3 4 5 6 7 8 9 10 11 12 13 14 15 15 16 </table>
+		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="icon" val="icon.skill6816" />
 		<set name="isDebuff" val="true" />
@@ -341,10 +360,12 @@
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<set name="trait" val="BLEED" />
 		<effects>
 			<effect name="TickHp">
-				<param power="#power" />
+				<param power="#tickHpPower" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 		<endEffects>
@@ -354,15 +375,16 @@
 		</endEffects>
 	</skill>
 	<skill id="6817" levels="1" name="Arena HP Recovery">
+		<!-- High Five Confirmed -->
 		<!-- Arena Skill -->
-		<set name="blockedInOlympiad" val="true" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
-		<set name="effectPoint" val="562" />
 		<set name="effectRange" val="900" />
-		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="TARGET" />
 		<effects>
 			<effect name="HpPerMax">
 				<param power="100" />
@@ -374,23 +396,26 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="RANGE" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
-		<set name="mpConsume2" val="60" />
 		<set name="mpConsume1" val="15" />
+		<set name="mpConsume2" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<mul stat="pAtk" val="1.3" />
+				<mul stat="pAtkSpd" val="1.1" />
 			</effect>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.1" />
+				<mul stat="pAtk" val="1.3" />
 			</effect>
 		</effects>
 	</skill>
@@ -399,6 +424,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="300" />
 		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
@@ -407,16 +434,16 @@
 		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill4038" />
-		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
-		<set name="mpConsume2" val="60" />
 		<set name="mpConsume1" val="15" />
+		<set name="mpConsume2" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="15000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="120" />
@@ -431,15 +458,18 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="RANGE" />
 		<set name="effectPoint" val="100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1800" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="30" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="pDef" val="1.2" />
@@ -451,12 +481,12 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="4" />
 		<set name="abnormalType" val="PD_DOWN" />
-		<set name="activateRate" val="80" />
 		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="140" />
 		<set name="effectPoint" val="-347" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
@@ -485,6 +515,7 @@
 		<set name="castRange" val="140" />
 		<set name="effectPoint" val="-347" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
@@ -508,7 +539,9 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DMG_SHIELD" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="438" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0086" />
 		<set name="isMagic" val="1" />
@@ -525,18 +558,20 @@
 	</skill>
 	<skill id="6824" levels="1" name="Piercing Storm">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="219" />
@@ -545,18 +580,20 @@
 	</skill>
 	<skill id="6825" levels="2" name="Bleed">
 		<!-- High Five Confirmed -->
-		<table name="#hotValue"> -100 -120 </table>
-		<table name="#power"> 122 146 </table>
-		<set name="affectRange" val="200" />
+		<table name="#magicalAttackPower"> 122 146 </table>
+		<table name="#tickHpPower"> -100 -120 </table>
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="CON" />
-		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
@@ -566,14 +603,15 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 			<effect name="TickHp">
-				<param power="#hotValue" />
+				<param power="#tickHpPower" />
 				<param ticks="4" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 		<endEffects>
@@ -584,15 +622,17 @@
 	</skill>
 	<skill id="6826" levels="1" name="Critical Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="150" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6960" />
@@ -610,6 +650,7 @@
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill4111" />
 		<set name="isDebuff" val="true" />
@@ -619,11 +660,11 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
-			<effect name="Stun" />
 			<effect name="PhysicalAttack">
 				<param power="6960" />
 				<param criticalChance="30" />
 			</effect>
+			<effect name="Stun" />
 			<effect name="BlockBuff" />
 			<effect name="BlockDebuff" />
 			<effect name="BlockDamage">
@@ -642,19 +683,23 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1386" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="250" />
@@ -668,30 +713,97 @@
 		</effects>
 	</skill>
 	<skill id="6829" levels="1" name="Vampiric Attack">
-		<!-- none -->
-		<set name="effectPoint" val="-100" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="800" />
+		<set name="effectPoint" val="-655" />
+		<set name="effectRange" val="1200" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1234" />
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="84" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1500" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
+		<effects>
+			<effect name="HpDrain">
+				<param power="108" />
+				<param drain="40" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="6830" levels="1" name="Bleed">
-		<!-- "For 5 seconds, inflicts bleed and decreases 100 HP every second. Decreases the effect of recovery magic by 600." -->
+		<!-- High Five Confirmed -->
+		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="5" />
-		<set name="activateRate" val="80" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="CON" />
-		<set name="effectPoint" val="-100" />
+		<set name="castRange" val="800" />
+		<set name="effectPoint" val="-10000" />
+		<set name="effectRange" val="1200" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="84" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
+		<effects>
+			<effect name="HpDrain">
+				<param power="124" />
+				<param drain="40" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="healEffect" val="-5" />
+			</effect>
+			<effect name="TickHp">
+				<param power="100" />
+				<param ticks="4" />
+				<param mode="DIFF" />
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6816" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="6831" levels="1" name="Blood Burst">
-		<!-- none -->
-		<set name="effectPoint" val="-100" />
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
+		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-10000" />
+		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="84" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
+		<effects>
+			<effect name="MagicalAttack">
+				<param power="219" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="6832" levels="1" name="Summon Parasite Leech">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
@@ -700,33 +812,39 @@
 	</skill>
 	<skill id="6833" levels="1" name="Power Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="150" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6960" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6834" levels="1" name="Range Magic Attack">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="182" />
@@ -735,6 +853,8 @@
 	</skill>
 	<skill id="6835" levels="1" name="Summon Skeleton">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
@@ -752,6 +872,7 @@
 		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1500" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
@@ -771,16 +892,19 @@
 	</skill>
 	<skill id="6837" levels="1" name="Range Magic Attack">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="182" />
@@ -789,15 +913,18 @@
 	</skill>
 	<skill id="6838" levels="1" name="Self-destruction">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="800" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6960" />
@@ -805,20 +932,52 @@
 		</effects>
 	</skill>
 	<skill id="6839" levels="2" name="Power Attack">
-		<!-- none -->
-		<set name="effectPoint" val="-100" />
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<table name="#physicalAttackPower"> 13920 20880 </table>
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-10000" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ENEMY" />
+		<effects>
+			<effect name="PhysicalAttack">
+				<param power="#physicalAttackPower" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="6840" levels="1" name="Paralysis">
-		<!-- Temporarily inflicted with paralysis and cannot move. -->
-		<set name="abnormalTime" val="20" />
-		<set name="activateRate" val="80" />
+		<!-- High Five Confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
+		<set name="activateRate" val="50" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="300" />
+		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1170" />
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY_ONLY" />
+		<set name="trait" val="PARALYZE" />
+		<effects>
+			<effect name="Stun" />
+		</effects>
 	</skill>
 	<skill id="6841" levels="1" name="Summon Subordinate">
 		<!-- High Five Confirmed -->
@@ -893,7 +1052,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6960" />
@@ -902,15 +1061,17 @@
 	</skill>
 	<skill id="6845" levels="1" name="Power Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="12670" />
@@ -919,17 +1080,19 @@
 	</skill>
 	<skill id="6846" levels="1" name="Vampiric Claw">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="800" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="81" />
-		<set name="mpConsume2" val="98" />
 		<set name="mpConsume1" val="25" />
+		<set name="mpConsume2" val="98" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="HpDrain">
 				<param power="110" />
@@ -938,28 +1101,52 @@
 		</effects>
 	</skill>
 	<skill id="6847" levels="1" name="Self Heal">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="546" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume1" val="17" />
+		<set name="mpConsume2" val="63" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Heal">
+				<param power="1002" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="6848" levels="1" name="Summoner Appearance">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="546" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="5000" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6849" levels="1" name="Summoner Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="UNHOLY" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="82" />
 		<set name="mpConsume2" val="100" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="12936" />
@@ -968,15 +1155,18 @@
 	</skill>
 	<skill id="6850" levels="1" name="Self-destruction">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="800" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6335" />
@@ -985,15 +1175,17 @@
 	</skill>
 	<skill id="6851" levels="1" name="Power Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="12936" />
@@ -1002,17 +1194,19 @@
 	</skill>
 	<skill id="6852" levels="1" name="Magic Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="81" />
-		<set name="mpConsume2" val="63" />
 		<set name="mpConsume1" val="17" />
+		<set name="mpConsume2" val="63" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="110" />
@@ -1031,20 +1225,21 @@
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1069" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="82" />
-		<set name="mpConsume2" val="63" />
 		<set name="mpConsume1" val="17" />
+		<set name="mpConsume2" val="63" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ENEMY_ONLY" />
 		<set name="trait" val="SLEEP" />
 		<effects>
-			<effect name="Sleep" />
+			<effect name="Stun" />
 			<effect name="DefenceTrait">
 				<param SLEEP="100" />
 			</effect>
@@ -1062,14 +1257,15 @@
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill4047" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="82" />
-		<set name="mpConsume2" val="58" />
 		<set name="mpConsume1" val="15" />
+		<set name="mpConsume2" val="58" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ENEMY_ONLY" />
@@ -1080,15 +1276,17 @@
 	</skill>
 	<skill id="6855" levels="1" name="Magic Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="110" />
@@ -1096,23 +1294,40 @@
 		</effects>
 	</skill>
 	<skill id="6856" levels="1" name="Heal">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="546" />
+		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="82" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="TARGET" />
+		<effects>
+			<effect name="Heal">
+				<param power="1074" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="6857" levels="1" name="Power Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="UNHOLY" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
@@ -1123,6 +1338,7 @@
 		<!-- High Five Confirmed -->
 		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="546" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
@@ -1131,17 +1347,19 @@
 	</skill>
 	<skill id="6859" levels="1" name="Power Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="UNHOLY" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
@@ -1150,17 +1368,19 @@
 	</skill>
 	<skill id="6860" levels="1" name="Power Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="FIRE" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="FIRE" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="20168" />
@@ -1172,25 +1392,27 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="MEN" />
-		<!-- <set name="castRange" val="600" /> -->
-		<!-- <set name="effectRange" val="900" /> -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="83" />
-		<set name="mpConsume2" val="60" />
 		<set name="mpConsume1" val="15" />
+		<set name="mpConsume2" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<mul stat="pAtk" val="1.2" />
+				<mul stat="pAtkSpd" val="1.3" />
 			</effect>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.3" />
+				<mul stat="pAtk" val="1.2" />
 			</effect>
 		</effects>
 	</skill>
@@ -1200,10 +1422,12 @@
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="100" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0129" />
 		<set name="isDebuff" val="true" />
@@ -1212,7 +1436,7 @@
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6723" />
@@ -1220,6 +1444,7 @@
 			<effect name="TickHp">
 				<param power="-100" />
 				<param ticks="4" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 		<endEffects>
@@ -1235,11 +1460,14 @@
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
 		<set name="activateRate" val="80" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="600" />
+		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0129" />
 		<set name="isDebuff" val="true" />
@@ -1248,11 +1476,12 @@
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="TickHp">
 				<param power="-120" />
 				<param ticks="4" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 		<endEffects>
@@ -1262,9 +1491,15 @@
 		</endEffects>
 	</skill>
 	<skill id="6864" levels="1" name="Summon">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="546" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6865" levels="1" name="Poison">
 		<!-- High Five Confirmed -->
@@ -1272,18 +1507,21 @@
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="100" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skill0129" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6723" />
@@ -1291,6 +1529,7 @@
 			<effect name="TickHp">
 				<param power="-100" />
 				<param ticks="4" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 		<endEffects>
@@ -1301,15 +1540,17 @@
 	</skill>
 	<skill id="6866" levels="1" name="Vampiric Claw">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="800" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="800" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="HpDrain">
 				<param power="110" />
@@ -1319,16 +1560,19 @@
 	</skill>
 	<skill id="6867" levels="1" name="Magic Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="118" />
@@ -1336,22 +1580,31 @@
 		</effects>
 	</skill>
 	<skill id="6868" levels="1" name="Summon">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="546" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="A1" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6869" levels="1" name="Detonate">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="250" />
@@ -1360,17 +1613,19 @@
 	</skill>
 	<skill id="6870" levels="1" name="Vampiric Claw">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="800" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="800" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="83" />
-		<set name="mpConsume2" val="98" />
 		<set name="mpConsume1" val="25" />
+		<set name="mpConsume2" val="98" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="HpDrain">
 				<param power="110" />
@@ -1380,18 +1635,21 @@
 	</skill>
 	<skill id="6871" levels="1" name="Range Magic Attack">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="83" />
-		<set name="mpConsume2" val="96" />
 		<set name="mpConsume1" val="26" />
+		<set name="mpConsume2" val="96" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="118" />
@@ -1400,16 +1658,19 @@
 	</skill>
 	<skill id="6872" levels="1" name="Self-destruction">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="800" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="12670" />
@@ -1418,9 +1679,9 @@
 	</skill>
 	<skill id="6873" levels="2" name="Hex">
 		<!-- High Five Confirmed -->
-		<table name="#abnormalLvls"> 3 4 </table>
+		<table name="#abnormalLvl"> 3 4 </table>
 		<table name="#pDef"> 0.77 0.67 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="4" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="affectScope" val="SINGLE" />
@@ -1428,6 +1689,7 @@
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-299" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
@@ -1447,16 +1709,19 @@
 	</skill>
 	<skill id="6874" levels="1" name="Range Magic Attack">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="118" />
@@ -1465,16 +1730,19 @@
 	</skill>
 	<skill id="6875" levels="2" name="Poison">
 		<!-- High Five Confirmed -->
-		<table name="#dmg"> -120 -140 </table>
+		<table name="#tickHpPower"> -120 -140 </table>
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0129" />
 		<set name="isDebuff" val="true" />
@@ -1483,14 +1751,15 @@
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="122" />
 			</effect>
 			<effect name="TickHp">
-				<param power="#dmg" />
+				<param power="#tickHpPower" />
 				<param ticks="4" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 		<endEffects>
@@ -1501,15 +1770,17 @@
 	</skill>
 	<skill id="6876" levels="1" name="Power Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
@@ -1518,18 +1789,21 @@
 	</skill>
 	<skill id="6877" levels="1" name="Power Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="20168" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
@@ -1540,38 +1814,43 @@
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="30" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="800" />
+		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
-		<set name="mpConsume2" val="62" />
 		<set name="mpConsume1" val="16" />
+		<set name="mpConsume2" val="62" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<set name="trait" val="PARALYZE" />
 		<effects>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 		</effects>
 	</skill>
 	<skill id="6879" levels="1" name="Vampiric Claw">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="500" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="HpDrain">
 				<param power="110" />
@@ -1590,6 +1869,7 @@
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="500" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
@@ -1609,16 +1889,18 @@
 	</skill>
 	<skill id="6881" levels="1" name="Critical Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume2" val="89" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="6960" />
@@ -1636,7 +1918,9 @@
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skill4111" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume2" val="80" />
@@ -1649,14 +1933,14 @@
 				<param power="6960" />
 			</effect>
 			<effect name="Stun" />
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
 			<effect name="BlockDamage">
 				<param block="HP" />
 			</effect>
 			<effect name="BlockDamage">
 				<param block="MP" />
 			</effect>
-			<effect name="BlockBuff" />
-			<effect name="BlockDebuff" />
 			<effect name="Buff">
 				<mul stat="regHp" val="0" />
 			</effect>
@@ -1684,6 +1968,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="TARGET" />
 		<effects>
+			<!-- TODO: Implement effect. -->
 			<effect name="Buff" />
 		</effects>
 	</skill>
@@ -1720,7 +2005,7 @@
 		<set name="effectRange" val="2000" />
 		<set name="icon" val="icon.skill6885" />
 		<set name="isMagic" val="4" />
-		<set name="magicLvl" val="-1" />
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="TARGET" />
@@ -1755,6 +2040,7 @@
 			<effect name="DefenceTrait">
 				<param BLEED="#defenceTraitPower" />
 			</effect>
+			<!-- TODO: Implement effect. -->
 			<effect name="Buff" />
 		</effects>
 	</skill>
@@ -1777,187 +2063,279 @@
 	</skill>
 	<skill id="6887" levels="1" name="Fatal Strike">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="100" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6888" levels="1" name="Fatal Shot">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="2000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6889" levels="1" name="Range Attack">
 		<!-- High Five Confirmed -->
-		<set name="affectRange" val="300" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectScope" val="FAN" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="100" />
 		<set name="fanRange" val="0,0,300,60" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6890" levels="1" name="Bleed">
-		<!-- "For 10 seconds, inflicts bleed and decreases 100 HP every second." -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="abnormalLvl" val="10" />
+		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="BLEEDING" />
+		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-10000" />
+		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill0096" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="84" />
+		<set name="mpConsume1" val="25" />
+		<set name="mpConsume2" val="98" />
+		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
+		<effects>
+			<effect name="TickHp">
+				<param power="100" />
+				<param ticks="4" />
+				<param mode="DIFF" />
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<param skillId="6816" skillLevel="1" />
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="6891" levels="1" name="Power Attack">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="UNHOLY" />
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6892" levels="1" name="Power Shot">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="RANGE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="UNHOLY" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="2000" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6893" levels="1" name="Power Attack">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="EARTH" />
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6894" levels="1" name="Power Shot">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="RANGE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="EARTH" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="2000" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6895" levels="1" name="Power Attack">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="EARTH" />
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6896" levels="1" name="Power Shot">
 		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="RANGE" />
+		<set name="attributePower" val="120" />
+		<set name="attributeType" val="EARTH" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="2000" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume2" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="13446" />
+				<param ignoreShieldDefence="50" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6897" levels="12" name="Shock">
-		<!-- Temporarily in shock and unable to move. -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume2"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
+		<table name="#physicalAttackPower"> 20 46 95 181 313 493 705 813 916 1006 1078 1134 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="30" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="150" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="basicProperty" val="CON" />
+		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume2" val="#mpConsume2" />
+		<set name="operateType" val="A2" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="SHOCK" />
+		<effects>
+			<effect name="PhysicalAttack">
+				<param power="#physicalAttackPower" />
+			</effect>
+			<effect name="Stun" />
+		</effects>
 	</skill>
 	<skill id="6898" levels="1" name="84 level Raid Boss">
 		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1965,6 +2343,7 @@
 	</skill>
 	<skill id="6899" levels="1" name="84 level Raid Boss">
 		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />

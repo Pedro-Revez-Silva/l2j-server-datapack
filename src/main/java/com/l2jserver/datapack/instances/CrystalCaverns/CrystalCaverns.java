@@ -841,7 +841,7 @@ public final class CrystalCaverns extends AbstractInstance {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon) {
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, List<L2Object> targets, boolean isSummon) {
 		
 		boolean doReturn = true;
 		for (L2Object obj : targets) {

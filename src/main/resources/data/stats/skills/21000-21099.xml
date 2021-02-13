@@ -243,47 +243,61 @@
 		</effects>
 	</skill>
 	<skill id="21014" levels="1" name="Scissors">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="500" />
+		<set name="hitCancelTime" val="1000" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="BranchSys.icon.br_xmas_gawi_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelayLock" val="true" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
 	</skill>
 	<skill id="21015" levels="1" name="Rock">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="500" />
+		<set name="hitCancelTime" val="1000" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="BranchSys.icon.br_xmas_bawi_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelayLock" val="true" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
 	</skill>
 	<skill id="21016" levels="1" name="Paper">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="500" />
+		<set name="hitCancelTime" val="1000" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="BranchSys.icon.br_xmas_bo_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelayLock" val="true" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
@@ -1649,11 +1663,13 @@
 		</effects>
 	</skill>
 	<skill id="21088" levels="1" name="Summon Friend">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="-2" />
 		<set name="effectPoint" val="1000" />
 		<set name="effectRange" val="-2" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" />
@@ -1661,7 +1677,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="OTHERS" />
 		<cond>
 			<and>
 				<target myParty="EXCEPT_ME" />
@@ -1674,9 +1690,7 @@
 			</not>
 		</cond>
 		<effects>
-			<effect name="CallPc">
-				<param itemId="0" itemCount="0" />
-			</effect>
+			<effect name="CallPc" />
 		</effects>
 	</skill>
 	<skill id="21089" levels="1" name="Dance of Shadows">
@@ -1805,19 +1819,22 @@
 		</effects>
 	</skill>
 	<skill id="21097" levels="1" name="Summon Friend">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="-2" />
 		<set name="effectPoint" val="1000" />
 		<set name="effectRange" val="-2" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="OTHERS" />
 		<cond>
 			<and>
 				<target myParty="EXCEPT_ME" />
@@ -1830,9 +1847,7 @@
 			</not>
 		</cond>
 		<effects>
-			<effect name="CallPc">
-				<param itemId="0" itemCount="0" />
-			</effect>
+			<effect name="CallPc" />
 		</effects>
 	</skill>
 	<skill id="21098" levels="1" name="Great Adventurer's Soul Power : Endless">

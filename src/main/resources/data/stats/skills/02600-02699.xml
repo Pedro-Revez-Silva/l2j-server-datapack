@@ -71,16 +71,21 @@
 		</effects>
 	</skill>
 	<skill id="2607" levels="1" name="Pailaka Door Key">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="13150" /> <!-- Pailaka All-Purpose Key -->
+		<set name="itemConsumeId" val="13150" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="22110100,22110101,22110102,22110103,22110104,22110105" />
 		</cond>
@@ -209,40 +214,75 @@
 		</effects>
 	</skill>
 	<skill id="2616" levels="1" name="Bond Sealant">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
-		<set name="hitTime" val="100" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1500" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="OTHERS" />
+		<cond msgId="109">
+			<target npcId="18672" />
+		</cond>
+		<effects>
+			<effect name="Stun" />
+			<effect name="BlockDebuff" />
+			<effect name="BlockDamage">
+				<param block="HP" />
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP" />
+			</effect>
+			<effect name="Root" />
+			<effect name="Debuff">
+				<mul stat="cancelVuln" val="0" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="2617" levels="1" name="Stun Planter">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
-		<set name="hitTime" val="100" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1500" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="OTHERS" />
+		<cond msgId="109">
+			<target npcId="18672" />
+		</cond>
 	</skill>
 	<skill id="2618" levels="1" name="Stun Land Mine">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
-		<set name="hitTime" val="100" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1500" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="OTHERS" />
 	</skill>
 	<skill id="2619" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss) (Event)">
 		<set name="isMagic" val="2" />
@@ -423,17 +463,19 @@
 		</effects>
 	</skill>
 	<skill id="2633" levels="1" name="Elmore-Aden's Holy Water">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="17240101,17240105,17240109" />
 		</cond>
@@ -444,17 +486,19 @@
 		</effects>
 	</skill>
 	<skill id="2634" levels="1" name="Court Magician's Blessing">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="17240103,17240107" />
 		</cond>

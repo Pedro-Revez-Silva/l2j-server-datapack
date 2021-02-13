@@ -246,7 +246,7 @@
 				<xs:attribute type="xs:boolean" name="critical" />
 				<xs:attribute type="xs:string" name="criticalChance" />
 				<xs:attribute type="xs:int" name="criticalLimit" />
-				<xs:attribute type="xs:byte" name="blowChance" />
+				<xs:attribute type="xs:int" name="blowChance" />
 				<xs:attribute type="xs:string" name="drain" />
 				<xs:attribute type="xs:byte" name="resPower" />
 				<xs:attribute type="xs:byte" name="resRecovery" />
@@ -579,9 +579,9 @@
 					<xs:enumeration value="HpDrain" />
 					<xs:enumeration value="HpPerMax" />
 					<xs:enumeration value="ImmobileBuff" />
-					<xs:enumeration value="ImmobilePetBuff" />
 					<xs:enumeration value="InstantAgathionEnergy" />
 					<xs:enumeration value="InstantBetray" />
+					<xs:enumeration value="InstantCallTargetParty" />
 					<xs:enumeration value="InstantDespawn" />
 					<xs:enumeration value="InstantDispelByName" />
 					<xs:enumeration value="Lethal" />

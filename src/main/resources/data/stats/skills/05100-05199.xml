@@ -137,12 +137,14 @@
 		<set name="targetType" val="TARGET" />
 	</skill>
 	<skill id="5110" levels="1" name="Cannon Fodder">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Swoop Cannon Skill -->
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="1600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1600" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="itemConsumeCount" val="4" />
 		<set name="itemConsumeId" val="8872" />
@@ -150,12 +152,8 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10500" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ARTILLERY" />
 		<cond msgId="113" addName="1">
-			<and>
-				<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
-				<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
-			</and>
 			<not>
 				<player insideZoneId="51101, 51102, 51103, 51104, 51105, 51106, 51108, 51108, 51109" />
 			</not>
@@ -167,12 +165,14 @@
 		</effects>
 	</skill>
 	<skill id="5111" levels="1" name="Big Bang">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Swoop Cannon Skill -->
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="itemConsumeCount" val="5" />
 		<set name="itemConsumeId" val="8872" />
@@ -180,12 +180,8 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10500" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ARTILLERY" />
 		<cond msgId="113" addName="1">
-			<and>
-				<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
-				<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
-			</and>
 			<not>
 				<player insideZoneId="51101, 51102, 51103, 51104, 51105, 51106, 51108, 51108, 51109" />
 			</not>
@@ -232,18 +228,22 @@
 		</effects>
 	</skill>
 	<skill id="5113" levels="12" name="Castle Self AE Dispell Buff">
-		<!-- CT2.5 retail confirmed -->
+		<!-- High Five Confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume1"> 2 2 3 4 5 6 7 7 8 8 8 8 </table>
 		<table name="#mpConsume2"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="150" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="6000" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume1" val="#mpConsume1" />
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="DispelByCategory">
 				<param slot="BUFF" rate="25" max="5" />
@@ -251,28 +251,33 @@
 		</effects>
 	</skill>
 	<skill id="5114" levels="12" name="Hold">
-		<!-- Lvl 1-12 - Temporarily Immobilized. -->
+		<!-- High Five Confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume2"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
+		<table name="#mpConsume1"> 2 2 3 4 5 6 7 7 8 8 8 8 </table>
+		<table name="#mpConsume2"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="80" />
-		<set name="affectRange" val="200" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="150" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill4047" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume1" val="#mpConsume1" />
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="HOLD" />
 		<effects>
 			<effect name="Root" />
@@ -322,16 +327,19 @@
 		</effects>
 	</skill>
 	<skill id="5117" levels="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="30" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -342,7 +350,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
 		<effects>
 			<effect name="PhysicalAttack">
@@ -352,8 +360,10 @@
 		</effects>
 	</skill>
 	<skill id="5118" levels="1" name="Cancel Sailren Use">
-		<!-- CT2.5 retail confirmed -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" />
@@ -361,7 +371,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="DispelByCategory">
 				<param slot="BUFF" rate="25" max="5" />
@@ -369,13 +379,15 @@
 		</effects>
 	</skill>
 	<skill id="5119" levels="1" name="Bleed">
-		<!-- CT2.5 retail confirmed -->
-		<set name="affectRange" val="80" />
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectScope" val="FAN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-351" />
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,80,150" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0245" />
 		<set name="magicLvl" val="90" />
@@ -384,7 +396,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="17000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="2487" />
@@ -446,135 +458,249 @@
 		</effects>
 	</skill>
 	<skill id="5123" levels="1" name="Maximum Defense">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="icon" val="icon.skill0454" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<add stat="pDef" val="1000" />
 				<add stat="mDef" val="800" />
-				<sub stat="cancelVuln" val="80" />
+			</effect>
+			<effect name="Buff">
+				<add stat="pDef" val="1000" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="cancelVuln" val="0.2" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5124" levels="1" name="Anti-Music">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<param dispel="DANCE_OF_AQUA_GUARD;DANCE_OF_CONCENTRATION;DANCE_OF_CONCENTRATION;DANCE_OF_EARTH_GUARD;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_LIGHT;DANCE_OF_MYSTIC;DANCE_OF_PROTECTION;DANCE_OF_SHADOW;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_FLAME_GUARD;SONG_OF_HUNTER;SONG_OF_INVOCATION;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_STORM_GUARD;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BLADESTORM;DANCE_OF_ALIGNMENT;SONG_OF_ELEMENTAL;SONG_OF_WINDSTORM" rate="100" />
+				<param dispel="DANCE_OF_AQUA_GUARD" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_CONCENTRATION" rate="100" />
+			</effect>
+				<effect name="DispelBySlotProbability">
+			<param dispel="DANCE_OF_EARTH_GUARD" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_FIRE" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_FURY" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_INSPIRATION" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_LIGHT" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_MYSTIC" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_PROTECTION" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_SHADOW" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_SIREN" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_VAMPIRE" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_WARRIOR" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_CHAMPION" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_EARTH" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_FLAME_GUARD" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_HUNTER" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_INVOCATION" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_LIFE" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_MEDITATION" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_RENEWAL" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_STORM_GUARD" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_VENGEANCE" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_VITALITY" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_WARDING" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_WATER" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_WIND" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_BLADESTORM" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="DANCE_OF_ALIGNMENT" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_ELEMENTAL" rate="100" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_WINDSTORM" rate="100" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5125" levels="1" name="Maximum Resist Status">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="icon" val="icon.skill0456" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<sub stat="debuffVuln" val="60" />
+				<mul stat="debuffVuln" val="0.4" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5126" levels="1" name="Maximum Recovery">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="icon" val="icon.skill0457" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<mul stat="regHp" val="1.4" />
 				<mul stat="regCp" val="1.4" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.4" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5127" levels="1" name="Recover Force">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="icon" val="icon.skill0458" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
-			<effect name="Buff">
-				<mul stat="pAtk" val="1.2" />
-			</effect>
 			<effect name="FocusEnergy">
 				<param charge="7" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.2" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5128" levels="1" name="Maximize long-range weapon use">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="icon" val="icon.skill0459" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<mul stat="pAtk" val="1.2">
-					<using kind="BOW,CROSSBOW" />
-				</mul>
 				<add stat="accCombat" val="10">
 					<using kind="BOW,CROSSBOW" />
 				</add>
 			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.2">
+					<using kind="BOW,CROSSBOW" />
+				</mul>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5129" levels="1" name="Smokescreen">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="icon" val="icon.skill0460" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
 				<add stat="rEvas" val="15" />
+			</effect>
+			<effect name="Buff">
 				<mul stat="blowRate" val="1.2" />
 			</effect>
 		</effects>
@@ -644,11 +770,12 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
 		<set name="affectScope" val="POINT_BLANK" />
-		<set name="basicProperty" val="CON" />
-		<set name="attributeType" val="UNHOLY" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="UNHOLY" />
+		<set name="basicProperty" val="CON" />
 		<set name="icon" val="icon.skill1424" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" />
@@ -656,22 +783,39 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<param dispel="ATTACK_TIME_DOWN" />
+				<param rate="80" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="CASTING_TIME_DOWN" />
+				<param rate="80" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SPEED_UP" />
+				<param rate="80" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="IMPROVE_SPEED_AVOID_UP" />
+				<param rate="80" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="IMPROVE_VAMPIRIC_HASTE" />
+				<param rate="80" />
+			</effect>
 			<effect name="Unsummon">
 				<param chance="80" />
-			</effect>
-			<effect name="Debuff">
-				<mul stat="mAtkSpd" val="0.77" />
 			</effect>
 			<effect name="Debuff">
 				<mul stat="pAtkSpd" val="0.77" />
 			</effect>
 			<effect name="Debuff">
-				<mul stat="runSpd" val="0.77" />
+				<mul stat="mAtkSpd" val="0.77" />
 			</effect>
-			<effect name="DispelBySlotProbability">
-				<param dispel="ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" rate="80" />
+			<effect name="Debuff">
+				<mul stat="runSpd" val="0.77" />
 			</effect>
 		</effects>
 	</skill>
@@ -698,19 +842,21 @@
 		</effects>
 	</skill>
 	<skill id="5136" levels="1" name="Spin Slash">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Feline King Skill -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="150" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="coolTime" val="733" />
 		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1070" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1067" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume2" val="322" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="17000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="4132" />
@@ -718,28 +864,31 @@
 		</effects>
 	</skill>
 	<skill id="5137" levels="1" name="Hold of King">
-		<!-- CT2.5 retail confirmed -->
+		<!-- High Five Confirmed -->
 		<!-- Summon Feline King Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="abnormalVisualEffect" val="ROOT" />
 		<set name="activateRate" val="61" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1201" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
-		<set name="mpConsume2" val="258" />
 		<set name="mpConsume1" val="64" />
+		<set name="mpConsume2" val="258" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="HOLD" />
 		<effects>
 			<effect name="Root" />
@@ -782,25 +931,28 @@
 		</effects>
 	</skill>
 	<skill id="5139" levels="1" name="Tidal Wave">
-		<!-- CT2.5 retail confirmed -->
+		<!-- High Five Confirmed -->
 		<!-- Summon Magnus the Unicorn Skill -->
 		<set name="affectLimit" val="10-10" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WATER" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
-		<set name="attributeType" val="WATER" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="mpConsume2" val="258" />
 		<set name="mpConsume1" val="64" />
+		<set name="mpConsume2" val="258" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="228" />
@@ -808,33 +960,39 @@
 		</effects>
 	</skill>
 	<skill id="5140" levels="1" name="Dark Curse">
-		<!-- CT2.5 retail confirmed -->
+		<!-- High Five Confirmed -->
 		<!-- Summon Spectral Lord Skill -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="60" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="mpConsume2" val="258" />
 		<set name="mpConsume1" val="64" />
+		<set name="mpConsume2" val="258" />
 		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd" val="0.77" />
+			</effect>
 			<effect name="TickHp">
 				<param power="-109" />
 				<param ticks="5" />
-				<mul stat="pAtkSpd" val="0.77" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 	</skill>
@@ -861,21 +1019,24 @@
 		</effects>
 	</skill>
 	<skill id="5142" levels="1" name="Corpse Kaboom">
-		<!-- CT2.5 retail confirmed -->
+		<!-- High Five Confirmed -->
 		<!-- Summon Spectral Lord Skill -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="150" />
+		<set name="affectScope" val="RANGE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="mpConsume2" val="258" />
 		<set name="mpConsume1" val="64" />
+		<set name="mpConsume2" val="258" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="20000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA_CORPSE_MOB" />
+		<set name="targetType" val="NPC_BODY" />
 		<effects>
 			<effect name="ConsumeBody" />
 			<effect name="MagicalAttack">
@@ -1716,19 +1877,24 @@
 		</effects>
 	</skill>
 	<skill id="5178" levels="1" name="NPC Burn">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="3500" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.action102" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
-		<set name="mpConsume2" val="38" />
+		<set name="mpConsume1" val="8" />
+		<set name="mpConsume2" val="30" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="116" />
+				<param power="122" />
 			</effect>
 		</effects>
 	</skill>
@@ -1772,15 +1938,18 @@
 			<effect name="ProtectionBlessing" />
 		</effects>
 	</skill>
-	<skill id="5183" levels="1" name="Production: Dimensional Stun">
-		<!-- Confirmed CT2.5 -->
+	<skill id="5183" levels="1" name="Dimensional Stun">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
 		<effects>
 			<effect name="ThrowUp">
@@ -1788,19 +1957,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5184" levels="1" name="Production: Valakas Dragon Breath">
-		<!-- Confirmed CT2.5 -->
-		<set name="affectRange" val="1200" />
+	<skill id="5184" levels="1" name="Dragon Breath">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectScope" val="FAN" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2000" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="fanRange" val="0,0,1200,35" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="5185" levels="1" name="Production: Magic-type Guard">
 		<!-- Confirmed CT2.5 -->

@@ -381,25 +381,47 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23018" levels="1" name="Thomas D. Turkey's Mistake">
+	<skill id="23018" levels="1" name="Stupid Turkey's Mistake">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="affectObject" val="ALL" />
+		<set name="affectRange" val="500" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="buffProtectLevel" val="1" />
 		<set name="coolTime" val="500" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="BranchSys.icon.br_turkey_buff_i00" />
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 		<effects>
-			<effect name="MaxHp">
+			<effect name="Buff">
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="danceMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.3" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.2" />
+			</effect>
+			<effect name="MaxCp">
 				<param power="40" />
 				<param type="PER" />
 			</effect>
-			<effect name="MaxCp">
+			<effect name="MaxHp">
 				<param power="40" />
 				<param type="PER" />
 			</effect>
@@ -409,13 +431,12 @@
 			</effect>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.2" />
+			</effect>
+			<effect name="Buff">
 				<mul stat="pDef" val="1.2" />
-				<mul stat="mDef" val="1.2" />
-				<mul stat="mAtk" val="1.3" />
+			</effect>
+			<effect name="Buff">
 				<add stat="runSpd" val="20" />
-				<mul stat="magicalMpConsumeRate" val="0.9" />
-				<mul stat="physicalMpConsumeRate" val="0.9" />
-				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</effects>
 	</skill>
@@ -456,7 +477,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23021" levels="3" name="Turkey's Attack Scissors">
 		<!-- High Five Confirmed -->
@@ -1434,7 +1455,7 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23073" levels="1" name="Switch State">
 		<!-- High Five Confirmed -->
@@ -1515,35 +1536,50 @@
 		</cond>
 	</skill>
 	<skill id="23077" levels="1" name="Weaver Agathion Special Skill - Power of the Golden Calf">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
 		<set name="activateRate" val="0" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="PARTY" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="buffProtectLevel" val="1" />
 		<set name="effectPoint" val="486" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20597" /> <!-- Girl's Soul Ore -->
+		<set name="itemConsumeId" val="20597" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
-			<player agathionId="1528" />
+			<player hasAgathion="true" />
 		</cond>
 		<effects>
-			<effect name="MaxHp">
+			<effect name="Buff">
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="danceMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.3" />
+			</effect>
+			<effect name="MaxCp">
 				<param power="60" />
 				<param type="PER" />
 			</effect>
-			<effect name="MaxCp">
+			<effect name="MaxHp">
 				<param power="60" />
 				<param type="PER" />
 			</effect>
@@ -1552,46 +1588,64 @@
 				<param type="PER" />
 			</effect>
 			<effect name="Buff">
-				<mul stat="pDef" val="1.3" />
-				<mul stat="mDef" val="1.3" />
-				<add stat="runSpd" val="30" />
 				<mul stat="pAtk" val="1.2" />
-				<mul stat="physicalMpConsumeRate" val="0.9" />
-				<mul stat="magicalMpConsumeRate" val="0.9" />
-				<mul stat="danceMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.3" />
+			</effect>
+			<effect name="Buff">
+				<add stat="runSpd" val="30" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="23078" levels="1" name="Weaver Agathion Special Skill - Flute Sound">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
 		<set name="activateRate" val="0" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="PARTY" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="buffProtectLevel" val="1" />
 		<set name="effectPoint" val="486" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20597" /> <!-- Girl's Soul Ore -->
+		<set name="itemConsumeId" val="20597" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
-			<player agathionId="1528" />
+			<player hasAgathion="true" />
 		</cond>
 		<effects>
-			<effect name="MaxHp">
+			<effect name="Buff">
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="danceMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.45" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.3" />
+			</effect>
+			<effect name="MaxCp">
 				<param power="40" />
 				<param type="PER" />
 			</effect>
-			<effect name="MaxCp">
+			<effect name="MaxHp">
 				<param power="40" />
 				<param type="PER" />
 			</effect>
@@ -1601,12 +1655,9 @@
 			</effect>
 			<effect name="Buff">
 				<mul stat="pDef" val="1.3" />
-				<mul stat="mDef" val="1.3" />
+			</effect>
+			<effect name="Buff">
 				<add stat="runSpd" val="20" />
-				<mul stat="mAtk" val="1.45" />
-				<mul stat="physicalMpConsumeRate" val="0.9" />
-				<mul stat="magicalMpConsumeRate" val="0.85" />
-				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</effects>
 	</skill>

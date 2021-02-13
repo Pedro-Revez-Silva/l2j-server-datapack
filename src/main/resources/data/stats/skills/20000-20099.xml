@@ -1,47 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="20000" levels="1" name="Block Checker Search">
-		<!-- "If you open your heart and look afar, you can find a hidden treasure chest." -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+ 	<skill id="20000" levels="1" name="Treasure Hunter Search">
+		<!-- High Five Confirmed -->
+		<set name="affectLimit" val="6-12" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="effectPoint" val="1000" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="BranchSys2.icon.br_s_search_treasure1_i00" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<target npcId="13097" />
+		</cond>
 	</skill>
 	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
 		<!-- Slams down on the treasure chest with a hammer to open it. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="20002" levels="1" name="Dragon Blow">
-		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
-		<set name="castRange" val="55" />
-		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
+	<skill id="20002" levels="1" name="Dragon Kick">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="20" />
+		<set name="coolTime" val="167" />
+		<set name="effectPoint" val="-347" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
-		<set name="magicLvl" val="85" /> <!-- FIXME: value unconfirmed -->
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="icon" val="icon.skill_transform_s_attack" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume2" val="55" />
+		<set name="nextActionAttack" val="attack" />
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
+		<set name="reuseDelay" val="7000" />
+		<set name="reuseDelayLock" val="true" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
-			<effect name="FatalBlow">
+			<effect name="PhysicalAttack">
 				<param power="3420" />
-				<param blowChance="20" />
+				<param criticalChance="5" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="20003" levels="1" name="Dragon Slash">
-		<!-- A dragon's powerful slash that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
-		<set name="castRange" val="55" />
-		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="20" />
+		<set name="coolTime" val="167" />
+		<set name="effectPoint" val="-348" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
-		<set name="magicLvl" val="85" /> <!-- FIXME: value unconfirmed -->
+		<set name="icon" val="icon.skill_transform_s_attack" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume2" val="55" />
+		<set name="nextActionAttack" val="attack" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
+		<set name="reuseDelay" val="7000" />
+		<set name="reuseDelayLock" val="true" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="3420" />
+				<param criticalChance="5" />
 			</effect>
 		</effects>
 	</skill>

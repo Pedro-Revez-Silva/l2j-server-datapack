@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2400" levels="1" name="Red Coral Treasure Chest Key">
-		<!-- Confirmed CT2.5 -->
-		<!-- set name="giveContribution" val="10" / -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10017" /> <!-- Coral Treasure Chest Key -->
+		<set name="itemConsumeId" val="10017" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="18477" />
 		</cond>

@@ -1,32 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22100" levels="1" name="Soul Scent">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF6" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="BranchSys.icon.br_ghost_incense_i00" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20603" /> <!-- Soul Scent (Event) -->
-		<set name="magicLvl" val="1" />
+		<set name="itemConsumeId" val="20603" />
+		<set name="magicLvl" val="-3" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="CORPSE_MOB" />
+		<set name="targetType" val="NPC_BODY" />
 		<effects>
 			<effect name="ConsumeBody" />
 		</effects>
 		<selfEffects>
-			<effect name="MaxHp">
+			<effect name="Buff">
+				<mul stat="physicalMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="danceMpConsumeRate" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.45" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.3" />
+			</effect>
+			<effect name="MaxCp">
 				<param power="40" />
 				<param type="PER" />
 			</effect>
-			<effect name="MaxCp">
+			<effect name="MaxHp">
 				<param power="40" />
 				<param type="PER" />
 			</effect>
@@ -36,12 +53,9 @@
 			</effect>
 			<effect name="Buff">
 				<mul stat="pDef" val="1.3" />
-				<mul stat="mDef" val="1.3" />
+			</effect>
+			<effect name="Buff">
 				<add stat="runSpd" val="20" />
-				<mul stat="mAtk" val="1.45" />
-				<mul stat="magicalMpConsumeRate" val="0.9" />
-				<mul stat="physicalMpConsumeRate" val="0.9" />
-				<mul stat="danceMpConsumeRate" val="0.9" />
 			</effect>
 		</selfEffects>
 	</skill>
@@ -401,22 +415,29 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22118" levels="1" name="Warmth of Kotatz">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="HP_REGEN_UP" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
+		<set name="buffProtectLevel" val="1" />
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="regCp" val="1.3" />
+			</effect>
+			<effect name="Buff">
 				<mul stat="regHp" val="1.4" />
+			</effect>
+			<effect name="Buff">
 				<mul stat="regMp" val="1.2" />
 			</effect>
 		</effects>

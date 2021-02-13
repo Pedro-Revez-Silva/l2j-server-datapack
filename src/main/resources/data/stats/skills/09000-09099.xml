@@ -71,21 +71,23 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9010" levels="1" name="Cool air cannon">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1300" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="15364" /> <!-- Cool Pack -->
+		<set name="itemConsumeId" val="15364" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="109">
 			<target npcId="13270" />
 		</cond>
@@ -952,18 +954,21 @@
 		</effects>
 	</skill>
 	<skill id="9057" levels="1" name="Freezing Core">
-		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SKILL_IGNORE" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="2000" />
+		<set name="affectScope" val="RANGE" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
-		<set name="rideState" val="NONE" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="COMMAND_CHANNEL" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="90578" />
 		</cond>
@@ -976,20 +981,23 @@
 		</effects>
 	</skill>
 	<skill id="9058" levels="1" name="Black Freezing Core">
-		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SKILL_IGNORE" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="2000" />
+		<set name="affectScope" val="RANGE" />
+		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="15470" /> <!-- Black Frozen Core -->
+		<set name="itemConsumeId" val="15470" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
-		<set name="rideState" val="NONE" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="COMMAND_CHANNEL" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="90578" />
 		</cond>
@@ -1002,7 +1010,8 @@
 		</effects>
 	</skill>
 	<skill id="9059" levels="1" name="Torch Light">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-10000" />
 		<set name="effectRange" val="400" />
@@ -1011,18 +1020,20 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="9060" levels="1" name="Maguen Machine">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="9000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="9061" levels="1" name="Uldie Summon Scroll">
 		<set name="isMagic" val="2" />
@@ -1311,19 +1322,20 @@
 		<set name="targetType" val="TARGET" />
 	</skill>
 	<skill id="9076" levels="1" name="Secret Door Key">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
-		<set name="effectPoint" val="-1" />
+		<set name="effectPoint" val="-100000" />
 		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<set name="hitCancelTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="15690" /> <!-- Secret Key -->
+		<set name="itemConsumeId" val="15690" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="3000" />
+		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="UNLOCKABLE" />
+		<set name="targetType" val="DOOR_TREASURE" />
 		<cond msgId="113" addName="1">
 			<target npcId="23150001,23150002" />
 		</cond>

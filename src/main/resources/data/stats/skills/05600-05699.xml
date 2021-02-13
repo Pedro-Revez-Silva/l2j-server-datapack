@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5600" levels="1" name="Betrayal Mark">
-		<!-- Confirmed CT2.5 -->
-		<!-- set name="castRange" val="900" / -->
-		<!-- set name="effectRange" val="1400" / -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="47" />
@@ -1263,25 +1266,33 @@
 		</pveEffects>
 	</skill>
 	<skill id="5658" levels="85" name="Gatekeeper Flame Strike">
-		<table name="#effectPoints"> -92 -97 -101 -106 -111 -116 -121 -126 -132 -138 -143 -149 -156 -162 -168 -175 -182 -189 -196 -204 -211 -219 -227 -235 -243 -251 -259 -268 -277 -285 -294 -303 -313 -322 -331 -341 -350 -360 -369 -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -92 -97 -101 -106 -111 -116 -121 -126 -132 -138 -143 -149 -156 -162 -168 -175 -182 -189 -196 -204 -211 -219 -227 -235 -243 -251 -259 -268 -277 -285 -294 -303 -313 -322 -331 -341 -350 -360 -369 -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume2"> 13 13 13 14 14 15 15 17 17 18 20 22 23 23 24 25 27 28 28 29 29 30 32 33 34 35 37 38 39 40 40 42 43 44 45 47 49 50 52 53 54 55 57 59 60 62 63 65 67 68 69 70 73 74 75 77 79 80 82 83 85 87 88 89 90 93 94 95 97 98 99 100 102 103 104 105 105 107 108 109 109 110 112 112 113 </table>
+		<table name="#mpConsume1"> 3 3 3 3 3 3 3 4 4 4 4 5 5 5 5 5 6 6 6 6 6 6 7 7 7 7 8 8 8 8 8 9 9 9 9 10 10 10 11 11 11 11 12 12 12 13 13 13 14 14 14 14 15 15 15 16 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 21 21 21 21 21 22 22 22 22 22 23 23 23 </table>
+		<table name="#mpConsume2"> 10 10 10 11 11 12 12 13 13 14 16 17 18 18 19 20 21 22 22 23 23 24 25 26 27 28 29 30 31 32 32 33 34 35 36 37 39 40 41 42 43 44 45 47 48 49 50 52 53 54 55 56 58 59 60 61 63 64 65 66 68 69 70 71 72 74 75 76 77 78 79 80 81 82 83 84 84 85 86 87 87 88 89 89 90 </table>
 		<table name="#pvePower"> 38 40 43 46 49 52 55 58 62 65 69 73 77 81 85 89 94 98 103 108 113 118 124 129 135 140 146 152 158 164 171 177 184 191 197 204 212 219 226 233 241 248 256 264 272 280 288 296 304 312 320 329 337 345 354 362 370 379 387 395 403 412 420 428 436 444 452 460 468 475 483 490 497 504 511 519 528 539 552 566 581 595 610 626 640 </table>
 		<table name="#pvpPower"> 30 32 34 37 39 41 44 47 49 52 55 58 61 65 68 71 75 79 83 87 91 95 99 103 108 112 117 122 127 132 137 142 147 153 158 164 169 175 181 187 193 199 205 211 218 224 230 237 243 250 256 263 270 276 283 290 296 303 310 316 323 329 336 343 349 355 362 368 374 380 386 392 398 403 409 415 423 431 442 453 465 476 488 501 512 </table>
 		<set name="affectLimit" val="5-12" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="FIRE" />
 		<set name="castRange" val="500" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="1000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill1181" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume1" val="#mpConsume1" />
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="7000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<pvpEffects>
 			<effect name="MagicalAttack">
 				<param power="#pvpPower" />
@@ -1294,45 +1305,60 @@
 		</pveEffects>
 	</skill>
 	<skill id="5659" levels="2" name="Gatekeeper Berserker Spirit">
-		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#effectPoints"> 331 486 </table>
-		<table name="#magicLvl"> 35 52 </table>
+		<!-- High Five Confirmed -->
+		<table name="#abnormalLvl"> 1 2 </table>
+		<table name="#effectPoint"> 331 486 </table>
 		<table name="#mAtk"> 1.1 1.16 </table>
 		<table name="#mAtkSpd"> 1.05 1.08 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
-		<table name="#mpConsume2"> 24 38 </table>
+		<table name="#magicLvl"> 35 52 </table>
 		<table name="#mpConsume1"> 6 10 </table>
+		<table name="#mpConsume2"> 24 38 </table>
 		<table name="#pAtk"> 1.05 1.08 </table>
 		<table name="#pAtkSpd"> 1.05 1.08 </table>
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#rEvas"> 2 4 </table>
 		<table name="#runSpd"> 5 8 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BERSERKER" />
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="900" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1062" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY_MEMBER" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<mul stat="mAtk" val="#mAtk" />
-				<mul stat="pAtk" val="#pAtk" />
-				<mul stat="mDef" val="#mDef" />
-				<mul stat="pDef" val="#pDef" />
-				<mul stat="mAtkSpd" val="#mAtkSpd" />
 				<mul stat="pAtkSpd" val="#pAtkSpd" />
-				<add stat="runSpd" val="#runSpd" />
+			</effect>
+			<effect name="Buff">
 				<sub stat="rEvas" val="#rEvas" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="#mAtk" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mDef" val="#mDef" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pDef" val="#pDef" />
+			</effect>
+			<effect name="Buff">
+				<add stat="runSpd" val="#runSpd" />
 			</effect>
 		</effects>
 	</skill>
@@ -1685,36 +1711,39 @@
 		</effects>
 	</skill>
 	<skill id="5679" levels="3" name="Oblivion Trap">
+		<!-- High Five Confirmed -->
+		<table name="#magicLvl"> 64 68 72 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MIRAGE_TRAP" />
 		<set name="activateRate" val="80" />
-		<set name="affectRange" val="200" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="500" />
+		<set name="effectRange" val="1100" />
 		<set name="icon" val="icon.skill0836" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="64" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param isCritical="false" />
 				<param minDamage="1" chance="60" />
-				<param skillId="5680" skillLevel="1" /> <!-- Oblivion Trap -->
+				<param skillId="5680" skillLevel="1" />
 				<param targetType="SELF" />
 				<param allowWeapons="ALL" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5680" levels="1" name="Oblivion Trap">
-		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />

@@ -751,15 +751,24 @@
 		</effects>
 	</skill>
 	<skill id="21258" levels="1" name="Rocking Horse Mount">
-		<!-- High Five Skill -->
-		<!-- Mounts a rocking horse. -->
-		<set name="abnormalTime" val="-1" /> <!-- FIXME: value unconfirmed -->
+		<!-- High Five Confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.skilltransform3" />
 		<set name="irreplaceableBuff" val="true" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="2195">
+			<player canTransform="true" />
+		</cond>
 		<effects>
 			<effect name="Transformation">
 				<param id="20007" />
@@ -801,14 +810,66 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21264" levels="1" name="Summon Friend">
-		<!-- Description: Summons your friend. The target to be summoned must be equipped with a Shining Couple Ring and be a party member. -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="castRange" val="-2" />
+		<set name="effectPoint" val="1000" />
+		<set name="effectRange" val="-2" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="10000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="OTHERS" />
+		<cond>
+			<and>
+				<target myParty="EXCEPT_ME" />
+				<player callPc="true" />
+			</and>
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="21265" levels="1" name="Summon Friend">
-		<!-- Description: Summons your friend. The target to be summoned must be equipped with a Mysterious Friend Summon Bracelet and be a party member. -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="castRange" val="-2" />
+		<set name="effectPoint" val="1000" />
+		<set name="effectRange" val="-2" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="10000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="OTHERS" />
+		<cond>
+			<and>
+				<target myParty="EXCEPT_ME" />
+				<player callPc="true" />
+			</and>
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="21266" levels="1" name="Release Seal on Agathion - Juju">
 		<!-- High Five Skill -->

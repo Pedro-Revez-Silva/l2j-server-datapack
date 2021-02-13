@@ -18,6 +18,8 @@
  */
 package com.l2jserver.datapack.quests.Q10274_CollectingInTheAir;
 
+import java.util.List;
+
 import com.l2jserver.datapack.quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import com.l2jserver.gameserver.enums.audio.Sound;
 import com.l2jserver.gameserver.model.L2Object;
@@ -77,7 +79,7 @@ public class Q10274_CollectingInTheAir extends Quest {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon) {
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, List<L2Object> targets, boolean isSummon) {
 		final QuestState st = getQuestState(caster, false);
 		if ((st == null) || !st.isStarted()) {
 			return null;

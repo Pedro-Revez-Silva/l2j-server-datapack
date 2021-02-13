@@ -250,31 +250,34 @@
 		</effects>
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 </table>
 		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
-		<table name="#mpConsume2"> 40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61 </table>
 		<table name="#mpConsume1"> 10 11 12 13 14 14 14 15 15 15 15 15 15 15 15 16 16 16 16 </table>
+		<table name="#mpConsume2"> 40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="6-12" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="MEN" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="DERANGEMENT" />
 		<effects>
 			<effect name="Fear" />
@@ -497,52 +500,65 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="6237" levels="1" name="Moving Speed Decrease">
+	<skill id="6237" levels="1" name="Speed Decrease">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="abnormalVisualEffect" val="SPEED_DOWN" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Debuff">
 				<mul stat="runSpd" val="0.2" />
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6238" levels="1" name="Moving Speed Decrease">
+	<skill id="6238" levels="1" name="Speed Decrease">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="abnormalVisualEffect" val="SPEED_DOWN" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="EARTH" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
-		<set name="attributeType" val="EARTH" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="18162" />
 			</effect>
 			<effect name="Debuff">
-				<mul stat="runSpd" val="0.5" />
 				<mul stat="pAtkSpd" val="0.5" />
+			</effect>
+			<effect name="Debuff">
 				<mul stat="mAtkSpd" val="0.5" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="runSpd" val="0.5" />
 			</effect>
 		</effects>
 	</skill>
@@ -783,7 +799,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6254" levels="1" name="Heatstroke Prevention Effect - Dion">
 		<!-- High Five Confirmed -->
@@ -799,7 +815,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6255" levels="1" name="Heatstroke Prevention Effect - Giran">
 		<!-- High Five Confirmed -->
@@ -815,7 +831,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6256" levels="1" name="Heatstroke Prevention Effect - Oren">
 		<!-- High Five Confirmed -->
@@ -831,7 +847,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6257" levels="1" name="Heatstroke Prevention Effect - Aden">
 		<!-- High Five Confirmed -->
@@ -847,7 +863,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6258" levels="1" name="Heatstroke Prevention Effect - Innadril">
 		<!-- High Five Confirmed -->
@@ -863,7 +879,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6259" levels="1" name="Heatstroke Prevention Effect - Goddard">
 		<!-- High Five Confirmed -->
@@ -879,7 +895,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6260" levels="1" name="Heatstroke Prevention Effect - Rune">
 		<!-- High Five Confirmed -->
@@ -895,7 +911,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6261" levels="1" name="Heatstroke Prevention Effect - Schuttgart">
 		<!-- High Five Confirmed -->
@@ -911,7 +927,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6262" levels="1" name="EMP Power">
 		<!-- High Five Confirmed -->
@@ -927,7 +943,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="2959" />
@@ -957,7 +973,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
 		<effects>
 			<effect name="PhysicalAttack">
@@ -979,7 +995,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="5627" />
@@ -999,7 +1015,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6266" levels="1" name="Shock">
 		<!-- High Five Confirmed -->
@@ -1065,7 +1081,7 @@
 		<set name="mpConsume2" val="164" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="2282" />
@@ -1121,7 +1137,7 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="POISON" />
 		<effects>
 			<effect name="PhysicalAttack">
@@ -1165,13 +1181,16 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6274" levels="1" name="Eternal Blizzard">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Skills -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="3000" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="180" />
+		<set name="attributeType" val="WATER" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1000" />
-		<set name="attributeType" val="WATER" />
-		<set name="attributePower" val="180" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.skill6274" />
 		<set name="magicLvl" val="85" />
@@ -1179,24 +1198,27 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
-			<effect name="PhysicalAttack">
-				<param power="38976" />
-			</effect>
 			<effect name="CallSkill">
 				<param skillId="6662" skillLevel="2" />
+			</effect>
+			<effect name="PhysicalAttack">
+				<param power="38976" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6275" levels="1" name="Eternal Blizzard">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Skills -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="3000" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="180" />
+		<set name="attributeType" val="WATER" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1000" />
-		<set name="attributeType" val="WATER" />
-		<set name="attributePower" val="180" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="7000" />
 		<set name="icon" val="icon.skill6274" />
 		<set name="magicLvl" val="85" />
@@ -1204,31 +1226,34 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
-			<effect name="PhysicalAttack">
-				<param power="45256" />
-			</effect>
 			<effect name="CallSkill">
 				<param skillId="6662" skillLevel="2" />
+			</effect>
+			<effect name="PhysicalAttack">
+				<param power="45256" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6276" levels="1" name="Eternal Blizzard">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Skills -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="3000" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="180" />
+		<set name="attributeType" val="WATER" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1000" />
-		<set name="attributeType" val="WATER" />
-		<set name="attributePower" val="180" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.skill6274" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6277" levels="1" name="Summon Spirits">
 		<!-- Confirmed CT2.5 -->
@@ -1246,21 +1271,24 @@
 		<set name="targetType" val="ENEMY_ONLY" />
 	</skill>
 	<skill id="6278" levels="1" name="Ice Ball">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Skills -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="250" />
+		<set name="affectScope" val="RANGE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WATER" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />
 		<set name="effectRange" val="1100" />
-		<set name="attributeType" val="WATER" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="168" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="18560" />
@@ -1268,19 +1296,22 @@
 		</effects>
 	</skill>
 	<skill id="6279" levels="1" name="Attack Nearby Range">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Skills -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="450" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WATER" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />
-		<set name="attributeType" val="WATER" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="168" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="18560" />
@@ -1315,14 +1346,15 @@
 		</endEffects>
 	</skill>
 	<skill id="6281" levels="1" name="Cold Judgement">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills (Triggered from 6280) -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="18560" />
@@ -1437,18 +1469,18 @@
 		</effects>
 	</skill>
 	<skill id="6287" levels="1" name="Bless of Sword">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Kegor Skills -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="1100" />
-		<set name="castRange" val="650" />
-		<set name="effectRange" val="900" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill6286" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Cp">
 				<param amount="100" />
@@ -1463,46 +1495,60 @@
 		</effects>
 	</skill>
 	<skill id="6288" levels="1" name="Jinia's Prayer">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Jinia Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SIGNAL_A" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill6288" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<mul stat="pDef" val="4" />
 				<mul stat="mDef" val="4" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pDef" val="4" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6289" levels="1" name="Kegor's Courage">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Kegor Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SIGNAL_B" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="1000" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill6289" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<mul stat="pAtk" val="3" />
-				<mul stat="mAtk" val="3" />
 				<mul stat="pAtkSpd" val="1.25" />
+			</effect>
+			<effect name="Buff">
 				<mul stat="mAtkSpd" val="1.25" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtk" val="3" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="3" />
 			</effect>
 		</effects>
 	</skill>
@@ -1528,18 +1574,21 @@
 		</effects>
 	</skill>
 	<skill id="6291" levels="1" name="Power Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Ice Knight Skills -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="300" />
-		<set name="effectPoint" val="-574" />
-		<set name="attributeType" val="WATER" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WATER" />
+		<set name="effectPoint" val="-574" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="123" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="4563" />
@@ -1573,44 +1622,50 @@
 		</effects>
 	</skill>
 	<skill id="6293" levels="1" name="Power Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Ice Knight Skills -->
-		<set name="affectRange" val="250" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectScope" val="FAN" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WATER" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="WATER" />
-		<set name="attributePower" val="20" />
 		<set name="fanRange" val="0,0,250,60" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume2" val="123" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="4563" />
+				<param ignoreShieldDefence="60" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6294" levels="1" name="Leader's Roar">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Ice Knight Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="500" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="34400" />
 		<set name="icon" val="icon.skill1040" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
-		<set name="mpConsume2" val="66" />
 		<set name="mpConsume1" val="17" />
+		<set name="mpConsume2" val="66" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="CLAN" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.15" />
@@ -1680,38 +1735,43 @@
 		</effects>
 	</skill>
 	<skill id="6298" levels="1" name="Summon Follower Knight">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Ice Knight Skills -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6299" levels="1" name="Breath of Ice Palace - Ice Storm">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Freya Skills -->
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WATER" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />
-		<set name="attributeType" val="WATER" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
-			<effect name="PhysicalAttack">
-				<param power="1547" />
-			</effect>
 			<effect name="CallSkill">
 				<param skillId="6662" skillLevel="1" />
+			</effect>
+			<effect name="PhysicalAttack">
+				<param power="1547" />
 			</effect>
 		</effects>
 	</skill>

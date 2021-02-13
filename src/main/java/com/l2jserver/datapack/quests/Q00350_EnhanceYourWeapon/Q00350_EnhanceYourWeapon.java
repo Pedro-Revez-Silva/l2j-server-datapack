@@ -167,9 +167,7 @@ public class Q00350_EnhanceYourWeapon extends Quest {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon) {
-		super.onSkillSee(npc, caster, skill, targets, isSummon);
-		
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, List<L2Object> targets, boolean isSummon) {
 		if ((skill == null) || (skill.getId() != 2096)) {
 			return null;
 		} else if ((caster == null) || caster.isDead()) {
@@ -184,7 +182,7 @@ public class Q00350_EnhanceYourWeapon extends Quest {
 		} catch (Exception e) {
 			_log.log(Level.SEVERE, "", e);
 		}
-		return null;
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override

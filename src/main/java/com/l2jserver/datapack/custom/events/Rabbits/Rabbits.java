@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Event;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Broadcast;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Rabbits event.<br>
@@ -184,9 +183,9 @@ public final class Rabbits extends Event {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon) {
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, List<L2Object> targets, boolean isSummon) {
 		if (skill.getId() == RABBIT_TORNADO.getSkillId()) {
-			if (!npc.isInvisible() && Util.contains(targets, npc)) {
+			if (!npc.isInvisible() && targets.contains(npc)) {
 				dropItem(npc, caster, DROPLIST);
 				npc.deleteMe();
 				_npcs.remove(npc);

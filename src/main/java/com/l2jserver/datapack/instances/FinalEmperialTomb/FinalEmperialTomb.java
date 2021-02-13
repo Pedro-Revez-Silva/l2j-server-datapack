@@ -23,6 +23,7 @@ import static com.l2jserver.gameserver.config.Configuration.server;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -45,6 +46,7 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2CommandChannel;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.L2World;
@@ -688,7 +690,7 @@ public final class FinalEmperialTomb extends AbstractInstance {
 					}
 					
 					if ((_world.frintezza != null) && !_world.frintezza.isDead() && (_world.activeScarlet != null) && !_world.activeScarlet.isDead()) {
-						final List<L2Character> targetList = new ArrayList<>();
+						final var targetList = new LinkedList<L2Object>();
 						if (skill.hasEffectType(L2EffectType.STUN) || skill.isDebuff()) {
 							for (int objId : _world.getAllowed()) {
 								L2PcInstance player = L2World.getInstance().getPlayer(objId);
@@ -705,7 +707,7 @@ public final class FinalEmperialTomb extends AbstractInstance {
 							targetList.add(_world.activeScarlet);
 						}
 						if (!targetList.isEmpty()) {
-							_world.frintezza.doCast(skill, targetList.get(0), targetList.toArray(new L2Character[targetList.size()]));
+							_world.frintezza.doCast(skill, (L2Character) targetList.get(0), targetList);
 						}
 					}
 					break;

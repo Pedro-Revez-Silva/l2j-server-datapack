@@ -619,10 +619,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3436" levels="1" name="Blue Talisman - Self destruction">
-		<!-- Confirmed CT2.5 -->
+	<skill id="3436" levels="1" name="Blue Talisman of Self destruction">
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="6-12" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="-669" />
 		<set name="hitTime" val="3000" />
 		<set name="hpConsume" val="800" />
@@ -630,8 +632,9 @@
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelayLock" val="true" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="200" />

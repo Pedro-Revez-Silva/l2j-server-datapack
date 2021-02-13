@@ -381,8 +381,11 @@
 		</effects>
 	</skill>
 	<skill id="623" levels="1" name="Find Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="INVISIBLE" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="RANGE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0470" />
 		<set name="magicLvl" val="74" />
@@ -390,7 +393,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="TrapDetect">
 				<param power="78" />
@@ -562,10 +565,12 @@
 		</effects>
 	</skill>
 	<skill id="629" levels="1" name="Rabbit Magic Eye">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="1000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0629" />
 		<set name="isMagic" val="2" />
@@ -573,7 +578,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="630" levels="1" name="Rabbit Tornado">
 		<!-- Confirmed CT2.5 -->
@@ -1545,10 +1550,14 @@
 		</effects>
 	</skill>
 	<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="6-12" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="150" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="coolTime" val="733" />
 		<set name="effectPoint" val="-342" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1067" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="80" />
@@ -1557,10 +1566,10 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="4000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="2323" />
+				<param power="1394" />
 				<param ignoreShieldDefence="true" />
 			</effect>
 		</effects>
@@ -1585,21 +1594,24 @@
 		</effects>
 	</skill>
 	<skill id="679" levels="1" name="Sacrifice Warrior">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="PARTY" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="PARTY" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
@@ -1641,25 +1653,29 @@
 		</effects>
 	</skill>
 	<skill id="681" levels="1" name="Divine Knight Hate Aura">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-6752" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_etc" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume2" val="144" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="40000" />
-		<set name="rideState" val="NONE" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="AURA" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="TargetMe" />
 		</effects>
@@ -1696,16 +1712,20 @@
 		</effects>
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="6-12" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="150" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-171" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
@@ -1716,7 +1736,7 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="AURA" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
 		<effects>
 			<effect name="PhysicalAttack">
@@ -1749,27 +1769,30 @@
 		</effects>
 	</skill>
 	<skill id="685" levels="1" name="Sacrifice Knight">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="PARTY" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="PARTY" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
 		<effects>
 			<effect name="Buff">
-				<mul stat="pDef" val="1.2" />
+				<mul stat="pDef" val="1.3" />
 			</effect>
 		</effects>
 		<selfEffects>
@@ -1918,21 +1941,24 @@
 		</effects>
 	</skill>
 	<skill id="691" levels="1" name="Sacrifice Rogue">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="PARTY" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="PARTY" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player hp="30" />
 		</cond>
@@ -2000,55 +2026,65 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
+	<skill id="694" levels="1" name="Divine Wizard Divine Curtain">
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="100" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="HOLY" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-338" />
 		<set name="effectRange" val="1000" />
-		<set name="attributeType" val="HOLY" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="mpConsume2" val="109" />
+		<set name="mpConsume1" val="22" />
+		<set name="mpConsume2" val="87" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="64" />
 			</effect>
 		</effects>
 	</skill>
-	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
+	<skill id="695" levels="1" name="Divine Wizard Divine Cloud">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="abnormalVisualEffect" val="SLEEP" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="9-10" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="RANGE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-676" />
 		<set name="effectRange" val="1000" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
-		<set name="mpConsume2" val="109" />
+		<set name="mpConsume1" val="22" />
+		<set name="mpConsume2" val="87" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="AREA" />
+		<set name="targetType" val="ENEMY_ONLY" />
 		<set name="trait" val="SLEEP" />
 		<effects>
-			<effect name="Sleep" />
+			<effect name="Stun" />
 			<effect name="DefenceTrait">
 				<param SLEEP="100" />
 			</effect>
@@ -2083,21 +2119,24 @@
 		</effects>
 	</skill>
 	<skill id="697" levels="1" name="Sacrifice Wizard">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
+		<set name="affectObject" val="FRIEND" />
 		<set name="affectRange" val="300" />
+		<set name="affectScope" val="PARTY" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="PARTY" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player mp="10" />
 		</cond>

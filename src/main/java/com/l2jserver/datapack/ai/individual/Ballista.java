@@ -20,6 +20,8 @@ package com.l2jserver.datapack.ai.individual;
 
 import static com.l2jserver.gameserver.config.Configuration.clan;
 
+import java.util.List;
+
 import com.l2jserver.datapack.ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -69,7 +71,7 @@ public final class Ballista extends AbstractNpcAI {
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon) {
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, List<L2Object> targets, boolean isSummon) {
 		if ((skill != null) && (caster.getTarget() == npc) && (getRandom(100) < 40) && (skill == BOMB.getSkill())) {
 			if (npc.getFort().getSiege().isInProgress()) {
 				if ((caster.getClan() != null) && (caster.getClan().getLevel() >= MIN_CLAN_LV)) {

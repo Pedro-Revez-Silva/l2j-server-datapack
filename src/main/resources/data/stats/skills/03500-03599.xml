@@ -1276,14 +1276,14 @@
 		</effects>
 	</skill>
 	<skill id="3581" levels="1" name="Discord">
-		<!-- Confirmed CT2.5 -->
 		<!-- Infinity Axe Skill -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
-			<!-- FIXME: this should be "Distrust" effect -->
+			<!-- TODO: This should be "Distrust" effect. -->
 			<effect name="Confuse" abnormalTime="20">
 				<param chance="20" />
 			</effect>
@@ -1546,12 +1546,13 @@
 		</effects>
 	</skill>
 	<skill id="3592" levels="1" name="Dispell">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- High Five Confirmed -->
 		<!-- Infinity Spear Skill -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="DispelByCategory">
 				<param slot="BUFF" rate="5" max="2" />
@@ -1629,19 +1630,14 @@
 		</effects>
 	</skill>
 	<skill id="3596" levels="1" name="Full Recover">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Infinity Scepter Skill -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<!-- TODO: Remove this condition when proper target type is done -->
-		<cond msgId="113" addName="1">
-			<not>
-				<target npcType="L2Attackable" />
-			</not>
-		</cond>
+		<set name="targetType" val="ENEMY_NOT" />
 		<effects>
 			<effect name="HpPerMax">
 				<param power="100" />
@@ -1649,12 +1645,16 @@
 		</effects>
 	</skill>
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<effects>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.15" />
+			</effect>
 			<effect name="MaxCp">
 				<param power="50" />
 				<param type="PER" />
@@ -1664,28 +1664,28 @@
 				<param type="PER" />
 			</effect>
 			<effect name="Buff">
-				<mul stat="mAtkSpd" val="1.15" />
 				<add stat="regMp" val="0.51" />
-				<mul stat="pvpPhysDmg" val="1.07" />
-				<mul stat="pvpMagicalDmg" val="1.07" />
-				<mul stat="pvpPhysSkillsDmg" val="1.07" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pvpMagicalDmg" val="1.2" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pvpPhysDmg" val="1.2" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pvpPhysSkillsDmg" val="1.2" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3598" levels="1" name="Full Recover">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Infinity Rod Skill -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<!-- TODO: Remove this condition when proper target type is done -->
-		<cond>
-			<not>
-				<target npcType="L2Attackable" />
-			</not>
-		</cond>
+		<set name="targetType" val="ENEMY_NOT" />
 		<effects>
 			<effect name="HpPerMax">
 				<param power="100" />
