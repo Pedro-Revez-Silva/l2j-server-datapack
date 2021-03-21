@@ -48,7 +48,7 @@ public class BasicListener extends ListenerAdapter {
 	}
 	
 	@Override
-	public void onReconnect(ReconnectedEvent event) {
+	public void onReconnected(ReconnectedEvent event) {
 		LOG.info(event.getJDA().getSelfUser().getName() + " has reconnected.");
 	}
 }
