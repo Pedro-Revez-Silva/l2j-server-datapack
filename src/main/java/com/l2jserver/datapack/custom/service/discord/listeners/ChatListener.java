@@ -54,7 +54,7 @@ public class ChatListener extends ListenerAdapter {
                 case 17 -> "Hero";
                 default -> null;
             };
-            if (type != null) {
+            if (type != null && discord().enableBot()) {
                 String replacedText = onShiftItems(event.getActiveChar(),  event.getText());
                 eb.setColor(Color.CYAN);
                 eb.setTitle("***___" + type + "___***");
@@ -73,7 +73,7 @@ public class ChatListener extends ListenerAdapter {
             long count = item.getCount();
             String enchant = item.getEnchantLevel() > 0 ? " +" + item.getEnchantLevel() : "";
             String name = item.getItem().getItemGrade() != CrystalType.NONE ? item.getItem().getItemGrade().name() + "-" + item.getName() : "" + item.getName();
-            final String info = name  + enchant + "\n" + (item.isStackable() ? df.format(count) : "");
+            final String info = name  + enchant + (item.isStackable() ? "\n" + df.format(count) : "");
             message = message.replace(matcher.group(0) + "\b", info);
         }
         if (message.contains("\b")) {
