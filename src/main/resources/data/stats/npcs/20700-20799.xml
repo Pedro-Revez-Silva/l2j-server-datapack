@@ -771,7 +771,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>DEMONIC</clan>
 			</clanList>
@@ -1444,7 +1444,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>OL_MAHUM</clan>
 			</clanList>
@@ -1779,7 +1779,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>CAVE_SERVANT</clan>
 			</clanList>
@@ -2065,7 +2065,7 @@
 					<item id="57" min="636" max="1270" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="0.4235000014305115">
-					<item id="21732" min="1" max="1" chance="1.732" /> <!-- Sword of Revolution - Event -->
+					<item id="129" min="1" max="1" chance="1.732" /> <!-- Sword of Revolution -->
 					<item id="2034" min="1" max="1" chance="98.268" /> <!-- Sword of Revolution Blade -->
 				</group>
 				<group chance="39.11399841308594">
@@ -2640,7 +2640,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -3670,7 +3670,6 @@
 					<item id="5549" min="1" max="1" chance="9.0352" /> <!-- Metallic Thread -->
 					<item id="2187" min="1" max="1" chance="4.0336" /> <!-- Recipe: Manticore Skin Shirt -->
 					<item id="2273" min="1" max="1" chance="0.6454" /> <!-- Recipe: Tarbar -->
-					<item id="6667" min="1" max="1" chance="56.4698" /> <!-- Deluxe Chest Key - Grade 3 -->
 				</group>
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
@@ -4121,7 +4120,6 @@
 					<item id="5549" min="1" max="1" chance="2.1219" /> <!-- Metallic Thread -->
 					<item id="2185" min="1" max="1" chance="4.177" /> <!-- Recipe: Iron Boots -->
 					<item id="2982" min="1" max="1" chance="2.7065" /> <!-- Recipe: Brigandine Shield -->
-					<item id="6667" min="1" max="1" chance="13.2619" /> <!-- Deluxe Chest Key - Grade 3 -->
 					<item id="1341" min="10" max="30" chance="70.7304" /> <!-- Bone Arrow -->
 				</group>
 				<group chance="42.0">
@@ -4682,7 +4680,7 @@
 					<item id="57" min="428" max="853" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="0.28119999170303345">
-					<item id="21731" min="1" max="1" chance="0.866" /> <!-- Maingauche - Event -->
+					<item id="224" min="1" max="1" chance="0.866" /> <!-- Maingauche -->
 					<item id="2038" min="1" max="1" chance="49.134" /> <!-- Maingauche Edge -->
 					<item id="1660" min="1" max="1" chance="0.866" /> <!-- Cursed Maingauche -->
 					<item id="2044" min="1" max="1" chance="49.134" /> <!-- Cursed Maingauche Edge -->
@@ -4696,7 +4694,6 @@
 					<item id="2147" min="1" max="1" chance="1.3411" /> <!-- Recipe: Blacksmith's frame -->
 					<item id="2984" min="1" max="1" chance="1.9197" /> <!-- Recipe: Salamander Skin Boots -->
 					<item id="2289" min="1" max="1" chance="0.1043" /> <!-- Recipe: Staff of Life -->
-					<item id="6667" min="1" max="1" chance="11.7343" /> <!-- Deluxe Chest Key - Grade 3 -->
 					<item id="1341" min="10" max="30" chance="62.5826" /> <!-- Bone Arrow -->
 				</group>
 				<group chance="42.0">
@@ -4922,7 +4919,7 @@
 					<item id="2031" min="1" max="1" chance="19.9807" /> <!-- Morning Star Head -->
 					<item id="90" min="1" max="1" chance="0.3676" /> <!-- Goat Head Staff -->
 					<item id="2032" min="1" max="1" chance="18.2395" /> <!-- Goat Head Staff Head -->
-					<item id="21735" min="1" max="1" chance="0.3676" /> <!-- Tarbar - Event -->
+					<item id="158" min="1" max="1" chance="0.3676" /> <!-- Tarbar -->
 					<item id="2035" min="1" max="1" chance="19.9807" /> <!-- Tarbar Head -->
 					<item id="169" min="1" max="1" chance="0.3676" /> <!-- Skull Breaker -->
 					<item id="2036" min="1" max="1" chance="19.9807" /> <!-- Skull Breaker Head -->
@@ -5039,7 +5036,7 @@
 					<item id="57" min="740" max="1478" chance="100" /> <!-- Adena -->
 				</group>
 				<group chance="0.5198000073432922">
-					<item id="21738" min="1" max="1" chance="0.821" /> <!-- Winged Spear - Event -->
+					<item id="93" min="1" max="1" chance="0.821" /> <!-- Winged Spear -->
 					<item id="2033" min="1" max="1" chance="49.179" /> <!-- Winged Spear Blade -->
 					<item id="294" min="1" max="1" chance="0.821" /> <!-- War Pick -->
 					<item id="2041" min="1" max="1" chance="49.179" /> <!-- War Pick Head -->
@@ -5396,7 +5393,6 @@
 					<item id="4557" min="1" max="1" chance="0.1286" /> <!-- Greater Dye of DEX <Dex+1 Str-1> -->
 					<item id="3033" min="1" max="1" chance="0.1072" /> <!-- Recipe: Spiritshot C -->
 					<item id="3954" min="1" max="1" chance="0.1072" /> <!-- Recipe: Blessed Spiritshot C -->
-					<item id="6668" min="1" max="1" chance="11.4849" /> <!-- Deluxe Chest Key - Grade 4 -->
 				</group>
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->

@@ -4166,9 +4166,9 @@
 					<item id="4039" min="1" max="1" chance="27.8930" /> <!-- Mold Glue -->
 					<item id="4041" min="1" max="1" chance="7.2764" /> <!-- Mold Hardener -->
 					<item id="4044" min="1" max="1" chance="27.8930" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.8110" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4528" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1453" /> <!-- High-Grade Life Stone -  Level 80 -->
+					<item id="9573" min="1" max="1" chance="5.8110" /> <!-- Life Stone - Level 80 -->
+					<item id="9574" min="1" max="1" chance="1.4528" /> <!-- Mid-Grade Life Stone - Level 80 -->
+					<item id="9575" min="1" max="1" chance="0.1453" /> <!-- High-Grade Life Stone - Level 80 -->
 					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
 					<item id="14219" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Magician's Will -->
 				</group>
@@ -4277,9 +4277,9 @@
 					<item id="4039" min="1" max="1" chance="27.8930" /> <!-- Mold Glue -->
 					<item id="4041" min="1" max="1" chance="7.2764" /> <!-- Mold Hardener -->
 					<item id="4044" min="1" max="1" chance="27.8930" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.8110" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.4528" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1453" /> <!-- High-Grade Life Stone -  Level 80 -->
+					<item id="9573" min="1" max="1" chance="5.8110" /> <!-- Life Stone - Level 80 -->
+					<item id="9574" min="1" max="1" chance="1.4528" /> <!-- Mid-Grade Life Stone - Level 80 -->
+					<item id="9575" min="1" max="1" chance="0.1453" /> <!-- High-Grade Life Stone - Level 80 -->
 					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
 					<item id="14219" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Magician's Will -->
 				</group>
@@ -4384,9 +4384,9 @@
 					<item id="9628" min="1" max="1" chance="0.8247" /> <!-- Leonard -->
 					<item id="9630" min="1" max="1" chance="0.5534" /> <!-- Orichalcum -->
 					<item id="9629" min="1" max="1" chance="0.4572" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="0.7302" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.1826" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0183" /> <!-- High-Grade Life Stone -  Level 80 -->
+					<item id="9573" min="1" max="1" chance="0.7302" /> <!-- Life Stone - Level 80 -->
+					<item id="9574" min="1" max="1" chance="0.1826" /> <!-- Mid-Grade Life Stone - Level 80 -->
+					<item id="9575" min="1" max="1" chance="0.0183" /> <!-- High-Grade Life Stone - Level 80 -->
 					<item id="9546" min="1" max="1" chance="0.8412" /> <!-- Fire Stone -->
 					<item id="1345" min="10" max="30" chance="70.1036" /> <!-- Shining Arrow -->
 					<item id="6622" min="1" max="1" chance="0.0500" /> <!-- Giant's Codex -->
@@ -4496,9 +4496,9 @@
 					<item id="4039" min="1" max="1" chance="26.1840" /> <!-- Mold Glue -->
 					<item id="4041" min="1" max="1" chance="6.8306" /> <!-- Mold Hardener -->
 					<item id="4044" min="1" max="1" chance="26.1840" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.4550" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.3638" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1364" /> <!-- High-Grade Life Stone -  Level 80 -->
+					<item id="9573" min="1" max="1" chance="5.4550" /> <!-- Life Stone - Level 80 -->
+					<item id="9574" min="1" max="1" chance="1.3638" /> <!-- Mid-Grade Life Stone - Level 80 -->
+					<item id="9575" min="1" max="1" chance="0.1364" /> <!-- High-Grade Life Stone - Level 80 -->
 					<item id="9547" min="1" max="1" chance="6.2841" /> <!-- Water Stone -->
 					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
 					<item id="14219" min="1" max="1" chance="0.5000" /> <!-- Forgotten Scroll - Magician's Will -->
@@ -4607,9 +4607,9 @@
 					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
 					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
 					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone -  Level 80 -->
+					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone - Level 80 -->
+					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone - Level 80 -->
+					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone - Level 80 -->
 					<item id="9548" min="1" max="1" chance="2.8138" /> <!-- Earth Stone -->
 					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
 					<item id="10549" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Protection of Rune -->
@@ -4720,9 +4720,9 @@
 					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
 					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
 					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone -  Level 80 -->
+					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone - Level 80 -->
+					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone - Level 80 -->
+					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone - Level 80 -->
 					<item id="9549" min="1" max="1" chance="2.8138" /> <!-- Wind Stone -->
 					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
 					<item id="10551" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Protection of Alignment -->
@@ -4830,9 +4830,9 @@
 					<item id="4039" min="1" max="1" chance="26.1840" /> <!-- Mold Glue -->
 					<item id="4041" min="1" max="1" chance="6.8306" /> <!-- Mold Hardene r-->
 					<item id="4044" min="1" max="1" chance="26.1840" /> <!-- Thons -->
-					<item id="9573" min="1" max="1" chance="5.4550" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="1.3638" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.1364" /> <!-- High-Grade Life Stone -  Level 80 -->
+					<item id="9573" min="1" max="1" chance="5.4550" /> <!-- Life Stone - Level 80 -->
+					<item id="9574" min="1" max="1" chance="1.3638" /> <!-- Mid-Grade Life Stone - Level 80 -->
+					<item id="9575" min="1" max="1" chance="0.1364" /> <!-- High-Grade Life Stone - Level 80 -->
 					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
 					<item id="10550" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Protection of Elemental -->
 					<item id="9550" min="1" max="1" chance="6.2841" /> <!-- Dark Stone -->
@@ -4942,9 +4942,9 @@
 					<item id="9628" min="1" max="1" chance="2.7587" /> <!-- Leonard -->
 					<item id="9630" min="1" max="1" chance="1.8512" /> <!-- Orichalcum -->
 					<item id="9629" min="1" max="1" chance="1.5293" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone -  Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone -  Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone -  Level 80 -->
+					<item id="9573" min="1" max="1" chance="2.4426" /> <!-- Life Stone - Level 80 -->
+					<item id="9574" min="1" max="1" chance="0.6106" /> <!-- Mid-Grade Life Stone - Level 80 -->
+					<item id="9575" min="1" max="1" chance="0.0611" /> <!-- High-Grade Life Stone - Level 80 -->
 					<item id="9551" min="1" max="1" chance="2.8138" /> <!-- Divine Stone -->
 					<item id="6622" min="1" max="1" chance="0.5000" /> <!-- Giant's Codex -->
 					<item id="14219" min="1" max="1" chance="0.1000" /> <!-- Forgotten Scroll - Magician's Will -->
@@ -8673,7 +8673,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>RAGNAORC</clan>
 			</clanList>
@@ -8786,7 +8786,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15">
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300">
 			<clanList>
 				<clan>RAGNAORC</clan>
 			</clanList>
