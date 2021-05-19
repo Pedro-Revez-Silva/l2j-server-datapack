@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="inc/colosseum_fence_types.xsd" />
 	<xs:element name="instance">
 		<xs:complexType>
 			<xs:sequence>
@@ -143,6 +144,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="colosseumfencelist" maxOccurs="1" minOccurs="0" type="colosseum_fence_list_t" />
 				<xs:element name="spawnlist" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence maxOccurs="unbounded">
