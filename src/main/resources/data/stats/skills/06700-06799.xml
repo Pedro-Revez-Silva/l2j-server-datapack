@@ -1181,10 +1181,27 @@
 		</effects>
 	</skill>
 	<skill id="6759" levels="1" name="Death Shot">
-		<!-- none -->
-		<set name="effectPoint" val="-100" />
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-897" />
+		<set name="effectRange" val="1400" />
+		<set name="attributeType" val="UNHOLY" />
+		<set name="attributePower" val="120" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume2" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="5000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<effects>
+			<effect name="PhysicalAttack">
+				<param power="5132" />
+				<param criticalChance="15" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="6760" levels="1" name="Dragon Strike">
 		<!-- High Five Confirmed -->

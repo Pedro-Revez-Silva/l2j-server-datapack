@@ -395,9 +395,36 @@
 		</effects>
 	</skill>
 	<skill id="6819" levels="1" name="Banshee's Curse">
-		<!-- "For 15 seconds, Atk. Spd. is decreased by 20%." -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<!-- High Five Confirmed -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="affectScope" val="RANGE" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-507" />
+		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill4038" />
+		<set name="isMagic" val="1" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume2" val="60" />
+		<set name="mpConsume1" val="15" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="15000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="AREA" />
+		<effects>
+			<effect name="MagicalAttack">
+				<param power="120" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd" val="0.8" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="6820" levels="1" name="P. Def. Enhance">
 		<!-- High Five Confirmed -->
