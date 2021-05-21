@@ -21,34 +21,57 @@ package com.l2jserver.datapack.handlers.admincommandhandlers;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.ActorDebugCategory;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 public class AdminDebug implements IAdminCommandHandler {
+	private static final String ADMIN_DEBUG = "admin_debug";
+	private static final String ADMIN_DEBUG_HELP = "admin_debug_help";
+	private static final String ADMIN_DEBUG_CATEGORY = "admin_debug_category";
+	
 	private static final String[] ADMIN_COMMANDS = {
-		"admin_debug"
+		ADMIN_DEBUG_HELP,
+		ADMIN_DEBUG,
+		ADMIN_DEBUG_CATEGORY
 	};
 	
 	@Override
 	public final boolean useAdminCommand(String command, L2PcInstance activeChar) {
 		String[] commandSplit = command.split(" ");
-		if (ADMIN_COMMANDS[0].equalsIgnoreCase(commandSplit[0])) {
-			L2Object target;
-			if (commandSplit.length > 1) {
-				target = L2World.getInstance().getPlayer(commandSplit[1].trim());
+		switch (commandSplit[0]) {
+			case ADMIN_DEBUG_HELP: {
+				showDebugHelp(activeChar);
+			}
+			case ADMIN_DEBUG: {
+				L2Character target = getDebugCharacter(activeChar, commandSplit.length > 1 ? commandSplit[1] : null);
 				if (target == null) {
 					activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
-					return true;
+					break;
 				}
-			} else {
-				target = activeChar.getTarget();
+				setDebug(activeChar, target);
 			}
-			
-			if (target instanceof L2Character) {
-				setDebug(activeChar, (L2Character) target);
-			} else {
-				setDebug(activeChar, activeChar);
+			case ADMIN_DEBUG_CATEGORY: {
+				if (commandSplit.length < 2) {
+					showWrongUsage(activeChar, "Not enough parameters!");
+					break;
+				}
+				
+				ActorDebugCategory category = null;
+				try {
+					category = ActorDebugCategory.valueOf(commandSplit[1]);
+				} catch (Exception e) {
+					showWrongUsage(activeChar, commandSplit[1] + " is not a valid ActorDebugCategory!");
+					break;
+				}
+				
+				L2Character target = getDebugCharacter(activeChar, commandSplit.length > 2 ? commandSplit[2] : null);
+				if (target == null) {
+					activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+					break;
+				}
+				activeChar.sendMessage("Debug category " + category.name() + " has been " + (target.toggleDebugCategory(category) ? "enabled" : "disabled") + ".");
 			}
 		}
 		return true;
@@ -57,6 +80,58 @@ public class AdminDebug implements IAdminCommandHandler {
 	@Override
 	public final String[] getAdminCommandList() {
 		return ADMIN_COMMANDS;
+	}
+	
+	private final L2Character getDebugCharacter(L2PcInstance activeChar, String playerName) {
+		L2Object target = null;
+		if (playerName != null) {
+			target = L2World.getInstance().getPlayer(playerName.trim());
+		} else {
+			target = activeChar.getTarget();
+			if (target == null) {
+				target = activeChar;
+			}
+		}
+		
+		if (target instanceof L2Character) {
+			return (L2Character) target;
+		}
+		return null;
+	}
+	
+	private final void showWrongUsage(L2PcInstance activeChar, String msg) {
+		activeChar.sendMessage(msg);
+		activeChar.sendMessage("Type //debug_help for help.");
+	}
+	
+	private final void showDebugHelp(L2PcInstance activeChar) {
+		activeChar.sendMessage("//debug [playerName]");
+		activeChar.sendMessage("  Description:");
+		activeChar.sendMessage("    Start to debug an Actor.");
+		activeChar.sendMessage("  Parameters:");
+		activeChar.sendMessage("    playerName - name of the player to debug");
+		activeChar.sendMessage("  Notes:");
+		activeChar.sendMessage("    Without parameter or target you debug yourself");
+		
+		activeChar.sendMessage("//debug_help");
+		activeChar.sendMessage("  Description:");
+		activeChar.sendMessage("    Show this help.");
+		
+		activeChar.sendMessage("//debug_gui");
+		activeChar.sendMessage("  Description:");
+		activeChar.sendMessage("    Show the debug GUI.");
+		
+		activeChar.sendMessage("//debug_category debugCategory [playerName]");
+		activeChar.sendMessage("  Description:");
+		activeChar.sendMessage("    Toggle the given debug category on/off.");
+		activeChar.sendMessage("  Parameters:");
+		activeChar.sendMessage("    debugCategory - category to toggle");
+		for (ActorDebugCategory category : ActorDebugCategory.values()) {
+			activeChar.sendMessage("      " + category.name());
+		}
+		activeChar.sendMessage("    playerName - name of the player to debug");
+		activeChar.sendMessage("  Notes:");
+		activeChar.sendMessage("    Without parameter or target you debug yourself");
 	}
 	
 	private final void setDebug(L2PcInstance activeChar, L2Character target) {

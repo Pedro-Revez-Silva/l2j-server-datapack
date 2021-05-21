@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.ActorDebugCategory;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
@@ -30,7 +31,7 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
- * Resist Skill effect implementaion.
+ * Resist Skill effect implementation.
  * @author UnAfraid
  */
 public final class ResistSkill extends AbstractEffect {
@@ -58,7 +59,7 @@ public final class ResistSkill extends AbstractEffect {
 		final L2Character effected = info.getEffected();
 		for (SkillHolder holder : _skills) {
 			effected.addInvulAgainst(holder);
-			effected.sendDebugMessage("Applying invul against " + holder.getSkill());
+			effected.sendDebugMessage(ActorDebugCategory.EFFECTS, "Applying invul against " + holder.getSkill());
 		}
 	}
 	
@@ -67,7 +68,7 @@ public final class ResistSkill extends AbstractEffect {
 		final L2Character effected = info.getEffected();
 		for (SkillHolder holder : _skills) {
 			info.getEffected().removeInvulAgainst(holder);
-			effected.sendDebugMessage("Removing invul against " + holder.getSkill());
+			effected.sendDebugMessage(ActorDebugCategory.EFFECTS, "Removing invul against " + holder.getSkill());
 		}
 	}
 	

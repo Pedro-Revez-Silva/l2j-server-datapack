@@ -22,7 +22,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.ActorDebugCategory;
 import com.l2jserver.gameserver.model.actor.stat.CharStat;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
@@ -34,6 +38,8 @@ import com.l2jserver.gameserver.model.stats.TraitType;
  * @author NosBit
  */
 public final class DefenceTrait extends AbstractEffect {
+	private static final Logger LOG = LoggerFactory.getLogger(DefenceTrait.class);
+
 	private final Map<TraitType, Float> _defenceTraits = new HashMap<>();
 	
 	public DefenceTrait(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params) {
@@ -65,6 +71,7 @@ public final class DefenceTrait extends AbstractEffect {
 		final CharStat charStat = info.getEffected().getStat();
 		synchronized (charStat.getDefenceTraits()) {
 			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet()) {
+				info.getEffected().sendDebugMessage(ActorDebugCategory.EFFECTS, "DefenseTrait-- "+info.getSkill().getName()+" - "+trait.getKey().toString()+" - "+trait.getValue());
 				if (trait.getValue() < 2.0f) {
 					charStat.getDefenceTraits()[trait.getKey().getId()] /= trait.getValue();
 					charStat.getDefenceTraitsCount()[trait.getKey().getId()]--;
@@ -80,6 +87,7 @@ public final class DefenceTrait extends AbstractEffect {
 		final CharStat charStat = info.getEffected().getStat();
 		synchronized (charStat.getDefenceTraits()) {
 			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet()) {
+				info.getEffected().sendDebugMessage(ActorDebugCategory.EFFECTS, "DefenseTrait++ "+info.getSkill().getName()+" + "+trait.getKey().toString()+" + "+trait.getValue());
 				if (trait.getValue() < 2.0f) {
 					charStat.getDefenceTraits()[trait.getKey().getId()] *= trait.getValue();
 					charStat.getDefenceTraitsCount()[trait.getKey().getId()]++;

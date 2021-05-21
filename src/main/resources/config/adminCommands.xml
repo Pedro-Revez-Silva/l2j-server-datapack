@@ -89,7 +89,9 @@
 	<admin command="admin_cw_info_menu" accessLevel="7" />
 
 	<!-- ADMIN DEBUG -->
+	<admin command="admin_debug_help" accessLevel="7" />
 	<admin command="admin_debug" accessLevel="7" />
+	<admin command="admin_debug_category" accessLevel="7" />
 
 	<!-- ADMIN DELETE -->
 	<admin command="admin_delete" accessLevel="7" />
