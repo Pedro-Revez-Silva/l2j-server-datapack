@@ -26,7 +26,6 @@ import static com.l2jserver.gameserver.network.SystemMessageId.THIS_SKILL_IS_NOT
 import static com.l2jserver.gameserver.network.serverpackets.ActionFailed.STATIC_PACKET;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.MINUTES;
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
