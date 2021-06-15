@@ -1466,31 +1466,34 @@
 		</effects>
 	</skill>
 	<skill id="3153" levels="10" name="Item Skill: Vampiric Touch">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+		<table name="#hpDrainPower"> 49 53 57 61 66 70 74 78 82 88 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume2"> 59 63 68 72 77 81 85 89 93 99 </table>
 		<table name="#mpConsume1"> 15 16 17 18 20 21 22 23 24 25 </table>
-		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1100" />
-		<set name="attributeType" val="UNHOLY" />
+		<table name="#mpConsume2"> 59 63 68 72 77 81 85 89 93 99 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="UNHOLY" />
+		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="300000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="HpDrain">
-				<param power="#power" />
+				<param power="#hpDrainPower" />
 				<param drain="0.4" />
 			</effect>
 		</effects>
@@ -1772,203 +1775,224 @@
 		</effects>
 	</skill>
 	<skill id="3165" levels="10" name="Item Skill: Prominence">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<table name="#magicalAttackPower"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<table name="#mpConsume1"> 9 9 10 10 11 12 12 13 13 14 </table>
-		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="attributeType" val="FIRE" />
+		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="FIRE" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3167" levels="10" name="Item Skill: Hydro Blast">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<table name="#magicalAttackPower"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<table name="#mpConsume1"> 9 9 10 10 11 12 12 13 13 14 </table>
-		<table name="#power"> 61 66 72 77 82 78 92 78 102 110 </table>
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="attributeType" val="WATER" />
+		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WATER" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3168" levels="10" name="Item Skill: Hurricane">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+	<skill id="3168" levels="10" name="Item Skill: Tempest">
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<table name="#magicalAttackPower"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<table name="#mpConsume1"> 9 9 10 10 11 12 12 13 13 14 </table>
-		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="attributeType" val="WIND" />
+		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WIND" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3169" levels="10" name="Item Skill: Stone">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<table name="#magicalAttackPower"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<table name="#mpConsume1"> 9 9 10 10 11 12 12 13 13 14 </table>
-		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="attributeType" val="EARTH" />
+		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="EARTH" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3170" levels="10" name="Item Skill: Solar Flare">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<table name="#magicalAttackPower"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<table name="#mpConsume1"> 9 9 10 10 11 12 12 13 13 14 </table>
-		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="attributeType" val="HOLY" />
+		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="HOLY" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3171" levels="10" name="Item Skill: Shadow Flare">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<table name="#magicalAttackPower"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<table name="#mpConsume1"> 9 9 10 10 11 12 12 13 13 14 </table>
-		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
-		<set name="castRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1400" />
-		<set name="attributeType" val="UNHOLY" />
+		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="UNHOLY" />
+		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3172" levels="10" name="Item Skill: Aura Flare">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<table name="#magicalAttackPower"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<table name="#mpConsume1"> 9 9 10 10 11 12 12 13 13 14 </table>
-		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
+		<table name="#mpConsume2"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelayType" val="S" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>

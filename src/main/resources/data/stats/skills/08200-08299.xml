@@ -1320,36 +1320,52 @@
 		</effects>
 	</skill>
 	<skill id="8252" levels="1" name="Test - Transform Mount1">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
 		</cond>
+		<effects>
+			<effect name="Transformation">
+				<param id="109" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8253" levels="1" name="Test - Transform Mount2">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
 		</cond>
+		<effects>
+			<effect name="Transformation">
+				<param id="110" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8254" levels="1" name="Release Seal on Agathion - Monkey">
 		<!-- Confirmed CT2.5 -->
@@ -1732,40 +1748,69 @@
 		</effects>
 	</skill>
 	<skill id="8279" levels="1" name="Blessing of Fire">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
-		<set name="hitTime" val="100" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="firePower" val="20" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8280" levels="1" name="Blessing of Earth">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
-		<set name="hitTime" val="100" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="earthPower" val="20" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8281" levels="1" name="Inventory Slot Add">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill8281" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<!-- TODO: Custom effect. -->
+			<effect name="Buff">
+				<add stat="inventoryLimit" val="1" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8282" levels="1" name="Cloak Slot Add">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill8282" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="EnableCloak" />
+		</effects>
 	</skill>
 	<skill id="8283" levels="1" name="Vesper Heavy Armor Set">
 		<!-- Confirmed CT2.5 -->
@@ -1904,6 +1949,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<effects>
+			<!-- TODO: Custom effect. -->
 			<effect name="Buff">
 				<add stat="inventoryLimit" val="#inventoryLimit" />
 			</effect>
@@ -2036,9 +2082,15 @@
 		</effects>
 	</skill>
 	<skill id="8299" levels="1" name="Arcana Sigil">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.arcana_sigil_i01" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<effects>
+			<effect name="Buff">
+				<mul stat="regMp" val="1.05" />
+			</effect>
+		</effects>
 	</skill>
 </list>

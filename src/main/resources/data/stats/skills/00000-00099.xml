@@ -194,8 +194,8 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="DUAL" /> <!-- Requires a dualsword weapon -->
-				<player Charges="3" /> <!-- whose 3rd energy stage has been recharged -->
+				<using kind="DUAL" />
+				<player Charges="3" />
 			</and>
 		</cond>
 		<effects>
@@ -265,8 +265,8 @@
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<and>
-				<using kind="DUAL,SWORD,BLUNT" /> <!-- Requires a dualsword, sword or blunt weapon weapon -->
-				<player Charges="2" /> <!-- whose 2nd energy stage has been recharged -->
+				<using kind="DUAL,SWORD,BLUNT" />
+				<player Charges="2" />
 			</and>
 		</cond>
 		<effects>

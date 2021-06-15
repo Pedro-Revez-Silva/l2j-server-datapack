@@ -1424,23 +1424,31 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6374" levels="1" name="Notification">
+	<skill id="6374" levels="1" name="Notification - Thunderbolts">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
-	<skill id="6375" levels="1" name="Notification">
+	<skill id="6375" levels="1" name="Notification - Thunderbolts">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6376" levels="9" name="Sonic Strike">
 		<!-- High Five Confirmed -->

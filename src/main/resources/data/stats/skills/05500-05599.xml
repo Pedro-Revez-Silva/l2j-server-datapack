@@ -344,36 +344,92 @@
 		</effects>
 	</skill>
 	<skill id="5513" levels="1" name="Fire Taint">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="250" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="180" />
+		<set name="attributeType" val="FIRE" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-1063" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="15000" />
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume2" val="85" />
 		<set name="operateType" val="CA1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<channelingEffects>
+			<effect name="MagicalAttack">
+				<param power="100" />
+			</effect>
+		</channelingEffects>
 	</skill>
 	<skill id="5514" levels="1" name="Water Taint">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="250" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="180" />
+		<set name="attributeType" val="WATER" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-1063" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="15000" />
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume2" val="85" />
 		<set name="operateType" val="CA1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<channelingEffects>
+			<effect name="MagicalAttack">
+				<param power="100" />
+			</effect>
+		</channelingEffects>
 	</skill>
 	<skill id="5515" levels="1" name="Wind Taint">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="250" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="180" />
+		<set name="attributeType" val="WIND" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-1063" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="15000" />
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume2" val="85" />
 		<set name="operateType" val="CA1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<channelingEffects>
+			<effect name="MagicalAttack">
+				<param power="100" />
+			</effect>
+		</channelingEffects>
 	</skill>
 	<skill id="5516" levels="1" name="Earth Taint">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="250" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="180" />
+		<set name="attributeType" val="EARTH" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-1063" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="15000" />
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume2" val="85" />
 		<set name="operateType" val="CA1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<channelingEffects>
+			<effect name="MagicalAttack">
+				<param power="100" />
+			</effect>
+		</channelingEffects>
 	</skill>
 	<skill id="5517" levels="1" name="Nurture">
 		<set name="abnormalLvl" val="1" />
@@ -392,11 +448,18 @@
 		</effects>
 	</skill>
 	<skill id="5518" levels="1" name="Last Stand">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="-100" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ENEMY" />
+		<effects>
+			<effect name="StaticDamage">
+				<param power="9000" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5519" levels="1" name="Chain Buff - Power Up">
 		<!-- High Five Confirmed -->
@@ -653,12 +716,23 @@
 		</effects>
 	</skill>
 	<skill id="5528" levels="1" name="Self-Destruct">
+		<!-- High Five Confirmed -->
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="300" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="attributePower" val="50" />
+		<set name="attributeType" val="FIRE" />
 		<set name="effectPoint" val="-100" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="StaticDamage">
+				<param power="2000" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5529" levels="12" name="Surrender to the Unholy">
 		<!-- Confirmed CT2.5 -->
@@ -694,24 +768,45 @@
 		</effects>
 	</skill>
 	<skill id="5530" levels="12" name="Blood Storm">
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 10 10 </table>
+		<!-- High Five Confirmed -->
+		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 9 10 10 10 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#mpConsume1"> 3 4 6 8 10 13 15 16 16 17 17 17 </table>
+		<table name="#mpConsume2"> 10 16 23 31 40 49 57 61 64 66 68 68 </table>
+		<table name="#physicalAttackPower"> 45 104 218 416 721 1135 1625 1875 2111 2319 2486 2616 </table>
+		<table name="#tickHpPower"> -18 -25 -34 -44 -54 -62 -67 -67 -70 -70 -71 -71 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="BLEED" />
+		<effects>
+			<effect name="PhysicalAttack">
+				<param power="#tickHpPower" />
+			</effect>
+			<effect name="TickHp">
+				<param power="#tickHpPower" />
+				<param ticks="5" />
+				<param mode="DIFF" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5531" levels="1" name="Direction-Beleth Magic Skill 1">
 		<!-- High Five Confirmed -->
@@ -742,19 +837,27 @@
 		<set name="targetType" val="TARGET" />
 	</skill>
 	<skill id="5533" levels="1" name="Direction-Beleth Self-Destruction Skill 1">
+		<!-- High Five Confirmed -->
+		<set name="affectRange" val="150" />
+		<set name="affectScope" val="POINT_BLANK" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5534" levels="1" name="Direction-Beleth Transformation Skill 1">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5535" levels="1" name="Little Angel Cuteness Trick">
 		<set name="icon" val="icon.skill_agathion_cute" />
@@ -954,12 +1057,21 @@
 		</effects>
 	</skill>
 	<skill id="5546" levels="1" name="Alert">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ENEMY" />
+		<effects>
+			<effect name="StaticDamage">
+				<param power="20" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5547" levels="1" name="Maximum Ability">
 		<!-- High Five Confirmed -->
@@ -1434,13 +1546,22 @@
 		</effects>
 	</skill>
 	<skill id="5566" levels="1" name="Post of Destruction">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="icon.skill1050" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="PhysicalAttack">
+				<param power="3000" />
+				<param criticalChance="15" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5567" levels="1" name="Flame Armor">
 		<!-- High Five Confirmed -->

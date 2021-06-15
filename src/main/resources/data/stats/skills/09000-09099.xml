@@ -421,17 +421,31 @@
 		</effects>
 	</skill>
 	<skill id="9028" levels="1" name="Cool air cannon of fortune">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
 		<set name="effectPoint" val="-10000" />
+		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="1300" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="15365" /> <!-- Lucky Cool Pack -->
+		<set name="itemConsumeId" val="15365" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ENEMY" />
+		<cond msgId="109">
+			<target npcId="1013270" />
+		</cond>
+		<effects>
+			<effect name="PhysicalAttack">
+				<param power="1" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9029" levels="1" name="Watermelon Seed">
 		<!-- Confirmed CT2.5 -->
@@ -520,21 +534,33 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9035" levels="1" name="Steamed Rice Cake">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="abnormalVisualEffect" val="VP_KEEP" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="buffProtectLevel" val="2" />
 		<set name="effectPoint" val="100" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc.event_steamed_rice_cake_i00" />
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="15379" /> <!-- Steamed Rice Cake -->
+		<set name="itemConsumeId" val="15379" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Debuff">
+				<sub stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9036" levels="1" name="Special July 7th Parcel">
 		<!-- Confirmed CT2.5 -->

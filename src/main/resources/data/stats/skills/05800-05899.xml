@@ -1047,20 +1047,25 @@
 		</effects>
 	</skill>
 	<skill id="5847" levels="1" name="Flip Nearby Blocks">
+		<!-- High Five Confirmed -->
 		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="effectPoint" val="100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5848" levels="1" name="Block Trigger Slow">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5849" levels="1" name="Decrease Speed">
 		<!-- High Five Confirmed -->

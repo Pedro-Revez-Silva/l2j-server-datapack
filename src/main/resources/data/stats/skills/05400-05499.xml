@@ -172,7 +172,9 @@
 		</cond>
 	</skill>
 	<skill id="5414" levels="1" name="Performing Agathion - Rainbow Clan Hall">
-		<!-- TODO: Needs to be verified -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="85" />
@@ -180,11 +182,13 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
-			<player agathionId="16027" />
+			<player hasAgathion="true" />
 		</cond>
 	</skill>
 	<skill id="5415" levels="1" name="Performing Agathion - Castle">
-		<!-- TODO: Needs to be verified -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="85" />
@@ -192,34 +196,71 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
-			<player agathionId="16028" />
+			<player hasAgathion="true" />
 		</cond>
 	</skill>
 	<skill id="5416" levels="1" name="Dark Cloud Mansion">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Debuff">
+				<mul stat="mDef" val="0.01" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="pDef" val="0.01" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5417" levels="1" name="Invincible">
-		<!-- Invincible against general attack and skill, buff/de-buff. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="BlockDamage">
+				<param block="HP" />
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="cancelVuln" val="0" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5418" levels="1" name="Invincible">
-		<!-- Invincible against general attack and skill, buff/de-buff. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="BlockDamage">
+				<param block="HP" />
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="cancelVuln" val="0" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5419" levels="1" name="Invincible Blow">
 		<!-- High Five Confirmed -->
@@ -234,12 +275,25 @@
 		<set name="targetType" val="TARGET" />
 	</skill>
 	<skill id="5420" levels="1" name="Invincible">
-		<!-- Invincible against general attack and skill, buff/de-buff. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="BlockDamage">
+				<param block="HP" />
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="cancelVuln" val="0" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5422" levels="12" name="Flame">
 		<!-- High Five Confirmed -->
@@ -830,13 +884,13 @@
 		</effects>
 	</skill>
 	<skill id="5446" levels="45" name="Soul Expansion">
-		<table name="#icons"> icon.skill5446_1 icon.skill5446_2 icon.skill5446_3 icon.skill5446_4 icon.skill5446_5 icon.skill5446_6 icon.skill5446_7 icon.skill5446_8 icon.skill5446_9 icon.skill5446_10 icon.skill5446_11 icon.skill5446_12 icon.skill5446_13 icon.skill5446_14 icon.skill5446_15 icon.skill5446_16 icon.skill5446_17 icon.skill5446_18 icon.skill5446_19 icon.skill5446_20 icon.skill5446_21 icon.skill5446_22 icon.skill5446_23 icon.skill5446_24 icon.skill5446_25 icon.skill5446_26 icon.skill5446_27 icon.skill5446_28 icon.skill5446_29 icon.skill5446_30 icon.skill5446_31 icon.skill5446_32 icon.skill5446_33 icon.skill5446_34 icon.skill5446_35 icon.skill5446_36 icon.skill5446_37 icon.skill5446_38 icon.skill5446_39
-			icon.skill5446_40 icon.skill5446_41 icon.skill5446_42 icon.skill5446_43 icon.skill5446_44 icon.skill5446_45
-		</table>
-		<set name="icon" val="#icons" />
+		<!-- High Five Confirmed -->
+		<table name="#icon"> icon.skill5446_1 icon.skill5446_2 icon.skill5446_3 icon.skill5446_4 icon.skill5446_5 icon.skill5446_6 icon.skill5446_7 icon.skill5446_8 icon.skill5446_9 icon.skill5446_10 icon.skill5446_11 icon.skill5446_12 icon.skill5446_13 icon.skill5446_14 icon.skill5446_15 icon.skill5446_16 icon.skill5446_17 icon.skill5446_18 icon.skill5446_19 icon.skill5446_20 icon.skill5446_21 icon.skill5446_22 icon.skill5446_23 icon.skill5446_24 icon.skill5446_25 icon.skill5446_26 icon.skill5446_27 icon.skill5446_28 icon.skill5446_29 icon.skill5446_30 icon.skill5446_31 icon.skill5446_32 icon.skill5446_33 icon.skill5446_34 icon.skill5446_35 icon.skill5446_36 icon.skill5446_37 icon.skill5446_38 icon.skill5446_39 icon.skill5446_40 icon.skill5446_41 icon.skill5446_42 icon.skill5446_43 icon.skill5446_44 icon.skill5446_45 </table>
+		<set name="blockedInOlympiad" val="true" />
+		<set name="icon" val="#icon" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5447" levels="7" name="Paralysis">
 		<!-- Confirmed CT2.5 -->
@@ -957,28 +1011,36 @@
 		</effects>
 	</skill>
 	<skill id="5454" levels="1" name="Shadow Bind">
-		<!-- Immobilized. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Root" />
+		</effects>
 	</skill>
 	<skill id="5455" levels="1" name="Voice Bind">
-		<!-- Silenced. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="SILENCE" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Mute" />
+		</effects>
 	</skill>
 	<skill id="5456" levels="1" name="Stubborn Resistance">
 		<!-- High Five Confirmed -->
@@ -1025,7 +1087,9 @@
 		</effects>
 	</skill>
 	<skill id="5458" levels="1" name="Performing Agathion - Fortress">
-		<!-- TODO: Needs to be verified -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="85" />
@@ -1033,7 +1097,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
-			<player agathionId="16029" />
+			<player hasAgathion="true" />
 		</cond>
 	</skill>
 	<skill id="5459" levels="1" name="Paralysis">
@@ -1440,17 +1504,25 @@
 		</effects>
 	</skill>
 	<skill id="5490" levels="1" name="Weakened Life">
-		<!-- You have been infected by a fatal poison. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="FATAL_POISON" />
 		<set name="abnormalVisualEffect" val="DOT_POISON" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="TickHpFatal">
+				<param power="-200" />
+				<param ticks="5" />
+				<param mode="DIFF" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5491" levels="1" name="Decrease Bow/Crossbow Atk. Spd.">
 		<!-- Confirmed CT2.5 -->

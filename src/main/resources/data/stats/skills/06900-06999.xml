@@ -305,6 +305,7 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -317,7 +318,7 @@
 		<set name="mpConsume2" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="Debuff">
 				<mul stat="pDef" val="0.77" />

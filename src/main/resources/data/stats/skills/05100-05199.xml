@@ -1,31 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5100" levels="1" name="Cancel Capture B">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume1" val="1" />
+		<set name="mpConsume2" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="DispelBySlot">
+				<param dispel="SEIZURE_B,4" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5101" levels="1" name="Cancel Capture C">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume1" val="1" />
+		<set name="mpConsume2" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="DispelBySlot">
+				<param dispel="SEIZURE_C,4" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5102" levels="1" name="Cancel All Capture">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="85" />
+		<set name="mpConsume1" val="1" />
+		<set name="mpConsume2" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="DispelBySlot">
+				<param dispel="SEIZURE_A,4" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SEIZURE_B,4" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SEIZURE_C,4" />
+			</effect>
+			<effect name="DispelBySlot">
+				<param dispel="SEIZURE_PENALTY,2" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5103" levels="1" name="Production - Clan / Transfer">
 		<!-- High Five Confirmed -->
@@ -80,46 +119,55 @@
 		</effects>
 	</skill>
 	<skill id="5106" levels="4" name="Capture A State">
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<!-- High Five Confirmed -->
+		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="SEIZURE_A" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
+		<!-- TODO: Custom effect. -->
 		<effects>
 			<effect name="Buff" />
 		</effects>
 	</skill>
 	<skill id="5107" levels="4" name="Capture B State">
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<!-- High Five Confirmed -->
+		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="SEIZURE_B" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
+		<!-- TODO: Custom effect. -->
 		<effects>
 			<effect name="Buff" />
 		</effects>
 	</skill>
 	<skill id="5108" levels="4" name="Capture C State">
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<!-- High Five Confirmed -->
+		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="SEIZURE_C" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
+		<!-- TODO: Custom effect. -->
 		<effects>
 			<effect name="Buff" />
 		</effects>
@@ -1045,17 +1093,19 @@
 		</effects>
 	</skill>
 	<skill id="5143" levels="1" name="Sailren Use Blow">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="89" />
 		<set name="mpConsume2" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="FatalBlow">
 				<param power="39544" />
@@ -1064,42 +1114,79 @@
 		</effects>
 	</skill>
 	<skill id="5144" levels="1" name="Mirage">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
 	<skill id="5145" levels="1" name="Day of Doom">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
+		<set name="affectObject" val="NOT_FRIEND" />
 		<set name="affectRange" val="200" />
+		<set name="affectScope" val="POINT_BLANK" />
 		<set name="icon" val="icon.skill1422" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 		<effects>
-			<effect name="BlockBuff">
-				<mul stat="pAtk" val="0.5" />
-				<mul stat="pDef" val="0.5" />
-				<mul stat="runSpd" val="0.5" />
-				<mul stat="magicalMpConsumeRate" val="3" />
-				<mul stat="physicalMpConsumeRate" val="3" />
-				<mul stat="danceMpConsumeRate" val="3" />
-				<sub stat="fireRes" val="50" />
-				<sub stat="windRes" val="50" />
-				<sub stat="waterRes" val="50" />
-				<sub stat="earthRes" val="50" />
+			<effect name="BlockBuff" />
+			<effect name="Debuff">
+				<sub stat="fireRes" val="-50" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="windRes" val="-50" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="waterRes" val="-50" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="earthRes" val="-50" />
+			</effect>
+			<effect name="Debuff">
 				<mul stat="regHp" val="0.1" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="physicalMpConsumeRate" val="3" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="magicalMpConsumeRate" val="3" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="danceMpConsumeRate" val="3" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="pAtk" val="0.5" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="pDef" val="0.5" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="runSpd" val="0.5" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="fireRes" val="50" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="windRes" val="50" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="waterRes" val="50" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="earthRes" val="50" />
 			</effect>
 		</effects>
 	</skill>
@@ -1974,18 +2061,20 @@
 		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="5185" levels="1" name="Production: Magic-type Guard">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="WIND" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-655" />
 		<set name="effectRange" val="1400" />
-		<set name="attributeType" val="WIND" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttack">
 				<param power="54" />

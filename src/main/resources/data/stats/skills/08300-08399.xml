@@ -464,25 +464,34 @@
 		</effects>
 	</skill>
 	<skill id="8325" levels="1" name="Wild Rose Pig Candy">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="abnormalVisualEffect" val="BIG_HEAD" />
 		<set name="activateRate" val="0" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="runSpd" val="20" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8327" levels="1" name="Release Seal on Agathion - Juju">
 		<!-- Confirmed CT2.5 -->
@@ -683,20 +692,28 @@
 		</effects>
 	</skill>
 	<skill id="8336" levels="1" name="Guardian's Strider Mount">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="irreplaceableBuff" val="true" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
 		</cond>
+		<effects>
+			<effect name="Transformation">
+				<param id="123" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
@@ -1111,20 +1128,27 @@
 		</effects>
 	</skill>
 	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
-		<!-- TODO: Implement me! -->
-		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.event_six_party_earing_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="AttackTrait">
 				<param SHOCK="20" />
+			</effect>
+			<effect name="AttackTrait">
 				<param DERANGEMENT="20" />
 			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="20" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param DERANGEMENT="20" />
+			</effect>
+			<effect name="Buff">
+				<add stat="absorbDam" val="4" />
 			</effect>
 		</effects>
 	</skill>
@@ -1181,53 +1205,144 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="darkRes" val="8" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.15" />
+			</effect>
+			<effect name="MaxMp">
+				<param power="321" />
+				<param type="DIFF" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="cancel" val="15" />
+			</effect>
+			<effect name="EnableCloak" />
+		</effects>
 	</skill>
 	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="critDmg" val="282" />
+			</effect>
+			<effect name="Buff">
+				<add stat="critRate" val="2.95" />
+			</effect>
+			<effect name="Buff">
+				<add stat="darkRes" val="8" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="492" />
+				<param type="DIFF" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.066" />
+			</effect>
+			<effect name="EnableCloak" />
+		</effects>
 	</skill>
-	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail">
+	<skill id="8367" levels="1" name="Dynasty Jewel Leather Armor">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="darkRes" val="8" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="physicalMpConsumeRate" val="0.94" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="492" />
+				<param type="DIFF" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.066" />
+			</effect>
+			<effect name="EnableCloak" />
+		</effects>
 	</skill>
-	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail">
+	<skill id="8368" levels="1" name="Dynasty Jewel Leather Armor">
+		<!-- High Five Confirmed -->
+		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="darkRes" val="8" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate" val="0.94" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.15" />
+			</effect>
+			<effect name="MaxMp">
+				<param power="321" />
+				<param type="DIFF" />
+			</effect>
+			<effect name="Debuff">
+				<sub stat="cancel" val="15" />
+			</effect>
+			<effect name="EnableCloak" />
+		</effects>
 	</skill>
 	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.ev_jack_ghost_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="400" />
 		<set name="icon" val="icon.ev_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="8371" levels="1" name="Transform Halloween Pumpkin">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="irreplaceableBuff" val="true" />
@@ -1235,101 +1350,239 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
 		</cond>
+		<effects>
+			<effect name="Transformation">
+				<param id="108" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
-		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.ev_frankenstein_mask_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="earthRes" val="5" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="MaxMp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8373" levels="1" name="Silent Scream's Mask">
-		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.ev_scream_mask_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<mul stat="critRate" val="1.05" />
+			</effect>
+			<effect name="Buff">
+				<add stat="windRes" val="5" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="MaxMp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
-		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.ev_doccabi_mask_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="fireRes" val="5" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="MaxMp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="runSpd" val="1.05" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
-		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.ev_mummy_mask_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="darkRes" val="5" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="danceMpConsumeRate" val="0.95" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="MaxMp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8376" levels="1" name="Planet X235 Alien Mask's Effect">
-		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, damage magic's Prominent Damage occurrence by 2, and water tolerance by 5. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.ev_alien_mask_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="Buff">
+				<add stat="waterRes" val="5" />
+			</effect>
+			<effect name="Buff">
+				<add stat="mCritRate" val="2" />
+			</effect>
+			<effect name="MaxHp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+			<effect name="MaxMp">
+				<param power="10" />
+				<param type="PER" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8377" levels="1" name="Golden Jack O'Lantern Mask's Effect">
-		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, moving speed by 10%, and resistance to debuffs by 10%. -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
+		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<effects>
+			<effect name="MaxHp">
+				<param power="20" />
+				<param type="PER" />
+			</effect>
+			<effect name="MaxMp">
+				<param power="20" />
+				<param type="PER" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="debuffVuln" val="0.9" />
+			</effect>
+			<effect name="Buff">
+				<add stat="runSpd" val="20" />
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8378" levels="1" name="Beast Training - Release All">
 		<!-- High Five Confirmed -->
