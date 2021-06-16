@@ -244,6 +244,7 @@
 		</effects>
 	</skill>
 	<skill id="4319" levels="1" name="Paralysis">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -256,13 +257,14 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="60" />
-		<set name="mpConsume2" val="50" />
+		<set name="mpConsume1" val="10" />
+		<set name="mpConsume2" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ENEMY_ONLY" />
 		<set name="trait" val="PARALYZE" />
 		<effects>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 		</effects>
 	</skill>
 	<skill id="4320" levels="12" name="Poison">

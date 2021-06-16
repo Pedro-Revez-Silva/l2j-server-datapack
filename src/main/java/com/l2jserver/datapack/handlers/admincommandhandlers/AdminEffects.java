@@ -193,8 +193,7 @@ public class AdminEffects implements IAdminCommandHandler {
 				for (L2PcInstance player : plrs) {
 					if (!player.isGM()) {
 						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
-						player.setIsParalyzed(true);
-						player.startParalyze();
+						player.startStunning();
 					}
 				}
 			} catch (Exception e) {
@@ -204,7 +203,7 @@ public class AdminEffects implements IAdminCommandHandler {
 				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
 				for (L2PcInstance player : plrs) {
 					player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
-					player.setIsParalyzed(false);
+					player.stopStunning(false);
 				}
 			} catch (Exception e) {
 			}
@@ -225,8 +224,7 @@ public class AdminEffects implements IAdminCommandHandler {
 					} else {
 						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.FLESH_STONE);
 					}
-					player.setIsParalyzed(true);
-					player.startParalyze();
+					player.startStunning();
 				}
 			} catch (Exception e) {
 			}
@@ -247,7 +245,7 @@ public class AdminEffects implements IAdminCommandHandler {
 					} else {
 						player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.FLESH_STONE);
 					}
-					player.setIsParalyzed(false);
+					player.stopStunning(false);
 				}
 			} catch (Exception e) {
 			}

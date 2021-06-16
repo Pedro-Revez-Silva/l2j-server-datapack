@@ -893,7 +893,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5447" levels="7" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Imbue Dark Seed effect -->
 		<table name="#magicLvl"> 62 64 66 68 70 72 74 </table>
 		<set name="abnormalLvl" val="1" />
@@ -901,8 +901,10 @@
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="99" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="icon.skill0523" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" />
@@ -913,7 +915,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="PARALYZE" />
 		<effects>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 		</effects>
 	</skill>
 	<skill id="5448" levels="1" name="Oblivion">

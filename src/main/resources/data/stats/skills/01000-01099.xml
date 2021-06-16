@@ -1017,40 +1017,46 @@
 		</effects>
 	</skill>
 	<skill id="1042" levels="12" name="Hold Undead" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
-		<table name="#effectPoints"> -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 48 52 56 58 60 62 64 66 68 70 72 74 </table>
-		<table name="#mpConsume2"> 103 112 122 127 132 137 142 147 151 155 159 163 </table>
 		<table name="#mpConsume1"> 26 28 31 32 33 35 36 37 38 39 40 41 </table>
-		<table name="#ench1ActivateRates"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
-		<table name="#ench2MpConsume2"> 201 200 198 196 195 192 191 188 187 185 183 181 180 177 176 175 172 171 168 167 165 163 161 160 157 156 153 152 151 148 </table>
-		<table name="#ench3Attack"> 30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 </table>
+		<table name="#mpConsume2"> 103 112 122 127 132 137 142 147 151 155 159 163 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#ench1ActivateRate"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
+		<table name="#ench2MpConsume1"> 40 39 38 38 37 36 36 35 34 34 33 32 31 31 30 29 29 28 27 27 26 25 25 24 23 23 22 21 21 20 </table>
+		<table name="#ench2MpConsume2"> 160 157 155 152 149 147 144 141 138 136 133 130 127 125 122 119 117 114 111 108 106 103 100 97 95 92 89 87 84 81 </table>
+		<table name="#ench3MagicalAttackPower"> 30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="40" />
 		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="HOLY" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1042" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ENEMY_ONLY" />
 		<set name="trait" val="PARALYZE" />
-		<enchant1 name="activateRate" val="#ench1ActivateRates" />
+		<enchant1 name="activateRate" val="#ench1ActivateRate" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<enchant2 name="mpConsume1" val="#ench2MpConsume1" />
 		<enchant2 name="mpConsume2" val="#ench2MpConsume2" />
 		<enchant3 name="attributeType" val="HOLY" />
 		<enchant3 name="attributePower" val="20" />
@@ -1059,13 +1065,13 @@
 			<target race="UNDEAD" />
 		</cond>
 		<effects>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 		</effects>
 		<enchant3Effects>
 			<effect name="MagicalAttack">
-				<param power="#ench3Attack" />
+				<param power="#ench3MagicalAttackPower" />
 			</effect>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 		</enchant3Effects>
 	</skill>
 	<skill id="1043" levels="1" name="Holy Weapon" enchantGroup1="1" enchantGroup2="1">

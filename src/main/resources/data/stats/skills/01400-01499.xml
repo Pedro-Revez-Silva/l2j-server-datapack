@@ -1127,33 +1127,38 @@
 		</effects>
 	</skill>
 	<skill id="1430" levels="5" name="Invocation">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<table name="#magicLvl"> 56 60 64 68 72 </table>
-		<table name="#mhot"> 27 30 34 37 42 </table>
-		<table name="#mpConsume2"> 21 22 24 26 27 </table>
 		<table name="#mpConsume1"> 6 6 6 7 7 </table>
+		<table name="#mpConsume2"> 21 22 24 26 27 </table>
+		<table name="#tickMpPower"> 27 30 34 37 42 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1430" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<effects>
-			<effect name="Paralyze">
+			<effect name="Stun" />
+			<effect name="Debuff">
 				<mul stat="pDef" val="0.1" />
 			</effect>
 			<effect name="TickMp">
-				<param power="#mhot" />
+				<param power="#tickMpPower" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 	</skill>

@@ -1230,6 +1230,7 @@
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="icon.skill0791" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" />
@@ -1240,7 +1241,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="PARALYZE" />
 		<effects>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 			<effect name="DefenceTrait">
 				<param PARALYZE="100" />
 			</effect>

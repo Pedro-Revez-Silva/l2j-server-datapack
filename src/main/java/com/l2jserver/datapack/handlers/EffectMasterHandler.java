@@ -38,7 +38,6 @@ import com.l2jserver.datapack.handlers.effecthandlers.custom.ImmobileBuff;
 import com.l2jserver.datapack.handlers.effecthandlers.custom.Mute;
 import com.l2jserver.datapack.handlers.effecthandlers.custom.OpenChest;
 import com.l2jserver.datapack.handlers.effecthandlers.custom.OpenDoor;
-import com.l2jserver.datapack.handlers.effecthandlers.custom.Paralyze;
 import com.l2jserver.datapack.handlers.effecthandlers.custom.Recovery;
 import com.l2jserver.datapack.handlers.effecthandlers.custom.Root;
 import com.l2jserver.datapack.handlers.effecthandlers.custom.SilentMove;
@@ -200,7 +199,6 @@ public final class EffectMasterHandler {
 		OpenDwarfRecipeBook.class,
 		OutpostCreate.class,
 		OutpostDestroy.class,
-		Paralyze.class,
 		Passive.class,
 		PhysicalAttack.class,
 		PhysicalAttackHpLink.class,

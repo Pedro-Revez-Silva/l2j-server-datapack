@@ -1208,30 +1208,32 @@
 		</effects>
 	</skill>
 	<skill id="4063" levels="1" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Orfen Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
 		<set name="activateRate" val="90" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3600" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="50" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="PARALYZE" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="916" />
 			</effect>
-			<effect name="Paralyze" />
+			<effect name="Stun" />
 		</effects>
 	</skill>
 	<skill id="4064" levels="1" name="Paralysis">

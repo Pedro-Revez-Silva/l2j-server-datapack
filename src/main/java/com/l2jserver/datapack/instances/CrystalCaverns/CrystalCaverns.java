@@ -1081,9 +1081,9 @@ public final class CrystalCaverns extends AbstractInstance {
 			} else if (event.equalsIgnoreCase("RaidStart")) {
 				world._camera.decayMe();
 				world._camera = null;
-				npc.setIsParalyzed(false);
+				npc.stopStunning(false);
 				for (L2PcInstance p : world._raiders) {
-					p.setIsParalyzed(false);
+					p.stopStunning(false);
 					Throw(npc, p);
 					if (p.getSummon() != null) {
 						Throw(npc, p.getSummon());
@@ -1143,7 +1143,7 @@ public final class CrystalCaverns extends AbstractInstance {
 				npc.stopSkillEffects(false, 5225);
 			} else if (event.equalsIgnoreCase("Baylor")) {
 				world._baylor = addSpawn(29099, 153572, 142075, -12738, 10800, false, 0, false, world.getInstanceId());
-				world._baylor.setIsParalyzed(true);
+				world._baylor.startStunning();
 				world._camera = addSpawn(29120, 153273, 141400, -12738, 10800, false, 0, false, world.getInstanceId());
 				world._camera.broadcastPacket(new SpecialCamera(world._camera, 700, -45, 160, 500, 15200, 0, 0, 1, 0, 0));
 				startQuestTimer("baylorMinions", 2000, world._baylor, null);
@@ -1574,7 +1574,7 @@ public final class CrystalCaverns extends AbstractInstance {
 						pet.teleToLocation(new Location(153571 + x, 142075 + y, -12737), true);
 						pet.broadcastPacket(new ValidateLocation(pet));
 					}
-					p.setIsParalyzed(true);
+					p.startStunning();
 					p.broadcastPacket(new ValidateLocation(p));
 				}
 				startQuestTimer("Baylor", 30000, npc, null);

@@ -1712,12 +1712,14 @@
 		</enchant1Effects>
 	</skill>
 	<skill id="441" levels="1" name="Force Meditation">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="chargeConsume" val="3" />
 		<set name="effectPoint" val="673" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0441" />
 		<set name="magicLvl" val="78" />
@@ -1726,19 +1728,22 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<player Charges="3" /> <!-- Must recharge 3rd energy stage. -->
+			<player Charges="3" />
 		</cond>
 		<effects>
-			<effect name="Paralyze">
+			<effect name="Stun" />
+			<effect name="Debuff">
 				<mul stat="pDef" val="0.2" />
 			</effect>
 			<effect name="TickHp">
 				<param power="60" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 			<effect name="TickMp">
 				<param power="10" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 	</skill>

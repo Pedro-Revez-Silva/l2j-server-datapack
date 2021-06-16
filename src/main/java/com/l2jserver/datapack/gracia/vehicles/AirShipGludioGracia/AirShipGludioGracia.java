@@ -154,7 +154,7 @@ public final class AirShipGludioGracia extends Quest implements Runnable {
 		if (player.isTransformed()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_TRANSFORMED);
 			return null;
-		} else if (player.isParalyzed()) {
+		} else if (player.isStunned()) {
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_PETRIFIED);
 			return null;
 		} else if (player.isDead() || player.isFakeDeath()) {
