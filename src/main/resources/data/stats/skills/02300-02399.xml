@@ -454,23 +454,23 @@
 		</effects>
 	</skill>
 	<skill id="2322" levels="1" name="Chest Key - For Events Only">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9205" /> <!-- Alchemist's Chest Key -->
+		<set name="itemConsumeId" val="9205" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<cond msgId="109">
-			<target npcId="13036" />
-		</cond>
+		<set name="targetType" val="DOOR_TREASURE" />
 		<effects>
+			<!-- TODO: Implement proper effect. -->
 			<effect name="OpenChest" />
 		</effects>
 	</skill>
@@ -771,16 +771,20 @@
 		</effects>
 	</skill>
 	<skill id="2342" levels="1" name="Ballista Bomb">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="650" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9688" /> <!-- Ballista Bomb -->
+		<set name="itemConsumeId" val="9688" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<target npcId="35685,35723,35754,35792,35823,35854,35892,35923,35961,35999,36030,36068,36106,36137,36168,36206,36244,36282,36313,36351,36389" />
 		</cond>
@@ -1162,48 +1166,52 @@
 		</effects>
 	</skill>
 	<skill id="2358" levels="1" name="Holy Water">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="2359" levels="1" name="Magic Bottle">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 	</skill>
 	<skill id="2360" levels="1" name="Water Dragon Claw">
-		<set name="castRange" val="150" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-1" />
-		<set name="effectRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="magicLvl" val="1" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9700" /> <!-- Water Dragon Claw -->
+		<set name="itemConsumeId" val="9700" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="false" />
-				<target npcId="29099" />
-			</and>
+			<target npcId="29099" />
 		</cond>
 	</skill>
 	<skill id="2361" levels="1" name="Evolving Wolf's Food">
@@ -1369,19 +1377,21 @@
 		</effects>
 	</skill>
 	<skill id="2368" levels="1" name="Spirit of the Lake">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="8000" />
 		<set name="isMagic" val="1" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9689" /> <!-- Spirit of the Lake -->
+		<set name="itemConsumeId" val="9689" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1500" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<target npcId="18482" />
 		</cond>
@@ -1392,22 +1402,22 @@
 		</effects>
 	</skill>
 	<skill id="2369" levels="1" name="Water Dragon Scale">
-		<set name="castRange" val="150" />
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-1" />
-		<set name="effectRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="magicLvl" val="1" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9691" /> <!-- Water Dragon Scale -->
+		<set name="itemConsumeId" val="9691" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
-			<and>
-				<player flyMounted="false" />
-				<target npcId="25534" />
-			</and>
+			<target npcId="25534" />
 		</cond>
 	</skill>
 	<skill id="2370" levels="1" name="Scroll of Transformation - Pig">

@@ -2654,19 +2654,21 @@
 	</skill>
 	<skill id="997" levels="25" name="Crushing Strike">
 		<!-- High Five Confirmed -->
-		<table name="#effectPoints"> -625 -744 -879 -1029 -1194 -1374 -1568 -1704 -1845 -1990 -2138 -2288 -2439 -2590 -2740 -2814 -2887 -2959 -3030 -3100 -3168 -3234 -3299 -3362 -3422 </table>
+		<table name="#effectPoint"> -625 -744 -879 -1029 -1194 -1374 -1568 -1704 -1845 -1990 -2138 -2288 -2439 -2590 -2740 -2814 -2887 -2959 -3030 -3100 -3168 -3234 -3299 -3362 -3422 </table>
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume2"> 38 41 44 48 51 55 58 61 62 65 67 69 71 73 75 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#power"> 1041 1240 1464 1714 1990 2290 2614 2840 3075 3316 3563 3813 4065 4316 4566 4689 4811 4931 5050 5166 5280 5390 5498 5603 5704 </table>
+		<table name="#physicalAttackPower"> 1041 1240 1464 1714 1990 2290 2614 2840 3075 3316 3563 3813 4065 4316 4566 4689 4811 4931 5050 5166 5280 5390 5498 5603 5704 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="800" />
 		<set name="icon" val="icon.skill0997" />
 		<set name="isDebuff" val="true" />
@@ -2678,29 +2680,31 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="SWORD,BLUNT" />
 		</cond>
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 				<param criticalChance="5" />
 			</effect>
 			<effect name="Debuff">
-				<mul stat="pDef" val="0.9" />
+				<mul stat="mDef" val="0.9" />
 			</effect>
 			<effect name="Debuff">
-				<mul stat="mDef" val="0.9" />
+				<mul stat="pDef" val="0.9" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="998" levels="1" name="Blazing Boost">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-630" />
 		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="800" />
 		<set name="icon" val="icon.skill0998" />
 		<set name="magicLvl" val="40" />
@@ -2709,7 +2713,7 @@
 		<set name="operateType" val="DA1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="SWORD,BLUNT,DAGGER,POLE,DUALFIST,DUAL,DUALDAGGER" />

@@ -725,32 +725,35 @@
 		</enchant2Effects>
 	</skill>
 	<skill id="1031" levels="8" name="Disrupt Undead">
-		<table name="#effectPoints"> -182 -204 -227 -243 -268 -285 -313 -331 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -182 -204 -227 -243 -268 -285 -313 -331 </table>
 		<table name="#magicLvl"> 17 20 23 25 28 30 33 35 </table>
-		<table name="#mpConsume2"> 14 16 17 18 20 21 23 24 </table>
+		<table name="#magicalAttackPower"> 19 21 24 25 28 30 33 36 </table>
 		<table name="#mpConsume1"> 4 4 5 5 5 6 6 6 </table>
-		<table name="#power"> 19 21 24 25 28 30 33 36 </table>
-		<set name="castRange" val="400" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="900" />
-		<set name="attributeType" val="HOLY" />
+		<table name="#mpConsume2"> 14 16 17 18 20 21 23 24 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="HOLY" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill1031" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<target race="UNDEAD" />
 		</cond>
 		<effects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#magicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -2095,27 +2098,30 @@
 		</effects>
 	</skill>
 	<skill id="1090" levels="6" name="Life Drain">
-		<table name="#effectPoints"> -121 -162 -204 -243 -285 -331 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -121 -162 -204 -243 -285 -331 </table>
+		<table name="#hpDrainPower"> 15 21 26 32 38 44 </table>
 		<table name="#magicLvl"> 7 14 20 25 30 35 </table>
-		<table name="#mpConsume2"> 22 32 40 46 54 63 </table>
-		<table name="#mpConsume1"> 5 8 10 12 14 16 </table>
-		<table name="#power"> 15 21 26 32 38 44 </table>
+		<table name="#mpConsume1"> 6 8 10 12 14 16 </table>
+		<table name="#mpConsume2"> 21 32 40 46 54 63 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="600" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1090" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="HpDrain">
-				<param power="#power" />
+				<param power="#hpDrainPower" />
 				<param drain="0.8" />
 			</effect>
 		</effects>
