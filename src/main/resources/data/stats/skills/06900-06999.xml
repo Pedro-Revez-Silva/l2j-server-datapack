@@ -292,7 +292,7 @@
 				<mul stat="pAtk" val="1.15" />
 			</effect>
 			<effect name="Buff">
-				<mul stat="rEvas" val="1.03" />
+				<mul stat="pAtkSpd" val="1.03" />
 			</effect>
 			<effect name="Buff">
 				<add stat="runSpd" val="5" />
