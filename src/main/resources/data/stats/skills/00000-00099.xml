@@ -1453,14 +1453,14 @@
 		</effects>
 		<enchant1Effects>
 			<effect name="Sweeper" />
-			<effect name="HpByLevel">
+			<effect name="InstantHpByLevelSelf">
 				<param power="#ench1DrainHp" />
 			</effect>
 			<effect name="ConsumeBody" />
 		</enchant1Effects>
 		<enchant2Effects>
 			<effect name="Sweeper" />
-			<effect name="ManaHealByLevel">
+			<effect name="InstantMpByLevelSelf">
 				<param power="#ench2DrainMp" />
 			</effect>
 			<effect name="ConsumeBody" />
@@ -1541,13 +1541,13 @@
 		<enchant2 name="mpConsume1" val="#ench2MpConsume1" />
 		<enchant2 name="mpConsume2" val="#ench2MpConsume2" />
 		<effects>
-			<effect name="HpByLevel">
+			<effect name="InstantHpByLevelSelf">
 				<param power="#hpByLevelPower" />
 			</effect>
 			<effect name="ConsumeBody" />
 		</effects>
 		<enchant1Effects>
-			<effect name="HpByLevel">
+			<effect name="InstantHpByLevelSelf">
 				<param power="#ench1hpByLevelPower" />
 			</effect>
 			<effect name="ConsumeBody" />
@@ -2771,7 +2771,7 @@
 			</effect>
 		</effects>
 		<enchant2Effects>
-			<effect name="HpByLevel">
+			<effect name="InstantHpByLevelSelf">
 				<param power="#ench2Sap" />
 			</effect>
 			<effect name="TickHp">

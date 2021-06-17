@@ -18,31 +18,25 @@
  */
 package com.l2jserver.datapack.handlers.effecthandlers.instant;
 
+import static com.l2jserver.gameserver.network.SystemMessageId.S1_HP_HAS_BEEN_RESTORED;
+
 import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Hp By Level effect implementation.
+ * Instant Hp By Level Self effect implementation.
  * @author Zoey76
  */
-public final class HpByLevel extends AbstractEffect {
-	private final double _power;
+public final class InstantHpByLevelSelf extends AbstractEffect {
 	
-	public HpByLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params) {
+	private final double power;
+	
+	public InstantHpByLevelSelf(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params) {
 		super(attachCond, applyCond, set, params);
-		
-		_power = params.getDouble("power", 0);
-	}
-	
-	@Override
-	public L2EffectType getEffectType() {
-		return L2EffectType.BUFF;
+		power = params.getDouble("power", 0);
 	}
 	
 	@Override
@@ -52,18 +46,15 @@ public final class HpByLevel extends AbstractEffect {
 	
 	@Override
 	public void onStart(BuffInfo info) {
-		if (info.getEffector() == null) {
+		final var target = info.getEffector();
+		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul() || target.isHpBlocked()) {
 			return;
 		}
 		
-		final L2Character activeChar = info.getEffector();
-		
-		// Calculation
-		final double abs = _power;
-		final double absorb = ((activeChar.getCurrentHp() + abs) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + abs));
-		final int restored = (int) (absorb - activeChar.getCurrentHp());
-		activeChar.setCurrentHp(absorb);
-		// System message
-		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addInt(restored));
+		// TODO(Zoey76): This formula looks naive to me, test skill id 5878 for game mechanics.
+		final var absorb = Math.max(target.getCurrentHp() + power, target.getMaxHp());
+		final var restored = (int) (absorb - target.getCurrentHp());
+		target.setCurrentHp(absorb);
+		target.sendPacket(SystemMessage.getSystemMessage(S1_HP_HAS_BEEN_RESTORED).addInt(restored));
 	}
 }

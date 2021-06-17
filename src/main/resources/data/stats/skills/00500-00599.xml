@@ -2996,7 +2996,7 @@
 		<set name="targetType" val="NPC_BODY" />
 		<effects>
 			<effect name="ConsumeBody" />
-			<effect name="HpByLevel">
+			<effect name="InstantHpByLevelSelf">
 				<param power="#hpByLevelPower" />
 			</effect>
 		</effects>

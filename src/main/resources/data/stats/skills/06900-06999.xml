@@ -276,12 +276,17 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PATIENCE" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="icon" val="BranchSys2.icon.skill0952" />
 		<set name="isMagic" val="4" />
 		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.03" />
+			</effect>
 			<effect name="Buff">
 				<mul stat="critDmg" val="1.1" />
 			</effect>
@@ -290,9 +295,6 @@
 			</effect>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.15" />
-			</effect>
-			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.03" />
 			</effect>
 			<effect name="Buff">
 				<add stat="runSpd" val="5" />

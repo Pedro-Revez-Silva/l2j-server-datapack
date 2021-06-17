@@ -2046,7 +2046,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ENEMY_ONLY" />
 		<effects>
-			<effect name="HpByLevel">
+			<effect name="InstantHpByLevelSelf">
 				<param power="73" />
 			</effect>
 			<effect name="Debuff">

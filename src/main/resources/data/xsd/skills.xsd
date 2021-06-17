@@ -575,7 +575,6 @@
 					<xs:enumeration value="Heal" />
 					<xs:enumeration value="Hide" />
 					<xs:enumeration value="Hp" />
-					<xs:enumeration value="HpByLevel" />
 					<xs:enumeration value="HpDrain" />
 					<xs:enumeration value="HpPerMax" />
 					<xs:enumeration value="ImmobileBuff" />
@@ -584,6 +583,8 @@
 					<xs:enumeration value="InstantCallTargetParty" />
 					<xs:enumeration value="InstantDespawn" />
 					<xs:enumeration value="InstantDispelByName" />
+					<xs:enumeration value="InstantHpByLevelSelf" />
+					<xs:enumeration value="InstantMpByLevelSelf" />
 					<xs:enumeration value="Lethal" />
 					<xs:enumeration value="Lucky" />
 					<xs:enumeration value="MagicalAttack" />
