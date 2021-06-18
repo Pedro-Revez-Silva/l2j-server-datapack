@@ -235,37 +235,35 @@
 		</effects>
 	</skill>
 	<skill id="1506" levels="1" name="Blessing of Eva">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="668" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1506" />
 		<set name="isMagic" val="1" />
-		<set name="magicLvl" val="83" />
-		<set name="mpConsume2" val="58" />
+		<set name="magicLvl" val="81" />
 		<set name="mpConsume1" val="15" />
+		<set name="mpConsume2" val="58" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<cond msgId="113" addName="1">
-			<not>
-				<target npcType="L2Attackable" />
-			</not>
-		</cond>
+		<set name="targetType" val="ENEMY_NOT" />
 		<effects>
 			<effect name="Cp">
 				<param amount="9000" />
+				<param mode="DIFF" />
+			</effect>
+			<effect name="DispelByCategory">
+				<param slot="DEBUFF" rate="40" max="10" />
 			</effect>
 			<effect name="HpPerMax">
 				<param power="100" />
 			</effect>
 			<effect name="MpPerMax">
 				<param power="100" />
-			</effect>
-			<effect name="DispelByCategory">
-				<param slot="DEBUFF" rate="40" max="10" />
 			</effect>
 		</effects>
 	</skill>
@@ -946,29 +944,31 @@
 		</effects>
 	</skill>
 	<skill id="1523" levels="42" name="Divine Punishment">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Inquisitor Stance Skill -->
-		<table name="#effectPoints"> -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
+		<table name="#effectPoint"> -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume2"> 28 29 30 30 31 32 33 33 34 35 36 36 37 38 39 39 40 41 42 42 43 44 44 45 46 46 47 48 48 49 49 50 50 51 51 52 52 53 53 53 54 54 </table>
 		<table name="#mpConsume1"> 7 8 8 8 8 8 9 9 9 9 9 9 10 10 10 10 10 11 11 11 11 11 11 12 12 12 12 12 12 13 13 13 13 13 13 13 13 14 14 14 14 14 </table>
-		<table name="#power"> 51 52 54 55 57 58 60 61 63 64 66 68 69 71 72 74 75 77 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109 </table>
+		<table name="#mpConsume2"> 28 29 30 30 31 32 33 33 34 35 36 36 37 38 39 39 40 41 42 42 43 44 44 45 46 46 47 48 48 49 49 50 50 51 51 52 52 53 53 53 54 54 </table>
+		<table name="#pvePower"> 51 52 54 55 57 58 60 61 63 64 66 68 69 71 72 74 75 77 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109 </table>
 		<table name="#pvpPower"> 31 32 33 33 34 35 36 37 38 39 40 41 42 43 44 44 45 46 47 48 49 50 51 52 53 54 54 55 56 57 58 59 59 60 61 62 62 63 64 64 65 65 </table>
-		<set name="castRange" val="750" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1250" />
-		<set name="attributeType" val="HOLY" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="HOLY" />
+		<set name="castRange" val="750" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1250" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1523" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<pvpEffects>
 			<effect name="MagicalAttack">
 				<param power="#pvpPower" />
@@ -976,7 +976,7 @@
 		</pvpEffects>
 		<pveEffects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#pvePower" />
 			</effect>
 		</pveEffects>
 	</skill>
@@ -1514,43 +1514,64 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1539" levels="4" name="Stigma of Shilen" enchantGroup1="1">
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
+	<skill id="1539" levels="4" name="Stigma of Shilien" enchantGroup1="1">
+		<!-- High Five Confirmed -->
+		<table name="#abnormalLvl"> 1 2 3 4 </table>
 		<table name="#castRange"> 600 700 800 900 </table>
 		<table name="#effectRange"> 1100 1200 1300 1400 </table>
 		<table name="#magicLvl"> 40 52 62 70 </table>
-		<table name="#mpConsume2"> 18 24 29 33 </table>
+		<table name="#mpConsume1"> 4 5 6 7 </table>
+		<table name="#mpConsume2"> 14 19 23 26 </table>
 		<table name="#traits"> -16 -24 -32 -40 </table>
-		<table name="#ench1AbnormalTimes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
-		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#ench1AbnormalTime"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
+		<table name="#ench1MagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="STIGMA_OF_SILEN" />
 		<set name="abnormalVisualEffect" val="STIGMA_OF_SILEN" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="#castRange" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="#effectRange" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1539" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume1" val="#mpConsume1" />
 		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
-		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
+		<set name="targetType" val="ENEMY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTime" />
+		<enchant1 name="magicLvl" val="#ench1MagicLvl" />
 		<effects>
 			<effect name="DefenceTrait">
 				<param SWORD="#traits" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param BLUNT="#traits" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param DAGGER="#traits" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param DUAL="#traits" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param DUALFIST="#traits" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param POLE="#traits" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param ANCIENTSWORD="#traits" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param RAPIER="#traits" />
+			</effect>
+			<effect name="DefenceTrait">
 				<param DUALDAGGER="#traits" />
 			</effect>
 		</effects>
@@ -2034,19 +2055,21 @@
 	</skill>
 	<skill id="1555" levels="1" name="Aura Cannon">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-689" />
 		<set name="effectRange" val="300" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1555" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="82" />
-		<set name="mpConsume2" val="98" />
 		<set name="mpConsume1" val="25" />
+		<set name="mpConsume2" val="98" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<pvpEffects>
 			<effect name="MagicalAttack">
 				<param power="178" />
@@ -2122,27 +2145,29 @@
 	</skill>
 	<skill id="1558" levels="24" name="Dimension Spiral">
 		<!-- High Five Confirmed -->
-		<table name="#effectPoints"> -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 </table>
+		<table name="#effectPoint"> -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume2"> 30 34 37 40 42 44 45 47 48 50 51 53 59 66 73 79 80 86 87 93 94 95 101 108 </table>
 		<table name="#mpConsume1"> 8 9 10 10 11 11 12 12 12 13 13 14 15 17 19 20 20 20 22 22 24 24 24 26 </table>
-		<table name="#power"> 57 58 60 61 63 66 68 71 74 77 79 82 89 94 100 104 110 115 139 152 166 179 193 207 </table>
+		<table name="#mpConsume2"> 30 34 37 40 42 44 45 47 48 50 51 53 59 66 73 79 80 86 87 93 94 95 101 108 </table>
+		<table name="#pvePower"> 57 58 60 61 63 66 68 71 74 77 79 82 89 94 100 104 110 115 139 152 166 179 193 207 </table>
 		<table name="#pvpPower"> 57 58 60 61 63 66 68 71 74 77 79 82 84 87 89 90 91 92 93 94 95 96 97 98 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="1400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1558" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="15000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="reuseDelayLock" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ENEMY" />
 		<pvpEffects>
 			<effect name="MagicalAttack">
 				<param power="#pvpPower" />
@@ -2150,7 +2175,7 @@
 		</pvpEffects>
 		<pveEffects>
 			<effect name="MagicalAttack">
-				<param power="#power" />
+				<param power="#pvePower" />
 			</effect>
 		</pveEffects>
 	</skill>
@@ -2181,10 +2206,12 @@
 	</skill>
 	<skill id="1560" levels="1" name="Lucky Blow">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-337" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1800" />
 		<set name="icon" val="icon.skill1560" />
 		<set name="magicLvl" val="83" />
@@ -2194,19 +2221,19 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">
 			<using kind="DUALDAGGER" />
 		</cond>
 		<effects>
+			<effect name="Lethal">
+				<param fullLethal="0.1" halfLethal="8" />
+			</effect>
 			<effect name="FatalBlow">
 				<param power="11234" />
 				<param blowChance="60" />
 				<param criticalChance="30" />
-			</effect>
-			<effect name="Lethal">
-				<param fullLethal="0.1" halfLethal="8" />
 			</effect>
 			<effect name="Spoil" />
 		</effects>

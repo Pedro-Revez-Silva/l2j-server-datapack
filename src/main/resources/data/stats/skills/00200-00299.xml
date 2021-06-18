@@ -1393,14 +1393,17 @@
 		</enchant3Effects>
 	</skill>
 	<skill id="255" levels="15" name="Power Smash">
-		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume2"> 19 20 20 21 22 23 25 26 27 28 28 29 32 33 34 </table>
-		<table name="#power"> 90 97 105 123 132 143 165 177 191 219 235 251 287 306 326 </table>
+		<table name="#physicalAttackPower"> 90 97 105 123 132 143 165 177 191 219 235 251 287 306 326 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0255" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1410,13 +1413,13 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="SWORD,BLUNT" />
 		</cond>
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>

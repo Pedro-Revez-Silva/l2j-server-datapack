@@ -2453,15 +2453,17 @@
 		</effects>
 	</skill>
 	<skill id="468" levels="9" name="Fallen Attack">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -52 -54 -57 -64 -67 -70 -79 -83 -86 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -52 -54 -57 -64 -67 -70 -79 -83 -86 </table>
 		<table name="#magicLvl"> 3 4 5 8 9 10 13 14 15 </table>
 		<table name="#mpConsume2"> 9 9 10 11 12 13 16 16 17 </table>
-		<table name="#power"> 30 32 35 46 51 55 71 78 84 </table>
+		<table name="#physicalAttackPower"> 30 32 35 46 51 55 71 78 84 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="300" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0468" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2471,13 +2473,13 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="SWORD,BLUNT,RAPIER" />
 		</cond>
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -2527,12 +2529,16 @@
 		</effects>
 	</skill>
 	<skill id="471" levels="7" name="Defuse Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<table name="#magicLvl"> 15 24 36 46 55 66 74 </table>
 		<table name="#mpConsume2"> 4 5 7 9 11 14 15 </table>
-		<table name="#power"> 18 28 38 48 58 68 78 </table>
+		<table name="#trapRemovePower"> 18 28 38 48 58 68 78 </table>
+		<set name="affectObject" val="NOT_FRIEND" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="500" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0471" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2540,13 +2546,10 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
-		<cond msgId="109">
-			<target npcType="L2TrapInstance" />
-		</cond>
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="TrapRemove">
-				<param power="#power" />
+				<param power="#trapRemovePower" />
 			</effect>
 		</effects>
 	</skill>
@@ -2691,15 +2694,17 @@
 		</effects>
 	</skill>
 	<skill id="476" levels="15" name="Dark Strike">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume2"> 16 16 16 17 18 18 20 21 21 23 23 24 25 26 27 </table>
-		<table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
+		<table name="#physicalSoulAttackPower"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="300" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0476" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2710,13 +2715,13 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="SWORD,BLUNT,ANCIENTSWORD" />
 		</cond>
 		<effects>
 			<effect name="PhysicalSoulAttack">
-				<param power="#power" />
+				<param power="#physicalSoulAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -2784,15 +2789,17 @@
 		</enchant4pveEffects>
 	</skill>
 	<skill id="478" levels="15" name="Double Thrust">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume2"> 16 16 16 18 18 19 20 21 21 23 23 24 25 26 27 </table>
-		<table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
+		<table name="#physicalSoulAttackPower"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="300" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0478" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2803,13 +2810,13 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="RAPIER" />
 		</cond>
 		<effects>
 			<effect name="PhysicalSoulAttack">
-				<param power="#power" />
+				<param power="#physicalSoulAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -2937,11 +2944,13 @@
 		</enchant2Effects>
 	</skill>
 	<skill id="484" levels="1" name="Rush">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-303" />
 		<set name="effectRange" val="600" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="800" />
 		<set name="icon" val="icon.skill0484" />
 		<set name="magicLvl" val="32" />
@@ -2949,7 +2958,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<and>
 				<using kind="ANCIENTSWORD,RAPIER" />
@@ -3012,15 +3021,17 @@
 		</effects>
 	</skill>
 	<skill id="487" levels="15" name="Penetrating Shot">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -192 -199 -207 -222 -230 -238 -255 -264 -272 -290 -299 -308 -327 -337 -346 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -192 -199 -207 -222 -230 -238 -255 -264 -272 -290 -299 -308 -327 -337 -346 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume2"> 69 70 71 74 78 81 88 91 95 101 101 104 112 116 120 </table>
-		<table name="#power"> 179 194 210 245 264 285 330 354 381 438 469 502 573 611 651 </table>
+		<table name="#physicalSoulAttackPower"> 179 194 210 245 264 285 330 354 381 438 469 502 573 611 651 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3200" />
 		<set name="icon" val="icon.skill0487" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -3030,13 +3041,13 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="CROSSBOW" />
 		</cond>
 		<effects>
 			<effect name="PhysicalSoulAttack">
-				<param power="#power" />
+				<param power="#physicalSoulAttackPower" />
 				<param criticalChance="20" />
 			</effect>
 		</effects>

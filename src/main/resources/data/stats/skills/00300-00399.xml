@@ -969,22 +969,27 @@
 		</effects>
 	</skill>
 	<skill id="325" levels="1" name="Strider Siege Assault">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0325" />
 		<set name="itemConsumeCount" val="5" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="3031" />
 		<set name="magicLvl" val="-1" />
 		<set name="mpConsume2" val="151" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="STRIDER" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
+		<!-- TODO: Add proper condition and ride state. -->
 		<cond msgId="113" addName="1">
-			<player SiegeZone="126" /> <!-- TODO: add new condition and ride_state -->
+			<player SiegeZone="126" />
 		</cond>
 		<effects>
 			<effect name="PhysicalAttack">
@@ -1649,10 +1654,12 @@
 		</enchant7pveEffects>
 	</skill>
 	<skill id="345" levels="1" name="Sonic Rage">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-340" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="hpConsume" val="50" />
 		<set name="icon" val="icon.skill0345" />
@@ -1662,12 +1669,13 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="DUAL" />
 		</cond>
 		<effects>
 			<effect name="PhysicalAttack">
+				<param power="0" />
 				<param criticalChance="10" />
 			</effect>
 		</effects>
@@ -1678,10 +1686,12 @@
 		</selfEffects>
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-340" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="hpConsume" val="50" />
 		<set name="icon" val="icon.skill0346" />
@@ -1691,12 +1701,13 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="DUALFIST" />
 		</cond>
 		<effects>
 			<effect name="PhysicalAttack">
+				<param power="0" />
 				<param criticalChance="10" />
 			</effect>
 		</effects>
@@ -1763,10 +1774,13 @@
 		</enchant1Effects>
 	</skill>
 	<skill id="348" levels="1" name="Spoil Crush">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="100" />
 		<set name="effectPoint" val="-337" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1700" />
 		<set name="icon" val="icon.skill0348" />
 		<set name="magicLvl" val="76" />
@@ -1776,13 +1790,13 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<cond msgId="113" addName="1">
 			<using kind="SWORD,BLUNT" />
 		</cond>
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="5" />
+				<param power="0" />
 				<param criticalChance="20" />
 			</effect>
 			<effect name="Spoil" />

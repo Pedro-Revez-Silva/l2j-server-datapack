@@ -1223,31 +1223,33 @@
 		</effects>
 	</skill>
 	<skill id="1433" levels="10" name="Abyssal Blaze">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -189 -204 -219 -235 -251 -268 -285 -303 -322 -350 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -189 -204 -219 -235 -251 -268 -285 -303 -322 -350 </table>
 		<table name="#magicLvl"> 18 20 22 24 26 28 30 32 34 36 </table>
-		<table name="#mpConsume2"> 12 13 13 14 15 16 17 18 19 20 </table>
+		<table name="#magicalSoulAttackPower"> 24 26 28 31 33 35 38 40 43 46 </table>
 		<table name="#mpConsume1"> 3 4 4 4 4 4 5 5 5 5 </table>
-		<table name="#power"> 24 26 28 31 33 35 38 40 43 46 </table>
-		<set name="castRange" val="750" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="1250" />
-		<set name="attributeType" val="UNHOLY" />
+		<table name="#mpConsume2"> 12 13 13 14 15 16 17 18 19 20 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="attributePower" val="20" />
+		<set name="attributeType" val="UNHOLY" />
+		<set name="castRange" val="750" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="1250" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill1433" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalSoulAttack">
-				<param power="#power" />
+				<param power="#magicalSoulAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -1576,30 +1578,32 @@
 		</enchant4pveEffects>
 	</skill>
 	<skill id="1439" levels="5" name="Curse of Divinity">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -611 -624 -635 -646 -655 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 66 68 70 72 74 </table>
-		<table name="#mpConsume2"> 49 51 52 53 55 </table>
+		<table name="#magicalAttackByAbnormalPower"> 96 99 102 105 108 </table>
 		<table name="#mpConsume1"> 13 13 13 14 14 </table>
-		<table name="#power"> 96 99 102 105 108 </table>
+		<table name="#mpConsume2"> 49 51 52 53 55 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill1439" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="MagicalAttackByAbnormal">
-				<param power="#power" />
+				<param power="#magicalAttackByAbnormalPower" />
 			</effect>
 		</effects>
 	</skill>

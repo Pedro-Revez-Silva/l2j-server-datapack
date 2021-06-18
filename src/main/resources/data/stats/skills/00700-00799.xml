@@ -702,15 +702,17 @@
 		</effects>
 	</skill>
 	<skill id="717" levels="4" name="Zaken Concentrated Attack">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -307 -323 -335 -342 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -307 -323 -335 -342 </table>
 		<table name="#magicLvl"> 65 70 75 80 </table>
 		<table name="#mpConsume2"> 60 65 69 72 </table>
-		<table name="#power"> 2751 3252 3752 4224 </table>
+		<table name="#physicalAttackPower"> 2751 3252 3752 4224 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="50" />
 		<set name="coolTime" val="900" />
-		<set name="effectPoint" val="#effectPoints" />
-		<set name="effectRange" val="150" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="effectRange" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2100" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -719,10 +721,10 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -779,18 +781,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="720" levels="2" name="Anakim Holy Light Burst">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -335 -342 </table>
+	<skill id="720" levels="2" name="Anakim Divine Light Burst">
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -335 -342 </table>
 		<table name="#magicLvl"> 75 80 </table>
 		<table name="#mpConsume2"> 69 72 </table>
-		<table name="#power"> 3189 3590 </table>
+		<table name="#physicalAttackPower"> 3189 3590 </table>
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="HOLY" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="400" />
-		<set name="attributeType" val="HOLY" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -800,10 +804,10 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -910,13 +914,15 @@
 		</effects>
 	</skill>
 	<skill id="725" levels="2" name="Venom Power Smash">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<table name="#magicLvl"> 75 80 </table>
-		<table name="#power"> 2626 2957 </table>
+		<table name="#physicalAttackPower"> 2626 2957 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -925,10 +931,10 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -980,11 +986,13 @@
 		</effects>
 	</skill>
 	<skill id="728" levels="1" name="Gordon Beast Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="80" />
@@ -993,7 +1001,7 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="2957" />
@@ -1088,17 +1096,19 @@
 		</effects>
 	</skill>
 	<skill id="732" levels="1" name="Ranku Stun Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
@@ -1110,7 +1120,7 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="SHOCK" />
 		<effects>
 			<effect name="PhysicalAttack">
@@ -1120,11 +1130,13 @@
 		</effects>
 	</skill>
 	<skill id="733" levels="1" name="Kechi Double Cutter">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="80" />
@@ -1133,7 +1145,7 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="2957" />
@@ -1141,10 +1153,12 @@
 		</effects>
 	</skill>
 	<skill id="734" levels="1" name="Kechi Air Blade">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1900" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="80" />
@@ -1153,7 +1167,7 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
 				<param power="1812" />
@@ -1186,19 +1200,19 @@
 		</effects>
 	</skill>
 	<skill id="736" levels="1" name="Devil Seed">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DARK_SEED" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="100" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="1400" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3300" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
@@ -1209,12 +1223,13 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="BLEED" />
 		<effects>
 			<effect name="TickHp">
 				<param power="-351" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 		<endEffects>
@@ -1299,21 +1314,23 @@
 		</effects>
 	</skill>
 	<skill id="740" levels="3" name="Heretic Resurrection">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> 595 617 637 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> 595 617 637 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
-		<table name="#mpConsume2"> 182 189 195 </table>
 		<table name="#mpConsume1"> 46 48 49 </table>
-		<table name="#power"> 50 55 60 </table>
+		<table name="#mpConsume2"> 182 189 195 </table>
+		<table name="#resurrectionPower"> 50 55 60 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -1323,16 +1340,16 @@
 		</cond>
 		<effects>
 			<effect name="Resurrection">
-				<param power="#power" />
+				<param power="#resurrectionPower" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="741" levels="3" name="Heretic Heal Side Effect">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -323 -331 -337 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -323 -331 -337 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
-		<table name="#mpConsume2"> 52 54 56 </table>
 		<table name="#mpConsume1"> 13 14 14 </table>
+		<table name="#mpConsume2"> 52 54 56 </table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
@@ -1341,16 +1358,17 @@
 		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="1100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -1360,33 +1378,37 @@
 			<effect name="TickHp">
 				<param power="-52" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 	</skill>
-	<skill id="742" levels="3" name="Vale Master Bursting Flame">
-		<!-- Confirmed CT2.5 -->
+	<skill id="742" levels="3" name="Veil Master Bursting Flame">
+		<!-- High Five Confirmed -->
 		<table name="#magicLvl"> 70 73 76 </table>
-		<table name="#mpConsume2"> 68 70 73 </table>
+		<table name="#magicalAttackRangePower"> 112 117 122 </table>
 		<table name="#mpConsume1"> 17 18 19 </table>
-		<table name="#power"> 112 117 122 </table>
+		<table name="#mpConsume2"> 68 70 73 </table>
+		<set name="affectScope" val="SINGLE" />
+		<set name="attributePower" val="20" />
+		<set name="attributeType" val="UNHOLY" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-92" />
 		<set name="effectRange" val="1100" />
-		<set name="attributeType" val="UNHOLY" />
-		<set name="attributePower" val="20" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
-			<effect name="MagicalAttack">
-				<param power="#power" />
+			<effect name="MagicalAttackRange">
+				<param power="#magicalAttackRangePower" />
+				<param shieldDefensePercent="40" />
 			</effect>
 		</effects>
 	</skill>
@@ -1480,14 +1502,16 @@
 		</effects>
 	</skill>
 	<skill id="746" levels="3" name="Saber Tooth Tiger Bite">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -648 -660 -671 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -648 -660 -671 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
-		<table name="#power"> 1789 1955 2117 </table>
+		<table name="#physicalAttackPower"> 1789 1955 2117 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1497,10 +1521,10 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -1564,21 +1588,23 @@
 		</effects>
 	</skill>
 	<skill id="749" levels="3" name="Oel Mahum Stun Attack">
-		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 895 978 1059 </table>
-		<table name="#effectPoints"> -323 -331 -337 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -323 -331 -337 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpConsume2"> 68 71 73 </table>
+		<table name="#physicalAttackPower"> 895 978 1059 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
@@ -1590,11 +1616,11 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="SHOCK" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 			<effect name="Stun" />
 		</effects>
@@ -1652,21 +1678,23 @@
 		</effects>
 	</skill>
 	<skill id="752" levels="3" name="Doll Blader Sting">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -323 -331 -337 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -323 -331 -337 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpConsume2"> 71 74 77 </table>
-		<table name="#power"> 1193 1303 1412 </table>
+		<table name="#physicalAttackPower"> 1193 1303 1412 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="50" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="isDebuff" val="true" />
@@ -1678,28 +1706,31 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="BLEED" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 			<effect name="TickHp">
 				<param power="-134" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="753" levels="3" name="Doll Blader Throwing Knife">
-		<!-- Confirmed CT2.5 -->
-		<table name="#effectPoints"> -323 -331 -337 </table>
+		<!-- High Five Confirmed -->
+		<table name="#effectPoint"> -323 -331 -337 </table>
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#mpConsume2"> 142 148 153 </table>
-		<table name="#power"> 4769 5211 5645 </table>
+		<table name="#physicalAttackPower"> 4769 5211 5645 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="700" />
 		<set name="coolTime" val="800" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="1200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3200" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1708,10 +1739,10 @@
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<effects>
 			<effect name="PhysicalAttack">
-				<param power="#power" />
+				<param power="#physicalAttackPower" />
 			</effect>
 		</effects>
 	</skill>
@@ -3097,27 +3128,30 @@
 		</effects>
 	</skill>
 	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="POISON" />
 		<set name="abnormalVisualEffect" val="DOT_BLEEDING" />
 		<set name="activateRate" val="50" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-340" />
 		<set name="effectRange" val="400" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
-		<set name="mpConsume2" val="88" />
+		<set name="mpConsume2" val="80" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<set name="trait" val="POISON" />
 		<effects>
 			<effect name="PhysicalAttack">
@@ -3126,6 +3160,7 @@
 			<effect name="TickHp">
 				<param power="-69" />
 				<param ticks="5" />
+				<param mode="DIFF" />
 			</effect>
 		</effects>
 	</skill>
