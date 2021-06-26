@@ -21,20 +21,28 @@ package com.l2jserver.datapack.gracia;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.l2jserver.datapack.gracia.ai.DraconianTroops;
 import com.l2jserver.datapack.gracia.ai.EnergySeeds;
 import com.l2jserver.datapack.gracia.ai.Lindvior;
 import com.l2jserver.datapack.gracia.ai.Maguen;
 import com.l2jserver.datapack.gracia.ai.StarStones;
 import com.l2jserver.datapack.gracia.ai.SeedOfAnnihilation.SeedOfAnnihilation;
+import com.l2jserver.datapack.gracia.ai.SeedOfDestruction.Defence;
+import com.l2jserver.datapack.gracia.ai.npc.Allenos.Allenos;
 import com.l2jserver.datapack.gracia.ai.npc.FortuneTelling.FortuneTelling;
 import com.l2jserver.datapack.gracia.ai.npc.GeneralDilios.GeneralDilios;
 import com.l2jserver.datapack.gracia.ai.npc.Lekon.Lekon;
 import com.l2jserver.datapack.gracia.ai.npc.Nemo.Nemo;
 import com.l2jserver.datapack.gracia.ai.npc.Nottingale.Nottingale;
 import com.l2jserver.datapack.gracia.ai.npc.Seyo.Seyo;
+import com.l2jserver.datapack.gracia.ai.npc.TemporaryTeleporter.TemporaryTeleporter;
 import com.l2jserver.datapack.gracia.ai.npc.ZealotOfShilen.ZealotOfShilen;
 import com.l2jserver.datapack.gracia.instances.SecretArea.SecretArea;
 import com.l2jserver.datapack.gracia.instances.SeedOfDestruction.Stage1;
+import com.l2jserver.datapack.gracia.instances.SeedOfDestruction.MountedTroops.ChamblainsMountedTroop;
+import com.l2jserver.datapack.gracia.instances.SeedOfDestruction.MountedTroops.GreatWarriorsMountedTroop;
+import com.l2jserver.datapack.gracia.instances.SeedOfDestruction.MountedTroops.SoldiersMountedTroop;
+import com.l2jserver.datapack.gracia.instances.SeedOfDestruction.MountedTroops.WarriorsMountedTroop;
 import com.l2jserver.datapack.gracia.instances.SeedOfInfinity.HallOfSuffering.HallOfSuffering;
 import com.l2jserver.datapack.gracia.vehicles.AirShipGludioGracia.AirShipGludioGracia;
 import com.l2jserver.datapack.gracia.vehicles.KeucereusNorthController.KeucereusNorthController;
@@ -52,30 +60,39 @@ public final class GraciaLoader {
 	
 	private static final Class<?>[] SCRIPTS = {
 		// AIs
+		DraconianTroops.class,
 		EnergySeeds.class,
 		Lindvior.class,
 		Maguen.class,
 		StarStones.class,
 		// NPCs
+		Allenos.class,
 		FortuneTelling.class,
 		GeneralDilios.class,
 		Lekon.class,
 		Nemo.class,
 		Nottingale.class,
 		Seyo.class,
+		TemporaryTeleporter.class,
 		ZealotOfShilen.class,
 		// Seed of Annihilation
 		SeedOfAnnihilation.class,
 		// Instances
+		Defence.class,
 		SecretArea.class,
-		Stage1.class, // Seed of Destruction
+		Stage1.class,
+		ChamblainsMountedTroop.class,
+		GreatWarriorsMountedTroop.class,
+		SoldiersMountedTroop.class,
+		WarriorsMountedTroop.class,
+		// Seed of Destruction
 		HallOfSuffering.class, // Seed of Infinity
 		// Vehicles
 		AirShipGludioGracia.class,
 		KeucereusNorthController.class,
 		KeucereusSouthController.class,
-		SoIController.class,
 		SoDController.class,
+		SoIController.class,
 	};
 	
 	public static void main(String[] args) {

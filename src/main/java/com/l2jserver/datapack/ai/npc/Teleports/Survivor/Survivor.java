@@ -19,6 +19,7 @@
 package com.l2jserver.datapack.ai.npc.Teleports.Survivor;
 
 import com.l2jserver.datapack.ai.npc.AbstractNpcAI;
+import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -45,6 +46,35 @@ public final class Survivor extends AbstractNpcAI {
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+		if (event.equalsIgnoreCase("STATUS")) {
+			String htmltext = getHtm(player.getHtmlPrefix(), "32632-4.htm");
+			String destructionStatus = "";
+			String infinityStatus = "";
+			// TODO: Implement Seed of Infinity & stages
+			// switch(GraciaSeedsManager.getInstance().getSoIState()){
+			// case 1:
+			// infinityStatus = "It's under the enemy's occupation, and the military forces of adventurers and clan members are unleashing an onslaught upon the Hall of Suffering and the Hall of Erosion.";
+			// case 2:
+			// infinityStatus = "It's under enemy occupation, but the situation is currently favorable, and an infiltration route to the Heart has been secured. All that is left is the final battle with Ekimus and the clean-up of his followers hiding in the Hall of Suffering!";
+			// case 3:
+			// infinityStatus = "Our forces have occupied it and are currently investigating the depths.";
+			// case 4:
+			// infinityStatus = "It's under occupation by our forces, but the enemy has resurrected and is attacking toward the Hall of Suffering and the Hall of Erosion.";
+			// case 5:
+			// infinityStatus = "It's under occupation by our forces, but the enemy has already overtaken the Hall of Erosion and is driving out our forces from the Hall of Suffering toward the Heart. It seems that Ekimus will revive shortly.";
+			// }
+			switch (GraciaSeedsManager.getInstance().getSoDState()) {
+				case 1:
+					destructionStatus = "It's currently occupied by the enemy and our troops are attacking.";
+				case 2:
+					destructionStatus = "It's under occupation by our forces, and I heard that Kucereus' clan is organizing the remnants.";
+				default:
+					destructionStatus = "Although we currently have control of it, the enemy is pushing back with a powerful attack.";
+			}
+			htmltext = htmltext.replaceAll("%sod%", destructionStatus);
+			htmltext = htmltext.replaceAll("%soi%", infinityStatus);
+			return htmltext;
+		}
 		if ("32632-2.htm".equals(event)) {
 			if (player.getLevel() < MIN_LEVEL) {
 				event = "32632-3.htm";

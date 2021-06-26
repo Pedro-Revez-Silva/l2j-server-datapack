@@ -1111,6 +1111,91 @@
 		<point X="124948" Y="206778" Z="-3400" delay="0" run="false" />
 		<point X="124483" Y="207777" Z="-3200" delay="60" run="false" />
 	</route>
+	<!-- Seed of Destruction - Defence Stage -->
+	<route name="invasion_center" repeat="true" repeatStyle="back">
+		<point X="-251457" Y="217771" Z="-12304" delay="0" run="true" />
+		<point X="-251446" Y="217377" Z="-12288" delay="0" run="true" />
+		<point X="-251791" Y="217292" Z="-12288" delay="0" run="true" />
+		<point X="-252172" Y="216891" Z="-12264" delay="0" run="true" />
+		<point X="-251965" Y="216458" Z="-12248" delay="0" run="true" />
+		<point X="-251424" Y="216370" Z="-12248" delay="0" run="true" />
+		<point X="-251424" Y="215790" Z="-12208" delay="0" run="true" />
+		<point X="-251424" Y="215213" Z="-12152" delay="0" run="true" />
+		<point X="-251424" Y="214565" Z="-12080" delay="0" run="true" />
+		<point X="-251424" Y="213729" Z="-12080" delay="0" run="true" />
+		<point X="-251424" Y="213114" Z="-12064" delay="0" run="true" />
+		<point X="-251434" Y="212237" Z="-11984" delay="0" run="true" />
+		<point X="-251444" Y="212045" Z="-11984" delay="0" run="true" />
+		<point X="-251441" Y="211784" Z="-11984" delay="0" run="true" />
+		<point X="-251442" Y="211679" Z="-11984" delay="0" run="true" />
+		<point X="-251310" Y="211667" Z="-11984" delay="0" run="true" />
+		<point X="-250897" Y="211673" Z="-11912" delay="0" run="true" />
+		<point X="-250416" Y="211676" Z="-11856" delay="0" run="true" />
+		<point X="-250415" Y="211189" Z="-11856" delay="0" run="true" />
+		<point X="-250422" Y="209048" Z="-11952" delay="0" run="true" />
+		<point X="-250401" Y="207541" Z="-11952" delay="0" run="true" />
+	</route>
+	<!-- Seed of Destruction - Defence Stage -->
+	<route name="invasion_left" repeat="true" repeatStyle="back">
+		<point X="-252913" Y="217802" Z="-12312" delay="0" run="true" />
+		<point X="-252744" Y="217350" Z="-12288" delay="0" run="true" />
+		<point X="-252263" Y="217283" Z="-12288" delay="0" run="true" />
+		<point X="-252222" Y="216955" Z="-12280" delay="0" run="true" />
+		<point X="-252015" Y="216522" Z="-12248" delay="0" run="true" />
+		<point X="-251474" Y="216434" Z="-12248" delay="0" run="true" />
+		<point X="-251474" Y="215854" Z="-12208" delay="0" run="true" />
+		<point X="-251474" Y="215277" Z="-12168" delay="0" run="true" />
+		<point X="-251475" Y="214629" Z="-12080" delay="0" run="true" />
+		<point X="-251474" Y="213793" Z="-12080" delay="0" run="true" />
+		<point X="-251474" Y="213178" Z="-12064" delay="0" run="true" />
+		<point X="-251484" Y="212301" Z="-11984" delay="0" run="true" />
+		<point X="-251484" Y="212301" Z="-11984" delay="0" run="true" />
+		<point X="-251497" Y="212109" Z="-11984" delay="0" run="true" />
+		<point X="-251489" Y="211848" Z="-11984" delay="0" run="true" />
+		<point X="-251462" Y="211680" Z="-11984" delay="0" run="true" />
+		<point X="-251310" Y="211679" Z="-11984" delay="0" run="true" />
+		<point X="-250893" Y="211679" Z="-11912" delay="0" run="true" />
+		<point X="-250434" Y="211675" Z="-11856" delay="0" run="true" />
+		<point X="-250420" Y="211203" Z="-11856" delay="0" run="true" />
+		<point X="-250437" Y="209055" Z="-11952" delay="0" run="true" />
+		<point X="-252013" Y="207677" Z="-11960" delay="0" run="true" />
+	</route>
+	<!-- Seed of Destruction - Defence Stage -->
+	<route name="invasion_right" repeat="true" repeatStyle="back">
+		<point X="-249895" Y="217888" Z="-12328" delay="0" run="true" />
+		<point X="-249966" Y="217368" Z="-12288" delay="0" run="true" />
+		<point X="-250690" Y="217337" Z="-12288" delay="0" run="true" />
+		<point X="-250690" Y="216902" Z="-12272" delay="0" run="true" />
+		<point X="-250965" Y="216491" Z="-12248" delay="0" run="true" />
+		<point X="-251431" Y="216450" Z="-12248" delay="0" run="true" />
+		<point X="-251430" Y="215870" Z="-12208" delay="0" run="true" />
+		<point X="-251432" Y="215293" Z="-12168" delay="0" run="true" />
+		<point X="-251432" Y="214645" Z="-12080" delay="0" run="true" />
+		<point X="-251432" Y="213809" Z="-12080" delay="0" run="true" />
+		<point X="-251434" Y="213194" Z="-12064" delay="0" run="true" />
+		<point X="-251444" Y="212317" Z="-11984" delay="0" run="true" />
+		<point X="-251451" Y="212125" Z="-11984" delay="0" run="true" />
+		<point X="-251445" Y="211864" Z="-11984" delay="0" run="true" />
+		<point X="-251448" Y="211691" Z="-11984" delay="0" run="true" />
+		<point X="-251315" Y="211669" Z="-11984" delay="0" run="true" />
+		<point X="-250987" Y="211669" Z="-11928" delay="0" run="true" />
+		<point X="-250438" Y="211671" Z="-11856" delay="0" run="true" />
+		<point X="-250409" Y="211175" Z="-11856" delay="0" run="true" />
+		<point X="-250391" Y="209043" Z="-11952" delay="0" run="true" />
+		<point X="-248790" Y="207749" Z="-11960" delay="0" run="true" />
+	</route>
+	<!-- Seed of Destruction - Defence Stage -->
+	<route name="invasion_left_surprise" repeat="true" repeatStyle="back">
+		<point X="-251776" Y="207789" Z="-11995" delay="0" run="true" />
+	</route>
+	<!-- Seed of Destruction - Defence Stage -->
+	<route name="invasion_center_surprise" repeat="true" repeatStyle="back">
+		<point X="-250398" Y="207811" Z="-11995" delay="0" run="true" />
+	</route>
+	<!-- Seed of Destruction - Defence Stage -->
+	<route name="invasion_right_surprise" repeat="true" repeatStyle="back">
+		<point X="-248958" Y="208053" Z="-11995" delay="0" run="true" />
+	</route>
 	<!-- Suspicious Merchant - Borderland Fortress -->
 	<route name="godad_fort_ordery" repeat="true" repeatStyle="back">
 		<target id="35928" spawnX="161876" spawnY="-73407" spawnZ="-2984" />

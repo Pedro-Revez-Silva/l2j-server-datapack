@@ -46,7 +46,7 @@ public class AdminGraciaSeeds implements IAdminCommandHandler {
 		if (actualCommand.equalsIgnoreCase("admin_kill_tiat")) {
 			GraciaSeedsManager.getInstance().increaseSoDTiatKilled();
 		} else if (actualCommand.equalsIgnoreCase("admin_set_sodstate")) {
-			GraciaSeedsManager.getInstance().setSoDState(Integer.parseInt(val), true);
+			GraciaSeedsManager.getInstance().setSoDState(Integer.parseInt(val), true, Integer.parseInt(val) < 3);
 		}
 		
 		showMenu(activeChar);

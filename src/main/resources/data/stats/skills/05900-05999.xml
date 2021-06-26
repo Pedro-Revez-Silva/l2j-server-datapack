@@ -877,10 +877,10 @@
 		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="BlockDamage">
-				<param block="HP"/>
+				<param block="HP" />
 			</effect>
 			<effect name="BlockDamage">
-				<param block="MP"/>
+				<param block="MP" />
 			</effect>
 			<effect name="BlockDebuff" />
 			<effect name="Buff">

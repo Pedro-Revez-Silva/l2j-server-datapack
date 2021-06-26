@@ -3372,6 +3372,11 @@
 			<skill id="4416" level="10" /> <!--Dragons -->
 			<skill id="5462" level="1" /> <!--Fire Attacks -->
 			<skill id="6127" level="1" /> <!--Anti-limit -->
+			<skill id="5839" level="1" /> <!--Breath -->
+			<skill id="5840" level="1" /> <!--Fire Breath -->
+			<skill id="5841" level="1" /> <!--Multi Defense -->
+			<skill id="5842" level="1" /> <!--Spinning Slasher -->
+			<skill id="5843" level="1" /> <!--Terror -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">

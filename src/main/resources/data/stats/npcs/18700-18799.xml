@@ -70,7 +70,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18702" level="80" type="L2Npc" name="Dimension Moving Device">
+	<npc id="18702" level="80" type="L2Monster" name="Dimension Moving Device">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3073,7 +3073,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18775" level="81" type="L2Npc" name="Seed of Destruction Control Device">
+	<npc id="18775" level="81" type="L2Guard" name="Seed of Destruction Control Device">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3436,7 +3436,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
 			<clanList>
 				<clan>DES_DRAGON</clan>
 			</clanList>
@@ -3491,7 +3491,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
 			<clanList>
 				<clan>DES_DRAGON</clan>
 			</clanList>
@@ -3546,7 +3546,7 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
 			<clanList>
 				<clan>DES_DRAGON</clan>
 			</clanList>
@@ -3601,7 +3601,7 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
 			<clanList>
 				<clan>DES_DRAGON</clan>
 			</clanList>
@@ -3657,7 +3657,7 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+		<ai type="MAGE" aggroRange="450" clanHelpRange="1000">
 			<clanList>
 				<clan>DES_DRAGON</clan>
 			</clanList>
@@ -3713,7 +3713,7 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+		<ai type="MAGE" aggroRange="450" clanHelpRange="1000">
 			<clanList>
 				<clan>DES_DRAGON</clan>
 			</clanList>
@@ -3770,7 +3770,7 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+		<ai type="MAGE" aggroRange="450" clanHelpRange="1000">
 			<clanList>
 				<clan>DES_DRAGON</clan>
 			</clanList>
@@ -3823,7 +3823,7 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+		<ai type="HEALER" aggroRange="450" clanHelpRange="1000" isAggressive="false">
 			<clanList>
 				<clan>DES_DRAGON</clan>
 			</clanList>
