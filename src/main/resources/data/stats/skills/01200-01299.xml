@@ -307,14 +307,16 @@
 		</effects>
 	</skill>
 	<skill id="1216" levels="1" name="Self Heal">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="10" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1216" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="mpConsume2" val="7" />
 		<set name="mpConsume1" val="2" />
+		<set name="mpConsume2" val="7" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />

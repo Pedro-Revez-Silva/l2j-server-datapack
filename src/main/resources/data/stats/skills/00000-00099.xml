@@ -131,15 +131,18 @@
 		</effects>
 	</skill>
 	<skill id="4" levels="2" name="Dash">
-		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#effectPoints"> 204 438 </table>
+		<!-- High Five Confirmed -->
+		<table name="#abnormalLvl"> 1 2 </table>
+		<table name="#effectPoint"> 204 438 </table>
 		<table name="#magicLvl"> 20 46 </table>
 		<table name="#mpConsume2"> 10 21 </table>
-		<table name="#spd"> 40 66 </table>
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#runSpd"> 40 66 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="#effectPoint" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0004" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -150,7 +153,7 @@
 		<set name="targetType" val="SELF" />
 		<effects>
 			<effect name="Buff">
-				<add stat="runSpd" val="#spd" />
+				<add stat="runSpd" val="#runSpd" />
 			</effect>
 		</effects>
 	</skill>
@@ -393,10 +396,12 @@
 		</enchant7pveEffects>
 	</skill>
 	<skill id="8" levels="8" name="Sonic Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<table name="#focusEnergyCharge"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
-		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="200" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="900" />
 		<set name="hpConsume" val="25" />
 		<set name="icon" val="icon.skill0008" />
@@ -410,12 +415,12 @@
 		</cond>
 		<cond msgId="324">
 			<not>
-				<player Charges="#maxCharges" />
+				<player Charges="#focusEnergyCharge" />
 			</not>
 		</cond>
 		<effects>
 			<effect name="FocusEnergy">
-				<param charge="#maxCharges" />
+				<param charge="#focusEnergyCharge" />
 			</effect>
 		</effects>
 	</skill>
@@ -534,15 +539,16 @@
 		</enchant1Effects>
 	</skill>
 	<skill id="11" levels="12" name="Trick">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: skill desc says "Requires a dagger" but is client typo -->
-		<table name="#effectPoints"> -119 -126 -133 -140 -144 -148 -152 -156 -159 -162 -164 -167 </table>
+		<!-- High Five Confirmed -->
+		<!-- Note: skill desc says "Requires a dagger" but is client typo. -->
+		<table name="#effectPoint"> -119 -126 -133 -140 -144 -148 -152 -156 -159 -162 -164 -167 </table>
 		<table name="#magicLvl"> 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume2"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
 		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="400" />
-		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectPoint" val="#effectPoint" />
 		<set name="effectRange" val="900" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill0011" />
 		<set name="magicLvl" val="#magicLvl" />

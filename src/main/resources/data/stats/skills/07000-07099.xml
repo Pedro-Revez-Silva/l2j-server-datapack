@@ -375,6 +375,7 @@
 		</effects>
 	</skill>
 	<skill id="7029" levels="4" name="Super Haste">
+		<!-- High Five Confirmed -->
 		<!-- GM Skill -->
 		<table name="#amount"> 1 1 1 2 </table>
 		<table name="#mAtkSpd"> 2 3 3 2 </table>
@@ -386,6 +387,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill7029" />
 		<set name="magicLvl" val="1" />
@@ -393,19 +395,35 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<effects>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="mReuse" val="#reuse" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pReuse" val="#reuse" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="runSpd" val="#runSpd" />
+			</effect>
 			<effect name="MaxMp">
 				<param power="#maxMp" />
 				<param type="PER" />
 			</effect>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="#pAtkSpd" />
-				<mul stat="runSpd" val="#runSpd" />
-				<mul stat="mAtkSpd" val="#mAtkSpd" />
-				<mul stat="pAtk" val="#pAtk" />
-				<mul stat="pReuse" val="#reuse" />
-				<mul stat="mReuse" val="#reuse" />
-				<mul stat="regHp" val="#amount" />
 				<mul stat="regMp" val="#amount" />
+			</effect>
+			<effect name="Buff">
+				<mul stat="regHp" val="#amount" />
+			</effect>
+			<effect name="Buff">
 				<mul stat="weightLimit" val="#amount" />
 			</effect>
 		</effects>

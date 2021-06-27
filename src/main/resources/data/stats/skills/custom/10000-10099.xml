@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
 	<skill id="10000" levels="1" name="Mana Drug">
 		<set name="abnormalTime" val="15" />
+		<set name="affectScope" val="SINGLE" />
 		<set name="displayId" val="2288" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
@@ -18,6 +19,7 @@
 		</effects>
 	</skill>
 	<skill id="10001" levels="1" name="Mana Potion">
+		<set name="affectScope" val="SINGLE" />
 		<set name="displayId" val="2288" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
