@@ -708,24 +708,26 @@
 		</enchant3Effects>
 	</skill>
 	<skill id="1516" levels="1" name="Soul Strike" enchantGroup1="6" enchantGroup2="6">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#ench1Power"> 167 168 169 170 171 173 174 175 176 177 178 180 181 182 183 </table>
-		<table name="#ench2Duel"> 168 170 172 174 176 178 180 182 184 186 188 190 192 194 196 </table>
+		<!-- High Five Confirmed -->
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#ench1Power"> 167 168 169 170 171 173 174 175 176 177 178 180 181 182 183 </table>
+		<table name="#ench1PvpPower"> 168 170 172 174 176 178 180 182 184 186 188 190 192 194 196 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-662" />
 		<set name="effectRange" val="1250" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1516" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="76" />
-		<set name="mpConsume2" val="27" />
 		<set name="mpConsume1" val="7" />
+		<set name="mpConsume2" val="27" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="ENEMY" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<effects>
@@ -742,7 +744,7 @@
 		</enchant2Effects>
 		<enchant2pvpEffects>
 			<effect name="MagicalSoulAttack">
-				<param power="#ench2Duel" />
+				<param power="#ench1PvpPower" />
 			</effect>
 		</enchant2pvpEffects>
 		<enchant2pveEffects>

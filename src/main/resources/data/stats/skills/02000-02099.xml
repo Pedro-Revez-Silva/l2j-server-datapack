@@ -148,12 +148,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2013" levels="1" name="Scroll Of Escape">
-		<!-- Confirmed CT2.5 -->
+	<skill id="2013" levels="1" name="Scroll of Escape">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="736" /> <!-- Scroll of Escape -->
+		<set name="itemConsumeId" val="736" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -392,8 +394,9 @@
 		</effects>
 	</skill>
 	<skill id="2036" levels="2" name="Blessed Scroll of Escape">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<table name="#itemConsumeId"> 1538 3958 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
@@ -454,14 +457,16 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="1829" /> <!-- Scroll of Escape: Clan Hall -->
+		<set name="itemConsumeId" val="1829" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="rideState" val="NONE;STRIDER;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -478,11 +483,13 @@
 		</effects>
 	</skill>
 	<skill id="2041" levels="1" name="Scroll of Escape: Castle">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="1830" /> <!-- Scroll of Escape: Castle -->
+		<set name="itemConsumeId" val="1830" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -1420,7 +1427,10 @@
 		</effects>
 	</skill>
 	<skill id="2099" levels="1" name="Escape: 5 minutes">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="300000" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />

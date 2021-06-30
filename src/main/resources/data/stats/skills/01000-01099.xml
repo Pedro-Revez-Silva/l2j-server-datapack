@@ -1311,18 +1311,20 @@
 		</effects>
 	</skill>
 	<skill id="1050" levels="2" name="Return">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<table name="#hitTime"> 20000 1500 </table>
 		<table name="#magicLvl"> 40 56 </table>
-		<table name="#mpConsume2"> 84 122 </table>
 		<table name="#mpConsume1"> 21 31 </table>
+		<table name="#mpConsume2"> 84 122 </table>
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="icon" val="icon.skill1050" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="mpConsume1" val="#mpConsume1" />
+		<set name="mpConsume2" val="#mpConsume2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />

@@ -1183,8 +1183,9 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21067" levels="1" name="Blessed Escape Ability">
-		<!-- Confirmed CT2.5 -->
+	<skill id="21067" levels="1" name="Blessed Escape">
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
@@ -1192,6 +1193,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
