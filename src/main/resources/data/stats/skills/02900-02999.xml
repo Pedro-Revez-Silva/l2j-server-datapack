@@ -245,11 +245,13 @@
 		</effects>
 	</skill>
 	<skill id="2915" levels="1" name="Clear Five-Colored Crystal">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="14835" /> <!-- Multi-colored Jewel -->
+		<set name="itemConsumeId" val="14835" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />

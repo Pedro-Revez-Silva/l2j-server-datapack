@@ -1400,10 +1400,18 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22290" levels="1" name="Scroll: Valakas Call">
-		<!-- One-time use scroll that teleports you to Watcher of Valakas Klein in the Hall of Flames. -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="BranchSys2.icon.call_of_fire_dragon" />
 		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21895" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1416,14 +1424,19 @@
 		</cond>
 		<effects>
 			<effect name="Teleport">
-				<param x="183624" y="-114891" z="-3340" />
+				<param x="183337" y="-114778" z="-3336" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="22291" levels="1" name="Jewel of Valakas">
-		<!-- Mysterious jewel that teleports you to Watcher of Valakas Klein in the Hall of Flames. Re-use time is 60 minutes. -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="BranchSys2.icon.orb_of_fire_dragon" />
 		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -1438,15 +1451,23 @@
 		</cond>
 		<effects>
 			<effect name="Teleport">
-				<param x="183624" y="-114891" z="-3340" />
+				<param x="183337" y="-114778" z="-3336" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="22292" levels="1" name="Scroll: Antharas Call">
-		<!-- One-time use scroll that teleports you to the entrance to Antharas's Lair. -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="BranchSys2.icon.call_of_earth_dragon" />
 		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21897" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1459,14 +1480,19 @@
 		</cond>
 		<effects>
 			<effect name="Teleport">
-				<param x="154596" y="121127" z="-3812" />
+				<param x="154291" y="120944" z="-3808" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="22293" levels="1" name="Jewel of Antharas">
-		<!-- Mysterious jewel that teleports you to the entrance to Antharas's Lair. Re-use time is 60 minutes. -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="effectPoint" val="100" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="BranchSys2.icon.orb_of_earth_dragon" />
 		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -1481,7 +1507,7 @@
 		</cond>
 		<effects>
 			<effect name="Teleport">
-				<param x="154596" y="121127" z="-3812" />
+				<param x="154291" y="120944" z="-3808" />
 			</effect>
 		</effects>
 	</skill>

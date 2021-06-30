@@ -525,13 +525,17 @@
 	</skill>
 	<skill id="21242" levels="1" name="Zaken's Call">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -550,13 +554,17 @@
 	</skill>
 	<skill id="21243" levels="1" name="Freya's Call">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -575,13 +583,17 @@
 	</skill>
 	<skill id="21244" levels="1" name="Frintezza's Call">
 		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
 		<set name="blockedInOlympiad" val="true" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
 		<set name="isMagic" val="2" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="reuseDelayLock" val="true" />
+		<set name="reuseDelayType" val="S" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">

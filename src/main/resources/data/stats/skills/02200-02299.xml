@@ -219,12 +219,14 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="NONE" />
 	</skill>
-	<skill id="2213" levels="22" name="Escape - to X Town">
-		<!-- Confirmed CT2.5 -->
-		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 149800 107946 -118092 </table>
-		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 -79999 -52280 46955 </table>
-		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 -5568 -2408 342 </table>
+	<skill id="2213" levels="22" name="Escape - Talking Island Village">
+		<!-- High Five Confirmed -->
 		<table name="#itemConsumeId"> 7117 7118 7119 7120 7121 7122 7123 7124 7125 7126 7127 7128 7129 7130 7131 7132 7133 7134 7135 7618 7619 9647 </table>
+		<table name="#teleportX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 149800 107946 -118092 </table>
+		<table name="#teleportY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 -79999 -52280 46955 </table>
+		<table name="#teleportZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 -5568 -2408 342 </table>
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
@@ -243,17 +245,19 @@
 		</cond>
 		<effects>
 			<effect name="Teleport">
-				<param x="#coordX" y="#coordY" z="#coordZ" />
+				<param x="#teleportX" y="#teleportY" z="#teleportZ" />
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
-		<!-- Confirmed CT2.5 -->
-		<!-- Levels 7, 8 and 9 doesn't exist in client. -->
-		<table name="#coordX"> -84200 46915 9723 -45208 115158 -118092 0 0 0 83378 </table>
-		<table name="#coordY"> 244566 51441 15576 -112502 -178170 46955 0 0 0 147999 </table>
-		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 342 0 0 0 -3400 </table>
+		<!-- High Five Confirmed -->
+		<!-- Note: Levels 7, 8 and 9 doesn't exist in client. -->
 		<table name="#itemConsumeId"> 7554 7555 7556 7557 7558 9716 0 0 0 7559 </table>
+		<table name="#teleportX"> -84200 46915 9723 -45208 115158 -118092 0 0 0 83378 </table>
+		<table name="#teleportY"> 244566 51441 15576 -112502 -178170 46955 0 0 0 147999 </table>
+		<table name="#teleportZ"> -3728 -2976 -4568 -240 -880 342 0 0 0 -3400 </table>
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
@@ -272,7 +276,7 @@
 		</cond>
 		<effects>
 			<effect name="Teleport">
-				<param x="#coordX" y="#coordY" z="#coordZ" />
+				<param x="#teleportX" y="#teleportY" z="#teleportZ" />
 			</effect>
 		</effects>
 	</skill>

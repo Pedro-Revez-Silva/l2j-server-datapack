@@ -380,11 +380,13 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2525" levels="1" name="Scroll to move to Kamael Village">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
+		<set name="affectScope" val="SINGLE" />
+		<set name="hitCancelTime" val="500" />
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="12753" /> <!-- Kamael Village Teleportation Scroll -->
+		<set name="itemConsumeId" val="12753" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
