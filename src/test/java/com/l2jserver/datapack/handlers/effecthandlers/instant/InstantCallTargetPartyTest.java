@@ -1,18 +1,16 @@
 package com.l2jserver.datapack.handlers.effecthandlers.instant;
 
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.expectLastCall;
-import static org.powermock.api.easymock.PowerMock.replayAll;
+import static org.mockito.Mockito.when;
 
 import java.util.List;
 import java.util.Map;
 
-import org.powermock.api.easymock.annotation.Mock;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.l2jserver.datapack.test.AbstractTest;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -22,10 +20,10 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 /**
  * Instant Call Target Party effect test.
  * @author Zoey76
- * @version 2.6.2.0
+ * @version 2.6.3.0
  */
-@PrepareForTest(BuffInfo.class)
-public class InstantCallTargetPartyTest extends AbstractTest {
+@ExtendWith(MockitoExtension.class)
+public class InstantCallTargetPartyTest {
 	
 	@Mock
 	private BuffInfo buffInfo;
@@ -38,10 +36,10 @@ public class InstantCallTargetPartyTest extends AbstractTest {
 	@Mock
 	private L2PcInstance partyMember;
 	
-	private InstantCallTargetParty effect;
+	private static InstantCallTargetParty effect;
 	
-	@BeforeSuite
-	void init() {
+	@BeforeAll
+	static void init() {
 		final var set = new StatsSet(Map.of("name", "InstantBetray"));
 		final var params = new StatsSet(Map.of("chance", "80", "time", "30"));
 		effect = new InstantCallTargetParty(null, null, set, params);
@@ -49,39 +47,34 @@ public class InstantCallTargetPartyTest extends AbstractTest {
 	
 	@Test
 	void test_target_not_in_party() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.isInParty()).andReturn(false);
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.isInParty()).thenReturn(false);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	void test_target_in_party_cannot_summon_party_member() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.isInParty()).andReturn(true);
-		expect(effected.getParty()).andReturn(party);
-		expect(party.getMembers()).andReturn(List.of(effectedPlayer, partyMember));
-		expect(effected.getActingPlayer()).andReturn(effectedPlayer);
-		expect(effectedPlayer.canSummonTarget(partyMember)).andReturn(false);
-		expect(effectedPlayer.canSummonTarget(effectedPlayer)).andReturn(false);
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.isInParty()).thenReturn(true);
+		when(effected.getParty()).thenReturn(party);
+		when(party.getMembers()).thenReturn(List.of(effectedPlayer, partyMember));
+		when(effected.getActingPlayer()).thenReturn(effectedPlayer);
+		when(effectedPlayer.canSummonTarget(partyMember)).thenReturn(false);
+		when(effectedPlayer.canSummonTarget(effectedPlayer)).thenReturn(false);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	void test_target_in_party_can_summon_party_member() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.isInParty()).andReturn(true);
-		expect(effected.getParty()).andReturn(party);
-		expect(party.getMembers()).andReturn(List.of(effectedPlayer, partyMember));
-		expect(effected.getActingPlayer()).andReturn(effectedPlayer);
-		expect(effectedPlayer.canSummonTarget(partyMember)).andReturn(true);
-		expect(effectedPlayer.canSummonTarget(effectedPlayer)).andReturn(false);
-		partyMember.teleToLocation(effected, true);
-		expectLastCall();
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.isInParty()).thenReturn(true);
+		when(effected.getParty()).thenReturn(party);
+		when(party.getMembers()).thenReturn(List.of(effectedPlayer, partyMember));
+		when(effected.getActingPlayer()).thenReturn(effectedPlayer);
+		when(effectedPlayer.canSummonTarget(partyMember)).thenReturn(true);
+		when(effectedPlayer.canSummonTarget(effectedPlayer)).thenReturn(false);
 		
 		effect.onStart(buffInfo);
 	}

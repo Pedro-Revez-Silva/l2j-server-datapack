@@ -19,39 +19,35 @@
 package com.l2jserver.datapack.handlers.admincommandhandlers;
 
 import static com.l2jserver.gameserver.config.Configuration.general;
-import static org.easymock.EasyMock.anyString;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.expectLastCall;
-import static org.powermock.api.easymock.PowerMock.replay;
-import static org.testng.Assert.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.mockito.Mockito.when;
 
-import org.powermock.api.easymock.annotation.Mock;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.l2jserver.datapack.test.AbstractTest;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Admin Reload test.
  * @author Zoey76
- * @version 2.6.1.0
+ * @version 2.6.3.0
  */
-public class AdminReloadTest extends AbstractTest {
+@ExtendWith(MockitoExtension.class)
+public class AdminReloadTest {
 	
 	@Mock
 	private L2PcInstance player;
 	
-	private final AdminReload adminReload = new AdminReload();
+	private static final AdminReload ADMIN_RELOAD = new AdminReload();
 	
 	@Test
 	public void useAdminCommandTest() {
 		general().setProperty("ServerListBrackets", "True");
-		expect(player.getName()).andReturn("Zoey76");
-		player.sendMessage(anyString());
-		expectLastCall();
-		replay(player);
+		when(player.getName()).thenReturn("Zoey76");
 		
-		adminReload.useAdminCommand("admin_reload config general", player);
+		ADMIN_RELOAD.useAdminCommand("admin_reload config general", player);
 		assertFalse(general().getServerListBrackets());
 	}
 }

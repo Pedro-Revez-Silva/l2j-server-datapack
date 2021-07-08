@@ -18,21 +18,17 @@
  */
 package com.l2jserver.datapack.handlers.effecthandlers.instant;
 
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.expectLastCall;
-import static org.powermock.api.easymock.PowerMock.mockStatic;
-import static org.powermock.api.easymock.PowerMock.replayAll;
+import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.when;
 
 import java.util.Map;
 
-import org.powermock.api.easymock.annotation.Mock;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.l2jserver.datapack.test.AbstractTest;
 import com.l2jserver.gameserver.ai.L2CharacterAI;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -45,13 +41,10 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 /**
  * Betray instant effect test.
  * @author Zoey76
- * @version 2.6.2.0
+ * @version 2.6.3.0
  */
-@PrepareForTest({
-	BuffInfo.class,
-	Formulas.class
-})
-public class InstantBetrayTest extends AbstractTest {
+@ExtendWith(MockitoExtension.class)
+public class InstantBetrayTest {
 	
 	@Mock
 	private BuffInfo buffInfo;
@@ -70,10 +63,11 @@ public class InstantBetrayTest extends AbstractTest {
 	@Mock
 	private L2CharacterAI creatureAI;
 	
-	private InstantBetray effect;
+	private static InstantBetray effect;
 	
-	@BeforeSuite
-	void init() {
+	@BeforeAll
+	static void init() {
+		mockStatic(Formulas.class);
 		final var set = new StatsSet(Map.of("name", "InstantBetray"));
 		final var params = new StatsSet(Map.of("chance", "80", "time", "30"));
 		effect = new InstantBetray(null, null, set, params);
@@ -86,100 +80,77 @@ public class InstantBetrayTest extends AbstractTest {
 	
 	@Test
 	public void test_effected_is_raid() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.isRaid()).andReturn(true);
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.isRaid()).thenReturn(true);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	public void test_effected_not_servitor_summon_raid_minion() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.isRaid()).andReturn(false);
-		expect(effected.isServitor()).andReturn(false);
-		expect(effected.isSummon()).andReturn(false);
-		expect(effected.isRaidMinion()).andReturn(false);
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.isRaid()).thenReturn(false);
+		when(effected.isServitor()).thenReturn(false);
+		when(effected.isSummon()).thenReturn(false);
+		when(effected.isRaidMinion()).thenReturn(false);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	public void test_effected_is_servitor_probability_fail() {
-		mockStatic(Formulas.class);
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(buffInfo.getEffector()).andReturn(effector);
-		expect(buffInfo.getSkill()).andReturn(skill);
-		expect(effected.isRaid()).andReturn(false);
-		expect(effected.isServitor()).andReturn(true);
-		expect(effected.getActingPlayer()).andReturn(masterPlayer);
-		expect(Formulas.calcProbability(80, effector, effected, skill)).andReturn(false);
-		expect(effected.getAI()).andReturn(creatureAI);
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(buffInfo.getEffector()).thenReturn(effector);
+		when(buffInfo.getSkill()).thenReturn(skill);
+		when(effected.isRaid()).thenReturn(false);
+		when(effected.isServitor()).thenReturn(true);
+		when(effected.getActingPlayer()).thenReturn(masterPlayer);
+		when(Formulas.calcProbability(80, effector, effected, skill)).thenReturn(false);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	public void test_effected_is_servitor() {
-		mockStatic(Formulas.class);
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(buffInfo.getEffector()).andReturn(effector);
-		expect(buffInfo.getSkill()).andReturn(skill);
-		expect(effected.isRaid()).andReturn(false);
-		expect(effected.isServitor()).andReturn(true);
-		expect(effected.getActingPlayer()).andReturn(masterPlayer);
-		expect(Formulas.calcProbability(80, effector, effected, skill)).andReturn(true);
-		expect(effected.getAI()).andReturn(creatureAI);
-		creatureAI.setIntention(AI_INTENTION_ATTACK, masterPlayer);
-		expectLastCall();
-		creatureAI.setIntention(AI_INTENTION_IDLE, masterPlayer);
-		expectLastCall();
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(buffInfo.getEffector()).thenReturn(effector);
+		when(buffInfo.getSkill()).thenReturn(skill);
+		when(effected.isRaid()).thenReturn(false);
+		when(effected.isServitor()).thenReturn(true);
+		when(effected.getActingPlayer()).thenReturn(masterPlayer);
+		when(Formulas.calcProbability(80, effector, effected, skill)).thenReturn(true);
+		when(effected.getAI()).thenReturn(creatureAI);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	public void test_effected_is_summon() {
-		mockStatic(Formulas.class);
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(buffInfo.getEffector()).andReturn(effector);
-		expect(buffInfo.getSkill()).andReturn(skill);
-		expect(effected.isRaid()).andReturn(false);
-		expect(effected.isServitor()).andReturn(false);
-		expect(effected.isSummon()).andReturn(true);
-		expect(effected.getActingPlayer()).andReturn(masterPlayer);
-		expect(Formulas.calcProbability(80, effector, effected, skill)).andReturn(true);
-		expect(effected.getAI()).andReturn(creatureAI);
-		creatureAI.setIntention(AI_INTENTION_ATTACK, masterPlayer);
-		expectLastCall();
-		creatureAI.setIntention(AI_INTENTION_IDLE, masterPlayer);
-		expectLastCall();
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(buffInfo.getEffector()).thenReturn(effector);
+		when(buffInfo.getSkill()).thenReturn(skill);
+		when(effected.isRaid()).thenReturn(false);
+		when(effected.isServitor()).thenReturn(false);
+		when(effected.isSummon()).thenReturn(true);
+		when(effected.getActingPlayer()).thenReturn(masterPlayer);
+		when(Formulas.calcProbability(80, effector, effected, skill)).thenReturn(true);
+		when(effected.getAI()).thenReturn(creatureAI);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	public void test_effected_is_raid_minion() {
-		mockStatic(Formulas.class);
-		expect(buffInfo.getEffected()).andReturn(effectedMinion);
-		expect(buffInfo.getEffector()).andReturn(effector);
-		expect(buffInfo.getSkill()).andReturn(skill);
-		expect(effectedMinion.isRaid()).andReturn(false);
-		expect(effectedMinion.isServitor()).andReturn(false);
-		expect(effectedMinion.isSummon()).andReturn(false);
-		expect(effectedMinion.isRaidMinion()).andReturn(true);
-		expect(effectedMinion.getLeader()).andReturn(effectedLeader);
-		expect(Formulas.calcProbability(80, effector, effectedMinion, skill)).andReturn(true);
-		expect(effectedMinion.getAI()).andReturn(creatureAI);
-		creatureAI.setIntention(AI_INTENTION_ATTACK, effectedLeader);
-		expectLastCall();
-		creatureAI.setIntention(AI_INTENTION_IDLE, effectedLeader);
-		expectLastCall();
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effectedMinion);
+		when(buffInfo.getEffector()).thenReturn(effector);
+		when(buffInfo.getSkill()).thenReturn(skill);
+		when(effectedMinion.isRaid()).thenReturn(false);
+		when(effectedMinion.isServitor()).thenReturn(false);
+		when(effectedMinion.isSummon()).thenReturn(false);
+		when(effectedMinion.isRaidMinion()).thenReturn(true);
+		when(effectedMinion.getLeader()).thenReturn(effectedLeader);
+		when(Formulas.calcProbability(80, effector, effectedMinion, skill)).thenReturn(true);
+		when(effectedMinion.getAI()).thenReturn(creatureAI);
 		
 		effect.onStart(buffInfo);
 	}

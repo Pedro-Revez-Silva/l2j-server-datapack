@@ -18,20 +18,18 @@
  */
 package com.l2jserver.datapack.handlers.effecthandlers.instant;
 
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.expectLastCall;
-import static org.powermock.api.easymock.PowerMock.mockStatic;
-import static org.powermock.api.easymock.PowerMock.replayAll;
+import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.when;
 
 import java.util.Map;
 
-import org.powermock.api.easymock.annotation.Mock;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.l2jserver.commons.util.Rnd;
-import com.l2jserver.datapack.test.AbstractTest;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -41,13 +39,10 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 /**
  * Despawn instant effect test.
  * @author Zoey76
- * @version 2.6.2.0
+ * @version 2.6.3.0
  */
-@PrepareForTest({
-	BuffInfo.class,
-	Rnd.class
-})
-public class InstantDespawnTest extends AbstractTest {
+@ExtendWith(MockitoExtension.class)
+public class InstantDespawnTest {
 	
 	private static final int CHANCE = 75;
 	
@@ -60,10 +55,12 @@ public class InstantDespawnTest extends AbstractTest {
 	@Mock
 	private L2Summon summon;
 	
-	private InstantDespawn effect;
+	private static InstantDespawn effect;
 	
-	@BeforeSuite
-	void init() {
+	@BeforeAll
+	static void init() {
+		mockStatic(Rnd.class);
+		
 		final var set = new StatsSet(Map.of("name", "InstantDespawn"));
 		final var params = new StatsSet(Map.of("chance", CHANCE));
 		effect = new InstantDespawn(null, null, set, params);
@@ -76,45 +73,37 @@ public class InstantDespawnTest extends AbstractTest {
 	
 	@Test
 	public void test_null_player() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.getActingPlayer()).andReturn(null);
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.getActingPlayer()).thenReturn(null);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	public void test_null_summon() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.getActingPlayer()).andReturn(player);
-		expect(player.getSummon()).andReturn(null);
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.getActingPlayer()).thenReturn(player);
+		when(player.getSummon()).thenReturn(null);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	public void test_chance_fail() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.getActingPlayer()).andReturn(player);
-		expect(player.getSummon()).andReturn(summon);
-		mockStatic(Rnd.class);
-		expect(Rnd.get(100)).andReturn(CHANCE - 1);
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.getActingPlayer()).thenReturn(player);
+		when(player.getSummon()).thenReturn(summon);
+		when(Rnd.get(100)).thenReturn(CHANCE - 1);
 		
 		effect.onStart(buffInfo);
 	}
 	
 	@Test
 	public void test_chance_success() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.getActingPlayer()).andReturn(player);
-		expect(player.getSummon()).andReturn(summon);
-		mockStatic(Rnd.class);
-		expect(Rnd.get(100)).andReturn(CHANCE);
-		summon.unSummon(player);
-		expectLastCall();
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.getActingPlayer()).thenReturn(player);
+		when(player.getSummon()).thenReturn(summon);
+		when(Rnd.get(100)).thenReturn(CHANCE);
 		
 		effect.onStart(buffInfo);
 	}

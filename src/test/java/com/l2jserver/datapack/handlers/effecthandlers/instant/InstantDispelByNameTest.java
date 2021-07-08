@@ -18,18 +18,16 @@
  */
 package com.l2jserver.datapack.handlers.effecthandlers.instant;
 
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.expectLastCall;
-import static org.powermock.api.easymock.PowerMock.replayAll;
+import static org.mockito.Mockito.when;
 
 import java.util.Map;
 
-import org.powermock.api.easymock.annotation.Mock;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.l2jserver.datapack.test.AbstractTest;
 import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -38,13 +36,10 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
 /**
  * Dispel By Name instant effect test.
  * @author Zoey76
- * @version 2.6.2.0
+ * @version 2.6.3.0
  */
-@PrepareForTest({
-	BuffInfo.class,
-	CharEffectList.class
-})
-public class InstantDispelByNameTest extends AbstractTest {
+@ExtendWith(MockitoExtension.class)
+public class InstantDispelByNameTest {
 	
 	private static final int SKILL_ID = 4342;
 	
@@ -55,10 +50,10 @@ public class InstantDispelByNameTest extends AbstractTest {
 	@Mock
 	private CharEffectList effectList;
 	
-	private InstantDispelByName effect;
+	private static InstantDispelByName effect;
 	
-	@BeforeSuite
-	void init() {
+	@BeforeAll
+	static void init() {
 		final var set = new StatsSet(Map.of("name", "InstantDispelByName"));
 		final var params = new StatsSet(Map.of("id", SKILL_ID));
 		effect = new InstantDispelByName(null, null, set, params);
@@ -71,12 +66,8 @@ public class InstantDispelByNameTest extends AbstractTest {
 	
 	@Test
 	public void test_effect_dispel() {
-		expect(buffInfo.getEffected()).andReturn(effected);
-		expect(effected.getEffectList()).andReturn(effectList);
-		effectList.stopSkillEffects(true, SKILL_ID);
-		expectLastCall().once();
-		
-		replayAll();
+		when(buffInfo.getEffected()).thenReturn(effected);
+		when(effected.getEffectList()).thenReturn(effectList);
 		
 		effect.onStart(buffInfo);
 	}

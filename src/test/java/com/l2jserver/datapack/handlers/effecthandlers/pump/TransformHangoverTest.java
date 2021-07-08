@@ -20,30 +20,30 @@ package com.l2jserver.datapack.handlers.effecthandlers.pump;
 
 import java.util.Map;
 
-import org.powermock.api.easymock.annotation.Mock;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.l2jserver.datapack.test.AbstractTest;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Transform Hangover pump effect test.
  * @author Zoey76
- * @version 2.6.2.0
+ * @version 2.6.3.0
  */
-@PrepareForTest(BuffInfo.class)
-public class TransformHangoverTest extends AbstractTest {
+@ExtendWith(MockitoExtension.class)
+public class TransformHangoverTest {
 	
 	@Mock
 	private BuffInfo buffInfo;
 	
-	private TransformHangover effect;
+	private static TransformHangover effect;
 	
-	@BeforeSuite
-	void init() {
+	@BeforeAll
+	static void init() {
 		final var set = new StatsSet(Map.of("name", "TransformHangover"));
 		final var params = new StatsSet(Map.of());
 		effect = new TransformHangover(null, null, set, params);
