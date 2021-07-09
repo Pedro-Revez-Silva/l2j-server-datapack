@@ -163,7 +163,6 @@
 			<xs:enumeration value="pAtk" />
 			<xs:enumeration value="pDef" />
 			<xs:enumeration value="sDef" />
-			<xs:enumeration value="mAtk" />
 			<xs:enumeration value="pAtkAngle" />
 			<xs:enumeration value="pAtkRange" />
 			<xs:enumeration value="pAtkSpd" />
