@@ -51,7 +51,7 @@ public class OnlineCommand extends AbstractCommand {
 		if (args.length != 1) {
 			eb.setColor(Color.RED);
 			eb.setDescription("Please use the command without any Arguments");
-			event.getTextChannel().sendMessage(eb.build()).queue();
+			event.getTextChannel().sendMessageEmbeds(eb.build()).queue();
 			event.getMessage().addReaction("\u274C").queue(); // Bot reacts with X mark.
 			return;
 		}
@@ -63,7 +63,7 @@ public class OnlineCommand extends AbstractCommand {
 		eb.addField("Online Players", String.valueOf(playersCount), false);
 		eb.addBlankField(false);
 		eb.addField("Online GM's", String.valueOf(gmCount), false);
-		event.getChannel().sendMessage(eb.build()).queue(); // this actually sends the information to discord.
+		event.getChannel().sendMessageEmbeds(eb.build()).queue(); // this actually sends the information to discord.
 		event.getMessage().addReaction("\u2705").queue(); // Bot reacts with check mark.
 	}
 }

@@ -54,7 +54,7 @@ public class AnnounceCommand extends AbstractCommand {
 
 		if (args.length <= 2) {
 			eb.setDescription("Wrong Arguments. Please type the message to be sent.");
-			event.getTextChannel().sendMessage(eb.build()).queue();
+			event.getTextChannel().sendMessageEmbeds(eb.build()).queue();
 			event.getMessage().addReaction("\u274C").queue();
 			return;
 		}
@@ -73,6 +73,6 @@ public class AnnounceCommand extends AbstractCommand {
 		}
 		eb.setDescription("**In game Announcement have been sent**.");
 		event.getMessage().addReaction("\u2705").queue();
-		event.getChannel().sendMessage(eb.build()).queue();
+		event.getChannel().sendMessageEmbeds(eb.build()).queue();
 	}
 }

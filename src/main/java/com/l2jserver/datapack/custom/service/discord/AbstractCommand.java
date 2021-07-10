@@ -71,7 +71,7 @@ public abstract class AbstractCommand extends ListenerAdapter {
 		// Only Server owner and members with the specified role assigned can execute the command.
 		if ((guildMember == null) || (gameMaster == null) || !guildMember.isOwner() || !guildMember.getRoles().contains(gameMaster)) {
 			eb.setDescription("Only Staff members can use this command!");
-			event.getTextChannel().sendMessage(eb.build()).queue();
+			event.getTextChannel().sendMessageEmbeds(eb.build()).queue();
 			event.getMessage().addReaction("\u274C").queue();
 			return false;
 		}

@@ -54,7 +54,7 @@ public class AbortCommand extends AbstractCommand {
 
         if (args.length != 1) {
             eb.setDescription("Please use the command without any Arguments");
-            event.getTextChannel().sendMessage(eb.build()).queue();
+            event.getTextChannel().sendMessageEmbeds(eb.build()).queue();
             event.getMessage().addReaction("\u274C").queue();
             return;
         }
@@ -63,7 +63,7 @@ public class AbortCommand extends AbstractCommand {
         String commandName = args[0].substring(discord().getPrefix().length()).toUpperCase();
         Shutdown.getInstance().telnetAbort(event.getAuthor().getName()); //Using telnet method.
         eb.setDescription("GM: {" + gmName + "} issued command. **" + commandName + "** --- Shutdown/Restart Aborted.");
-        event.getChannel().sendMessage(eb.build()).queue();
+        event.getChannel().sendMessageEmbeds(eb.build()).queue();
         event.getMessage().addReaction("\u2705").queue();
     }
 }

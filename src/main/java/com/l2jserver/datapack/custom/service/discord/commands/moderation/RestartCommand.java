@@ -54,7 +54,7 @@ public class RestartCommand extends AbstractCommand {
 
 		if (args.length != 2) {
 			eb.setDescription("Wrong Arguments. Please just provide a number in seconds.");
-			event.getTextChannel().sendMessage(eb.build()).queue();
+			event.getTextChannel().sendMessageEmbeds(eb.build()).queue();
 			event.getMessage().addReaction("\u274C").queue();
 			return;
 		}
@@ -64,7 +64,7 @@ public class RestartCommand extends AbstractCommand {
 			seconds = Integer.parseInt(args[1]);
 		} catch (NumberFormatException e) {
 			eb.setDescription("Wrong Arguments. Please just provide a number in seconds.");
-			event.getChannel().sendMessage(eb.build()).queue();
+			event.getChannel().sendMessageEmbeds(eb.build()).queue();
 			event.getMessage().addReaction("\u274C").queue();
 			return;
 		}
@@ -74,7 +74,7 @@ public class RestartCommand extends AbstractCommand {
 		Shutdown.getInstance().startTelnetShutdown(event.getAuthor().getName(), seconds, true); //Using telnet method.
 		eb.setColor(Color.GREEN);
 		eb.setDescription("GM: {" + gmName + "} issued command. **" + commandName + "** in " + seconds + " " + "seconds!");
-		event.getChannel().sendMessage(eb.build()).queue();
+		event.getChannel().sendMessageEmbeds(eb.build()).queue();
 		event.getMessage().addReaction("\u2705").queue();
 	}
 }

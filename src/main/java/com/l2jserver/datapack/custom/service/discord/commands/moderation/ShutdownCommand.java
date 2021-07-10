@@ -55,7 +55,7 @@ public class ShutdownCommand extends AbstractCommand {
 		if (args.length != 2) {
 			eb.setColor(Color.RED);
 			eb.setDescription("Wrong Arguments. Please just provide a number in seconds.");
-			event.getTextChannel().sendMessage(eb.build()).queue();
+			event.getTextChannel().sendMessageEmbeds(eb.build()).queue();
 			event.getMessage().addReaction("\u274C").queue();
 			return;
 		}
@@ -66,7 +66,7 @@ public class ShutdownCommand extends AbstractCommand {
 		} catch (NumberFormatException e) {
 			eb.setColor(Color.RED);
 			eb.setDescription("Wrong Arguments. Please just provide a number in seconds.");
-			event.getChannel().sendMessage(eb.build()).queue();
+			event.getChannel().sendMessageEmbeds(eb.build()).queue();
 			event.getMessage().addReaction("\u274C").queue();
 			return;
 		}
@@ -75,8 +75,8 @@ public class ShutdownCommand extends AbstractCommand {
 		String commandName = args[0].substring(discord().getPrefix().length()).toUpperCase();
 		Shutdown.getInstance().startTelnetShutdown(event.getAuthor().getName(), seconds, false); //Using telnet method.
 		eb.setColor(Color.GREEN);
-		eb.setDescription("GM: {" + gmName + "} issued command. **" + commandName + "** in " + args[1] + " " + "seconds!");
-		event.getChannel().sendMessage(eb.build()).queue();
+		eb.setDescription("GM: {" + gmName + "} issued command. **" + commandName + "** in " + seconds + " " + "seconds!");
+		event.getChannel().sendMessageEmbeds(eb.build()).queue();
 		event.getMessage().addReaction("\u2705").queue();
 	}
 }

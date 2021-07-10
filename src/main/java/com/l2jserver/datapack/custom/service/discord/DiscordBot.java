@@ -103,7 +103,7 @@ public class DiscordBot {
 	public static void sendMessageTo(EmbedBuilder ed, String channelId) {
 		MessageChannel channel = jda.getTextChannelById(channelId);
 		if (channel != null) {
-			channel.sendMessage(ed.build()).queue(); // this actually sends the information to discord.
+			channel.sendMessageEmbeds(ed.build()).queue(); // this actually sends the information to discord.
 		}
 	}
 }
